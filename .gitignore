@@ -11,6 +11,8 @@
 .svn/
 .swiftpm/
 migrate_working_dir/
+.agent
+.planning
 
 # IntelliJ related
 *.iml
@@ -53,6 +55,16 @@ app.*.map.json
 google-services.json
 GoogleService-Info.plist
 **/secrets/**
-.agent
+# Security & Secret Boundaries (TASK 003 / ASVS L1)
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.jks
+*.keystore
+google-services.json
+GoogleService-Info.plist
+**/secrets/**
 .vscode
 Brain

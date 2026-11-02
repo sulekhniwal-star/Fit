@@ -20,3 +20,4 @@ Presentation Layer (lib/features/*/presentation, lib/shared/widgets)
 3. **Presentation Layer**: `presentation/` consumes domain models and exposes Riverpod state notifiers and widgets.
 4. **Core Layer**: `lib/core/` houses foundational cross-cutting primitives (config, errors, logging, providers, network utilities).
 5. **Shared Layer**: `lib/shared/` contains reusable UI components, themes, and design system tokens.
+

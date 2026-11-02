@@ -41,3 +41,4 @@ class PricingTier {
         'entitlements': entitlements,
       };
 }
+

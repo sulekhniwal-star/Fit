@@ -120,3 +120,4 @@ class PrivacyOperationFailure extends Failure {
     super.requestId,
   });
 }
+

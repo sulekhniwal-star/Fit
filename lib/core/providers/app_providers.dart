@@ -8,3 +8,4 @@ import '../config/app_config.dart';
 final appConfigProvider = Provider<AppConfig>((ref) {
   throw UnimplementedError('appConfigProvider must be initialized via ProviderScope overrides');
 });
+

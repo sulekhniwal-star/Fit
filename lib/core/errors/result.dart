@@ -36,3 +36,4 @@ final class FailureResult<T> extends Result<T> {
   final Failure failure;
   const FailureResult(this.failure);
 }
+

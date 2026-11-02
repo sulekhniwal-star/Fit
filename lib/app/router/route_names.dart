@@ -11,3 +11,4 @@ class RouteNames {
   static const dataVault = '/data-vault';
   static const settings = '/settings';
 }
+
