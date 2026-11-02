@@ -27,15 +27,15 @@ void main() {
 
     testWidgets('Components render cleanly under 1.5x text scale factor', (WidgetTester tester) async {
       await tester.pumpWidget(
-        MaterialApp(
+        const MaterialApp(
           home: Scaffold(
             body: MediaQuery(
-              data: const MediaQueryData(
+              data: MediaQueryData(
                 textScaler: TextScaler.linear(1.5),
               ),
               child: BoundedTextScale(
                 child: Column(
-                  children: const [
+                  children: [
                     Text('FitKarma Large Text Title', style: TextStyle(fontSize: 24)),
                     Text('Health OS Telemetry Information Subtitle', style: TextStyle(fontSize: 16)),
                   ],
