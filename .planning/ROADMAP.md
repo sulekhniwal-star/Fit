@@ -113,7 +113,12 @@ Plans:
   1. User can log any core health metric completely offline.
   2. Historical charts and trends display accurate daily, weekly, and monthly aggregations.
   3. Vitals outside healthy ranges trigger appropriate warnings without giving medical diagnoses.
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 05-01: Core Health Primitives, Weight & Body Measurements Logging
+- [ ] 05-02: Daily Steps, Sleep, Water & Mood Tracking
+- [ ] 05-03: Vitals, Medication Adherence, Habits & Unified Health Dashboard
 
 ---
 
