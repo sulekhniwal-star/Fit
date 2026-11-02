@@ -40,3 +40,4 @@ export function errorResponse(requestId: string, code: string, message: string, 
     },
   };
 }
+

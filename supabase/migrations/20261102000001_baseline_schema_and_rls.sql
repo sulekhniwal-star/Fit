@@ -382,3 +382,4 @@ begin
     values (target_user_id, 'erasure', 'completed', jsonb_build_object('timestamp', now()));
 end;
 $$;
+

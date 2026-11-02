@@ -3,6 +3,9 @@ import 'failures.dart';
 sealed class Result<T> {
   const Result();
 
+  const factory Result.success(T data) = Success<T>;
+  const factory Result.failure(Failure failure) = FailureResult<T>;
+
   bool get isSuccess => this is Success<T>;
   bool get isFailure => this is FailureResult<T>;
 
@@ -25,6 +28,12 @@ sealed class Result<T> {
       FailureResult(:final failure) => onFailure(failure),
     };
   }
+
+  R when<R>({
+    required R Function(T data) onSuccess,
+    required R Function(Failure failure) onFailure,
+  }) =>
+      fold(onSuccess: onSuccess, onFailure: onFailure);
 }
 
 final class Success<T> extends Result<T> {

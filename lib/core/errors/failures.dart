@@ -40,6 +40,18 @@ class AuthZFailure extends Failure {
   });
 }
 
+class RateLimitFailure extends Failure {
+  final int retryAfterSeconds;
+
+  const RateLimitFailure({
+    super.code = 'FK-1003',
+    required super.message,
+    this.retryAfterSeconds = 60,
+    super.retryable = true,
+    super.requestId,
+  });
+}
+
 class ValidationFailure extends Failure {
   const ValidationFailure({
     super.code = 'FK-2001',

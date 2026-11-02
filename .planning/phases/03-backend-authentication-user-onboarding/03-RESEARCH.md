@@ -67,3 +67,4 @@ The onboarding wizard implements a responsive, bento-styled multi-step flow usin
 4. **Onboarding Flow**: Verify that new users can transition from Step 1 through Step 5 (consent) to reach `/dashboard`.
 5. **Static Analysis**: Verify `flutter analyze --fatal-infos` passes with 0 issues.
 </verification_guidelines>
+
