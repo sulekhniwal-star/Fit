@@ -45,7 +45,12 @@ FitKarma's roadmap translates the master product specification and 24-phase impl
   1. Flutter project boots on emulator/device with zero compilation or analyzer warnings.
   2. Layered folder architecture (presentation, domain, data) is established with clear dependency boundaries.
   3. Environment configuration and secrets abstraction prevent credential leakage.
-**Plans**: 3 plans (TBD during `/gsd-plan-phase 1`)
+**Plans**: 3 plans
+
+Plans:
+- [ ] 01-01: Repository Audit, Doc-Lint Gate & Flutter Application Bootstrap
+- [ ] 01-02: Security Boundaries, Folder Architecture & Riverpod Dependency Injection
+- [ ] 01-03: Route Navigation, Error Taxonomy, Observability & Remote Config
 
 ---
 
@@ -348,3 +353,4 @@ Phases execute in numeric order: 1 → 2 → 3 → ... → 24
 
 ---
 *Roadmap created: 2026-11-02*
+
