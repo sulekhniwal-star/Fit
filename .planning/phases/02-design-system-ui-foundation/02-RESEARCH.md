@@ -72,3 +72,4 @@ For localization, a typed key-value localization delegate supports English (`en`
 4. **Touch Target**: Verify interactive buttons enforce `kMinInteractiveDimension` (48dp).
 5. **Static Analysis**: Verify `flutter analyze --fatal-infos` passes with 0 issues.
 </verification_guidelines>
+

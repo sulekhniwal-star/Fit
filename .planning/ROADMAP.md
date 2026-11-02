@@ -9,7 +9,7 @@ FitKarma's roadmap translates the master product specification and 24-phase impl
 ## Phases
 
 - [x] **Phase 1: Repository Initialization & Engineering Foundation** - Flutter 3.x project setup, linting, Riverpod structure, logging, and error handling.
-- [ ] **Phase 2: Design System & UI Foundation** - Dark theme (`#0D0F12`), glassmorphism, spring physics, and English/Hindi localization.
+- [x] **Phase 2: Design System & UI Foundation** - Dark theme (`#0D0F12`), glassmorphism, spring physics, and English/Hindi localization.
 - [ ] **Phase 3: Backend, Authentication & User Onboarding** - Supabase schema scaffold, RLS, phone OTP + Google auth, and biometric onboarding wizard.
 - [ ] **Phase 4: Offline-First Data Foundation** - Drift + SQLCipher encrypted local storage, persistent mutation outbox, and sync state machine.
 - [ ] **Phase 5: Health Data Core** - Offline and syncable tracking for weight, measurements, sleep, water, mood, vitals, and medication.
@@ -65,9 +65,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 02-01: Design Tokens, Dark Theme & Spring Physics
-- [ ] 02-02: Localization (EN/HI) & Accessibility Primitives
-- [ ] 02-03: Shared UI Primitives & Bento Grid Components
+- [x] 02-01: Design Tokens, Dark Theme & Spring Physics
+- [x] 02-02: Localization (EN/HI) & Accessibility Primitives
+- [x] 02-03: Shared UI Primitives & Bento Grid Components
 
 ---
 
@@ -332,7 +332,7 @@ Phases execute in numeric order: 1 → 2 → 3 → ... → 24
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Repository Initialization & Engineering Foundation | 3/3 | Complete | 2026-11-02 |
-| 2. Design System & UI Foundation | 0/TBD | Not started | - |
+| 2. Design System & UI Foundation | 3/3 | Complete | 2026-11-02 |
 | 3. Backend, Authentication & User Onboarding | 0/TBD | Not started | - |
 | 4. Offline-First Data Foundation | 0/TBD | Not started | - |
 | 5. Health Data Core | 0/TBD | Not started | - |

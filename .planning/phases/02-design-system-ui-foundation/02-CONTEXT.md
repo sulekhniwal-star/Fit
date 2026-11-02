@@ -75,3 +75,4 @@ Phase Gate: Dark-theme design system, EN/HI localization, accessibility helpers,
 ---
 *Phase: 02-design-system-ui-foundation*
 *Context gathered: 2026-11-02 from Todo.md & Brain/ui_spec.md*
+
