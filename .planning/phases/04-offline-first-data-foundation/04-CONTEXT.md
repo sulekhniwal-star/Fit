@@ -52,3 +52,4 @@ FitKarma is architected from day one as an offline-first Health OS. Indian conne
   - Specific domain tables beyond the minimum foundation (Nutrition tables deferred to Phase 6, Workout tables to Phase 7, Sleep/Vitals to Phase 5).
   - Bi-directional sync of Health Connect / Apple Health (deferred to Phase 8).
   - AI photo uploads and media syncing (deferred to Phase 10).
+

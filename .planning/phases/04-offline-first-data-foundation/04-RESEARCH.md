@@ -64,3 +64,4 @@
 1. **04-01-PLAN.md (Wave 1)**: Drift Local Database, Schema Foundations & SQLCipher Encryption Contract.
 2. **04-02-PLAN.md (Wave 2)**: Persistent Offline Outbox Queue & Sync State Machine Coordinator.
 3. **04-03-PLAN.md (Wave 3)**: Syncable Repository Pattern, Realtime Bridge & Offline/Conflict UI.
+
