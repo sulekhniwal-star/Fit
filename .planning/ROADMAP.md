@@ -62,7 +62,12 @@ Plans:
   1. Theme tokens, color palette, and typography match `Brain/ui_spec.md`.
   2. Shared UI components (cards, buttons, sliders, dialogs) render consistently in dark mode.
   3. UI seamlessly switches between English and Hindi with persisted locale preferences.
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 02-01: Design Tokens, Dark Theme & Spring Physics
+- [ ] 02-02: Localization (EN/HI) & Accessibility Primitives
+- [ ] 02-03: Shared UI Primitives & Bento Grid Components
 
 ---
 
