@@ -79,7 +79,12 @@ Plans:
   1. Supabase schema migrations apply cleanly with 100% RLS coverage on all tables.
   2. Users can authenticate via phone number OTP and Google OAuth.
   3. Onboarding flow accurately captures baseline user metrics and persists them to the user profile.
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 03-01: Supabase Workspace, Baseline Schema & Universal RLS
+- [ ] 03-02: Supabase Client, Phone OTP & Google Auth Service
+- [ ] 03-03: User Profile Domain & Multi-Step Onboarding Wizard
 
 ---
 
