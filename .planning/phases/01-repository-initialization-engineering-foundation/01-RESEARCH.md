@@ -124,3 +124,4 @@ class ServerFailure extends Failure { ... }
 4. **Architecture Isolation**: Ensure mock overrides function in Riverpod `ProviderContainer` without network or platform bindings.
 5. **PII Redaction**: Verify that sensitive fields (phone, email, medical tokens) are scrubbed before reaching logger sinks.
 </verification_guidelines>
+
