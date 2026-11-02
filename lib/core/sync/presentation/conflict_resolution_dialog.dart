@@ -159,3 +159,4 @@ class ConflictResolutionDialog<T> extends StatelessWidget {
     );
   }
 }
+

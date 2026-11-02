@@ -25,3 +25,4 @@ abstract class SyncableRepository<T, ID> {
   /// Pulls remote delta updates since [since] and merges them into the local store.
   Future<Result<int>> pullRemote(DateTime since);
 }
+

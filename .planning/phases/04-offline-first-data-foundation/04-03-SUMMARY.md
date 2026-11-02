@@ -53,3 +53,4 @@
 - `test/core/sync/conflict_resolution_test.dart`
 - `test/shared/widgets/sync_status_badge_test.dart`
 - `.planning/phases/04-offline-first-data-foundation/04-03-SUMMARY.md`
+

@@ -46,3 +46,4 @@
 - `test/core/sync/outbox_queue_test.dart`
 - `test/core/sync/sync_coordinator_test.dart`
 - `.planning/phases/04-offline-first-data-foundation/04-02-SUMMARY.md`
+

@@ -42,3 +42,4 @@
 - `lib/core/database/app_database.g.dart`
 - `test/core/database/app_database_test.dart`
 - `.planning/phases/04-offline-first-data-foundation/04-01-SUMMARY.md`
+

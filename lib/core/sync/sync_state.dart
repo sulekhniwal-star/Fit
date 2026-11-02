@@ -40,3 +40,4 @@ class SyncConflictState extends SyncState {
   final String entityId;
   const SyncConflictState({required this.entityType, required this.entityId});
 }
+

@@ -155,3 +155,4 @@ class DriftProfileRepository extends SyncableRepository<UserProfile, String>
     );
   }
 }
+

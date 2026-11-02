@@ -49,3 +49,4 @@ class RealtimeSyncBridge {
     return false;
   }
 }
+
