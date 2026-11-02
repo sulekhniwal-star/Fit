@@ -143,3 +143,4 @@ final bodyMetricsRepositoryProvider = Provider<DriftBodyMetricsRepository>((ref)
   final queue = ref.watch(outboxQueueProvider);
   return DriftBodyMetricsRepository(db, queue);
 });
+

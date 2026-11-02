@@ -64,3 +64,4 @@ class HealthQuantity {
   @override
   String toString() => '$value ${unit.symbol}';
 }
+

@@ -272,3 +272,4 @@ final habitsRepositoryProvider = Provider<DriftHabitsRepository>((ref) {
   final queue = ref.watch(outboxQueueProvider);
   return DriftHabitsRepository(db, queue);
 });
+

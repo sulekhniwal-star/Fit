@@ -59,3 +59,4 @@ class MoodLog {
 
   String get tagsJson => jsonEncode(tags);
 }
+

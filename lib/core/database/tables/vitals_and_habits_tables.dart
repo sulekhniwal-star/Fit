@@ -42,3 +42,4 @@ class HabitEntriesTable extends Table {
   @override
   Set<Column> get primaryKey => {id};
 }
+

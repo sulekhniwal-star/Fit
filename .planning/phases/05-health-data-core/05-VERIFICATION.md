@@ -57,3 +57,4 @@
 - [x] All writes generate idempotent `SyncMutation` records into `outbox_mutations`.
 - [x] `HealthDashboardScreen` mounted to `/dashboard` route in `AppRouter`.
 - [x] Phase 5 is ready for official milestone closure.
+

@@ -13,3 +13,4 @@ class BodyMetricEntriesTable extends Table {
   @override
   Set<Column> get primaryKey => {id};
 }
+
