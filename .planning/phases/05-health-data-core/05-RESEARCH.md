@@ -43,3 +43,4 @@ Under ASVS L1 and digital health privacy regulations:
 1. **05-01-PLAN.md (Wave 1)**: Core Health Primitives, Weight & Body Measurements Logging (TASK 025, 026, 032).
 2. **05-02-PLAN.md (Wave 2)**: Steps, Sleep, Water & Mood Tracking (TASK 027, 028, 029, 030).
 3. **05-03-PLAN.md (Wave 3)**: Vitals (BP & Glucose), Medication Schedule, Habits & Health Dashboard (TASK 031, 032A, 032B).
+

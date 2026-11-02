@@ -49,3 +49,4 @@ FitKarma's Health Data Core provides local-first, offline-capable logging and vi
   - Indian Nutrition database & meal logging (deferred to Phase 6).
   - Workout & exercise session logs (deferred to Phase 7).
   - Continuous Glucose Monitor (CGM) sensor streaming (deferred to Phase 24).
+

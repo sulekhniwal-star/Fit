@@ -4,12 +4,26 @@ import 'package:drift/native.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
+import 'tables/activity_and_wellness_tables.dart';
+import 'tables/body_metrics_table.dart';
 import 'tables/outbox_table.dart';
 import 'tables/user_profiles_table.dart';
+import 'tables/vitals_and_habits_tables.dart';
 
 part 'app_database.g.dart';
 
-@DriftDatabase(tables: [OutboxMutations, LocalUserProfiles])
+@DriftDatabase(tables: [
+  OutboxMutations,
+  LocalUserProfiles,
+  BodyMetricEntriesTable,
+  StepRecordsTable,
+  SleepRecordsTable,
+  WaterLogsTable,
+  MoodLogsTable,
+  VitalRecordsTable,
+  MedicationEntriesTable,
+  HabitEntriesTable,
+])
 class AppDatabase extends _$AppDatabase {
   AppDatabase([QueryExecutor? executor]) : super(executor ?? _openConnection());
 
@@ -54,4 +68,3 @@ final appDatabaseProvider = Provider<AppDatabase>((ref) {
   ref.onDispose(() => db.close());
   return db;
 });
-
