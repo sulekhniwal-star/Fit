@@ -116,9 +116,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 05-01: Core Health Primitives, Weight & Body Measurements Logging
-- [ ] 05-02: Daily Steps, Sleep, Water & Mood Tracking
-- [ ] 05-03: Vitals, Medication Adherence, Habits & Unified Health Dashboard
+- [x] 05-01: Core Health Primitives, Weight & Body Measurements Logging
+- [x] 05-02: Daily Steps, Sleep, Water & Mood Tracking
+- [x] 05-03: Vitals, Medication Adherence, Habits & Unified Health Dashboard
 
 ---
 

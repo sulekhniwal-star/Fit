@@ -5,23 +5,23 @@
 See: `.planning/PROJECT.md` (updated 2026-11-02)
 
 **Core value:** India's smartest, most private Health OS combining offline-first local storage, deep Indian cultural/nutritional realities, and zero-friction WhatsApp logging without compromising user data sovereignty.  
-**Current focus:** Phase 5: Health Data Core
+**Current focus:** Phase 6: Indian Nutrition Engine
 
 ## Current Position
 
-Phase: 5 of 24 (Health Data Core)  
-Plan: 0 of 3 in current phase  
-Status: Ready to execute (`/gsd-execute-phase 5`)  
-Last activity: 2026-11-02 — Phase 5 planned (3 plans created: 05-01, 05-02, 05-03).
+Phase: 5 of 24 (Health Data Core) — COMPLETED  
+Plan: 3 of 3 in Phase 5  
+Status: Phase 5 verified & closed. Ready to plan Phase 6 (`/gsd-plan-phase 6`)  
+Last activity: 2026-11-03 — Phase 5 executed, tested (113/113 passed), verified, and closed.
 
-Progress: [████░░░░░░] 16.7%
+Progress: [█████░░░░░] 20.8%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 12
+- Total plans completed: 15
 - Average duration: 11 min
-- Total execution time: 2.1 hours
+- Total execution time: 2.7 hours
 
 **By Phase:**
 
@@ -31,9 +31,10 @@ Progress: [████░░░░░░] 16.7%
 | 2. Design System & UI Foundation | 3 | 35 min | 11.6 min |
 | 3. Backend, Authentication & User Onboarding | 3 | 30 min | 10.0 min |
 | 4. Offline-First Data Foundation | 3 | 30 min | 10.0 min |
+| 5. Health Data Core | 3 | 35 min | 11.6 min |
 
 **Recent Trend:**
-- Last 5 plans: [10m, 10m, 10m, 10m, 10m]
+- Last 5 plans: [10m, 10m, 11m, 12m, 12m]
 - Trend: Stable / High velocity
 
 *Updated after each plan completion*
@@ -43,7 +44,15 @@ Progress: [████░░░░░░] 16.7%
 ### Decisions
 
 Decisions are logged in `PROJECT.md` Key Decisions table.
-Phase 4 decisions:
+Phase 5 decisions:
+
+- [Phase 5]: Standardized unified `HealthQuantity` primitives with explicit `HealthSource` (`manual`, `device`, `healthConnect`, `appleHealth`) and `ConfidenceLevel`.
+- [Phase 5]: Implemented 7-day moving average and weekly rate of change calculator for body weight tracking to eliminate noise from daily fluid fluctuations.
+- [Phase 5]: Handled overnight sleep boundaries across midnight accurately via `SleepRecord.fromInterval()`.
+- [Phase 5]: Provided culturally tailored water quick-add presets (+250ml katori/glass, +500ml bottle) with instant local updates and background sync.
+- [Phase 5]: Mandated statutory non-medical disclaimer on all vitals UI and JSON schemas to strictly delineate personal wellness tracking from clinical diagnostics.
+- [Phase 5]: Created non-punitive habit streak tracking that preserves personal best streaks and restarts gently without penalty.
+- [Phase 5]: Built Bento-grid `HealthDashboardScreen` with direct sync telemetry badge in app bar and routed under `/dashboard`.
 
 - [Phase 4]: Adopted Drift with `sqlite3` and SQLCipher encryption pragma configuration for local-as-source-of-truth persistence.
 - [Phase 4]: Created `OutboxQueue` storing operations (`INSERT`, `UPDATE`, `DELETE`) with UUID idempotency keys and automatic startup recovery (`resetInFlightToPending()`).
