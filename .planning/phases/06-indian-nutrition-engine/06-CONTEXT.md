@@ -62,3 +62,4 @@ FitKarma's nutrition moat lies in solving the unique realities of Indian eating 
   - Inbound WhatsApp food logging webhook and server-side NLP transcription (deferred to Phase 12).
   - Computer vision meal scanning / photo food recognition (deferred to Phase 13).
   - Online cloud vector semantic recipe search (`TASK 039A` / pgvector, deferred to Phase 18).
+

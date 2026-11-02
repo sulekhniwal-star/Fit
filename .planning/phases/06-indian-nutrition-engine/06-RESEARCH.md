@@ -70,3 +70,4 @@
 ## 2. Threat Model (ASVS L1)
 - **Sensitive Dietary Patterns**: Food logs can reflect fasting protocols (Navratri, Ramadan, Ekadashi), medical diets (diabetic, low-sodium), or cultural traditions. Must be encrypted at rest with SQLCipher.
 - **Nutritional Claims**: Do not prescribe rigid medical diets; all goals are user-configurable with explicit disclaimers.
+
