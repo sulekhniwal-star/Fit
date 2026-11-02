@@ -10,7 +10,7 @@ FitKarma's roadmap translates the master product specification and 24-phase impl
 
 - [x] **Phase 1: Repository Initialization & Engineering Foundation** - Flutter 3.x project setup, linting, Riverpod structure, logging, and error handling.
 - [x] **Phase 2: Design System & UI Foundation** - Dark theme (`#0D0F12`), glassmorphism, spring physics, and English/Hindi localization.
-- [ ] **Phase 3: Backend, Authentication & User Onboarding** - Supabase schema scaffold, RLS, phone OTP + Google auth, and biometric onboarding wizard.
+- [x] **Phase 3: Backend, Authentication & User Onboarding** - Supabase schema scaffold, RLS, phone OTP + Google auth, and biometric onboarding wizard.
 - [ ] **Phase 4: Offline-First Data Foundation** - Drift + SQLCipher encrypted local storage, persistent mutation outbox, and sync state machine.
 - [ ] **Phase 5: Health Data Core** - Offline and syncable tracking for weight, measurements, sleep, water, mood, vitals, and medication.
 - [ ] **Phase 6: Indian Nutrition Engine** - 500+ Indian food database, household portion units, raw/cooked conversion, tadka slider, and Family Recipe Splitter.
@@ -82,9 +82,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 03-01: Supabase Workspace, Baseline Schema & Universal RLS
-- [ ] 03-02: Supabase Client, Phone OTP & Google Auth Service
-- [ ] 03-03: User Profile Domain & Multi-Step Onboarding Wizard
+- [x] 03-01: Supabase Workspace, Baseline Schema & Universal RLS
+- [x] 03-02: Supabase Client, Phone OTP & Google Auth Service
+- [x] 03-03: User Profile Domain & Multi-Step Onboarding Wizard
 
 ---
 
