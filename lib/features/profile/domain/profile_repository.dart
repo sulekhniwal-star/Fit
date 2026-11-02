@@ -11,3 +11,4 @@ abstract class ProfileRepository {
   /// Permanently removes profile data (DPDP Act erasure compliance).
   Future<Result<void>> deleteProfile(String userId);
 }
+

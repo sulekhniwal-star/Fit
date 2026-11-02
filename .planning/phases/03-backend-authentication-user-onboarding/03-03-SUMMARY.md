@@ -51,3 +51,4 @@
 - `test/features/profile/user_profile_test.dart`
 - `test/features/onboarding/onboarding_wizard_screen_test.dart`
 - `.planning/phases/03-backend-authentication-user-onboarding/03-03-SUMMARY.md`
+

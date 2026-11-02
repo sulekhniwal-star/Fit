@@ -49,3 +49,4 @@ class LocalProfileRepository implements ProfileRepository {
 final profileRepositoryProvider = Provider<ProfileRepository>((ref) {
   return LocalProfileRepository();
 });
+

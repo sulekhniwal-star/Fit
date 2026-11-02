@@ -52,3 +52,4 @@
 - `test/features/auth/auth_repository_test.dart`
 - `test/features/auth/phone_login_screen_test.dart`
 - `.planning/phases/03-backend-authentication-user-onboarding/03-02-SUMMARY.md`
+
