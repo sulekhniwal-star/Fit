@@ -11,7 +11,7 @@ FitKarma's roadmap translates the master product specification and 24-phase impl
 - [x] **Phase 1: Repository Initialization & Engineering Foundation** - Flutter 3.x project setup, linting, Riverpod structure, logging, and error handling.
 - [x] **Phase 2: Design System & UI Foundation** - Dark theme (`#0D0F12`), glassmorphism, spring physics, and English/Hindi localization.
 - [x] **Phase 3: Backend, Authentication & User Onboarding** - Supabase schema scaffold, RLS, phone OTP + Google auth, and biometric onboarding wizard.
-- [ ] **Phase 4: Offline-First Data Foundation** - Drift + SQLCipher encrypted local storage, persistent mutation outbox, and sync state machine.
+- [x] **Phase 4: Offline-First Data Foundation** - Drift + SQLCipher encrypted local storage, persistent mutation outbox, and sync state machine.
 - [ ] **Phase 5: Health Data Core** - Offline and syncable tracking for weight, measurements, sleep, water, mood, vitals, and medication.
 - [ ] **Phase 6: Indian Nutrition Engine** - 500+ Indian food database, household portion units, raw/cooked conversion, tadka slider, and Family Recipe Splitter.
 - [ ] **Phase 7: Workout & Fitness Core** - Structured exercise catalog, offline workout logger, rest timers, and volume progression tracking.
@@ -99,9 +99,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 04-01: Drift Local Database, Schema Foundation & Encryption Contract
-- [ ] 04-02: Persistent Offline Outbox Queue & Sync State Machine Coordinator
-- [ ] 04-03: Supabase Sync Repository Pattern, Realtime Bridge & Offline/Conflict UX
+- [x] 04-01: Drift Local Database, Schema Foundation & Encryption Contract
+- [x] 04-02: Persistent Offline Outbox Queue & Sync State Machine Coordinator
+- [x] 04-03: Supabase Sync Repository Pattern, Realtime Bridge & Offline/Conflict UX
 
 ---
 
