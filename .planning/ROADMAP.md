@@ -131,7 +131,12 @@ Plans:
   2. Cooking yield multipliers accurately distinguish raw vs. cooked nutritional densities.
   3. Tadka slider adjusts estimated oil/fat content with explicit "estimate" labeling.
   4. Family Recipe Splitter correctly computes individual macro shares from batch ingredients.
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 06-01: Food Catalog, Indian Portion Units & Nutrition Domain Foundation
+- [ ] 06-02: Raw vs. Cooked Conversion, Cooking Yield Multipliers & Tadka Fat Slider
+- [ ] 06-03: Family Recipe Splitter, Meal Logging, Dynamic TDEE & Nutrition Dashboard
 
 ---
 
