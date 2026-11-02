@@ -96,7 +96,12 @@ Plans:
   1. All local SQLite database files are encrypted at rest with SQLCipher.
   2. Mutations recorded offline survive app termination and automatically flush upon reconnection.
   3. Conflict resolution tests prove zero data loss during concurrent edits.
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 04-01: Drift Local Database, Schema Foundation & Encryption Contract
+- [ ] 04-02: Persistent Offline Outbox Queue & Sync State Machine Coordinator
+- [ ] 04-03: Supabase Sync Repository Pattern, Realtime Bridge & Offline/Conflict UX
 
 ---
 
