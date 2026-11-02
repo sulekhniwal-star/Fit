@@ -72,3 +72,4 @@ class BoundedTextScale extends StatelessWidget {
     );
   }
 }
+

@@ -11,3 +11,4 @@ abstract class AppSpacing {
   /// Strict minimum touch target dimension (WCAG 2.1)
   static const double minTouchTarget = 48.0;
 }
+

@@ -11,3 +11,4 @@ abstract class AppMotion {
   /// Smooth deceleration curve for layout transitions
   static const Curve smooth = Curves.easeOutCubic;
 }
+

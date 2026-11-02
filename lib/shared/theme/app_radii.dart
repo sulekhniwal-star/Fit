@@ -13,3 +13,4 @@ abstract class AppRadii {
   static const BorderRadius borderLg = BorderRadius.all(Radius.circular(lg));
   static const BorderRadius borderFull = BorderRadius.all(Radius.circular(full));
 }
+

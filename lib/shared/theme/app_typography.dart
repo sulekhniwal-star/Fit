@@ -58,3 +58,4 @@ abstract class AppTypography {
     color: AppColors.background,
   );
 }
+

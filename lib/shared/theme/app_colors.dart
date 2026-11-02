@@ -30,3 +30,4 @@ abstract class AppColors {
   static const Color glassBackground = Color(0xB31F2430); // 70% opacity
   static const Color glassBorder = Color(0x14FFFFFF); // 8% white
 }
+
