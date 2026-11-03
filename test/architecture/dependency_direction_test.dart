@@ -136,7 +136,8 @@ void main() {
           child: const FitKarmaApp(),
         ),
       );
-      expect(find.text('FitKarma'), findsOneWidget);
+      await tester.pumpAndSettle();
+      expect(find.text('Onboarding'), findsOneWidget);
     });
   });
 }

@@ -1,17 +1,17 @@
-import 'package:fitkarma/core/providers/app_providers.dart';
+import 'package:fitkarma/core/routing/app_router.dart';
 import 'package:fitkarma/shared/presentation/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-/// Root Application Widget for FitKarma.
+/// Root Application Widget for FitKarma with declarative GoRouter navigation.
 class FitKarmaApp extends ConsumerWidget {
   const FitKarmaApp({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final config = ref.watch(appConfigProvider);
+    final router = ref.watch(appRouterProvider);
 
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'FitKarma',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -19,31 +19,7 @@ class FitKarmaApp extends ConsumerWidget {
         scaffoldBackgroundColor: AppColors.darkBackground,
         useMaterial3: true,
       ),
-      home: Scaffold(
-        body: Center(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Text(
-                'FitKarma',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: AppColors.textPrimary,
-                ),
-              ),
-              const SizedBox(height: 8.0),
-              Text(
-                'Env: ${config.environment.name}',
-                style: const TextStyle(
-                  fontSize: 14,
-                  color: AppColors.textSecondary,
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
+      routerConfig: router,
     );
   }
 }

@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d91faf27-3ffa-4c9f-bc56-5d720cb9204b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Brain/changelog.md" beforeDir="false" afterPath="$PROJECT_DIR$/Brain/changelog.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brain/implementation_audit.md" beforeDir="false" afterPath="$PROJECT_DIR$/Brain/implementation_audit.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/services/console_logging_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/services/console_logging_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

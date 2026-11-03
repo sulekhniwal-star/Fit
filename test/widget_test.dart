@@ -20,7 +20,8 @@ void main() {
         child: const FitKarmaApp(),
       ),
     );
+    await tester.pumpAndSettle();
 
-    expect(find.text('FitKarma'), findsOneWidget);
+    expect(find.text('Onboarding'), findsOneWidget);
   });
 }
