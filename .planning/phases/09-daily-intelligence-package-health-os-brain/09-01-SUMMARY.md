@@ -21,3 +21,4 @@
      - Hydration Pacing Factor (consumed water vs expected time-of-day pace, 15% weight)
    - Dynamic weight normalization with uncertainty prior weighting for missing telemetry.
    - Explicit statutory non-diagnostic disclaimer: *"Wellness indicator only. Not intended to diagnose, cure, or treat any medical condition."*
+
