@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:math';
+import 'package:shared_preferences/shared_preferences.dart';
 
 abstract class EncryptionKeyProvider {
   /// Returns a 256-bit hex-encoded encryption key for SQLCipher pragma setup.
@@ -10,6 +11,7 @@ abstract class EncryptionKeyProvider {
 }
 
 class DefaultEncryptionKeyProvider implements EncryptionKeyProvider {
+  static const String _keyStorageKey = 'fitkarma_sqlcipher_key_v1';
   String? _cachedKey;
 
   @override
@@ -18,11 +20,23 @@ class DefaultEncryptionKeyProvider implements EncryptionKeyProvider {
       return _cachedKey!;
     }
 
-    // In a real device setup, this key is retrieved from FlutterSecureStorage / OS Keystore.
-    // If none exists, a cryptographically secure 256-bit random key is generated.
-    final key = _generateSecureKey();
-    _cachedKey = key;
-    return key;
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final storedKey = prefs.getString(_keyStorageKey);
+      if (storedKey != null && storedKey.isNotEmpty) {
+        _cachedKey = storedKey;
+        return storedKey;
+      }
+
+      final key = _generateSecureKey();
+      await prefs.setString(_keyStorageKey, key);
+      _cachedKey = key;
+      return key;
+    } catch (_) {
+      final fallbackKey = _generateSecureKey();
+      _cachedKey = fallbackKey;
+      return fallbackKey;
+    }
   }
 
   String _generateSecureKey() {

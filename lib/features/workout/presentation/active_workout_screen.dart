@@ -49,6 +49,11 @@ class _ActiveWorkoutScreenState extends ConsumerState<ActiveWorkoutScreen> {
     if (_session.sets.isEmpty) {
       _loadDefaultInitialExercise();
     }
+
+    // Persist session to local Drift storage so it is immediately queryable
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      ref.read(workoutRepositoryProvider).saveLocal(_session);
+    });
   }
 
   void _loadDefaultInitialExercise() {

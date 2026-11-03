@@ -356,8 +356,8 @@ language plpgsql
 security definer
 as $$
 begin
-    -- Only allow users to erase themselves or service_role
-    if auth.uid() <> target_user_id and current_setting('role') <> 'service_role' then
+    -- Only allow authenticated users to erase themselves or service_role
+    if (auth.uid() is null or auth.uid() <> target_user_id) and current_setting('role', true) <> 'service_role' then
         raise exception 'Unauthorized deletion request';
     end if;
 

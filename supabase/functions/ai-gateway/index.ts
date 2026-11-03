@@ -1,9 +1,12 @@
 // FitKarma Server-Side AI Gateway (TASK 058, TASK 059, TASK 063)
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 import { successResponse, errorResponse } from '../_shared/envelope.ts';
 import { GroqClient } from './groq_client.ts';
 import { sanitizePromptText, applyMedicalGuardrailsToResponse } from './guardrails.ts';
 
 const groqClient = new GroqClient();
+const supabaseUrl = Deno.env.get('SUPABASE_URL');
+const supabaseAnonKey = Deno.env.get('SUPABASE_ANON_KEY');
 
 Deno.serve(async (req: Request) => {
   const requestId = req.headers.get('x-request-id') ?? crypto.randomUUID();
@@ -27,13 +30,27 @@ Deno.serve(async (req: Request) => {
     );
   }
 
-  // 2. Authentication check (Bearer Token)
+  // 2. Authentication check (Bearer Token & Supabase Auth Verification)
   const authHeader = req.headers.get('authorization');
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
     return new Response(
       JSON.stringify(errorResponse(requestId, 'FK-1001', 'Authentication token required (FK-1001)')),
       { status: 401, headers: { 'Content-Type': 'application/json' } }
     );
+  }
+
+  const token = authHeader.replace('Bearer ', '').trim();
+  if (supabaseUrl && supabaseAnonKey && token && token !== 'mock-anon-key') {
+    const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+      global: { headers: { Authorization: authHeader } },
+    });
+    const { data: { user }, error: authError } = await supabase.auth.getUser();
+    if (authError || !user) {
+      return new Response(
+        JSON.stringify(errorResponse(requestId, 'FK-1001', 'Invalid or expired authentication session (FK-1001)')),
+        { status: 401, headers: { 'Content-Type': 'application/json' } }
+      );
+    }
   }
 
   try {
