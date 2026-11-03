@@ -1,3 +1,4 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:logger/logger.dart';
 import 'pii_redactor.dart';
 
@@ -65,4 +66,6 @@ class AppLogger {
     }
   }
 }
+
+final appLoggerProvider = Provider<AppLogger>((ref) => AppLogger());
 

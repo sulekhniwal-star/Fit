@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../features/health/presentation/health_dashboard_screen.dart';
 import '../../features/nutrition/presentation/nutrition_dashboard_screen.dart';
+import '../../features/os_health/presentation/os_health_settings_screen.dart';
 import '../../features/workout/presentation/workout_dashboard_screen.dart';
 import 'route_names.dart';
 
@@ -63,7 +64,7 @@ final appRouterProvider = Provider<GoRouter>((ref) {
       ),
       GoRoute(
         path: RouteNames.settings,
-        builder: (context, state) => const _PlaceholderScreen(title: 'Settings'),
+        builder: (context, state) => const OsHealthSettingsScreen(),
       ),
     ],
   );
