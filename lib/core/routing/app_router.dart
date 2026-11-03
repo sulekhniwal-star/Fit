@@ -154,9 +154,7 @@ class GoRouterAppRouter implements AppRouterContract {
 
   @override
   String get currentRoute {
-    final lastMatch = _router.routerDelegate.currentConfiguration.last;
-    final matchList = lastMatch is RouteMatchList ? lastMatch : null;
-    return matchList?.uri.toString() ?? '';
+    return _router.routerDelegate.currentConfiguration.uri.toString();
   }
 }
 

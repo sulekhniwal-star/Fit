@@ -1,4 +1,4 @@
-import 'package:fitkarma/shared/presentation/theme/app_colors.dart';
+import 'package:fitkarma/core/constants/app_constants.dart';
 import 'package:flutter/material.dart';
 
 /// Lightweight placeholder screen for unbuilt modular routes.
@@ -10,7 +10,7 @@ class PlaceholderScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.darkBackground,
+      backgroundColor: const Color(AppConstants.primaryDarkBackgroundHex),
       appBar: AppBar(
         title: Text(title),
         backgroundColor: Colors.transparent,
@@ -20,18 +20,15 @@ class PlaceholderScreen extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(
-              title,
-              style: const TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: AppColors.textPrimary,
-              ),
+            const Icon(
+              Icons.dashboard_customize_outlined,
+              size: 48,
+              color: Colors.white70,
             ),
-            const SizedBox(height: 8.0),
-            const Text(
-              'Placeholder Route',
-              style: TextStyle(fontSize: 14, color: AppColors.textSecondary),
+            const SizedBox(height: 12.0),
+            Text(
+              'Route: $title',
+              style: const TextStyle(fontSize: 16, color: Colors.white60),
             ),
           ],
         ),

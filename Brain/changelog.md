@@ -4,6 +4,43 @@ All notable changes, documentation audits, and architecture decisions for FitKar
 
 ---
 
+## [2026-11-04] — Navigation and Route Architecture (TASK 006)
+
+### 1. Declarative Routing Foundation
+- Added `go_router: ^14.8.1` to `pubspec.yaml`.
+- Centralized all route definitions in `lib/core/routing/app_routes.dart`:
+  - Public / unauthenticated: `/onboarding`, `/auth/login`, `/auth/otp`.
+  - Authenticated top-level areas: `/dashboard` (home/DIP), `/nutrition`, `/nutrition/log`, `/workouts`, `/sleep`, `/recovery`, `/ai/meal-analyze`, `/family`, `/subscriptions`, `/settings`, `/data-vault`.
+- Created reactive authentication state notifier in `lib/core/routing/auth_nav_state.dart` (`AuthNavNotifier`, `authNavNotifierProvider`).
+
+### 2. Authentication Boundaries & Reactive Redirection
+- Configured declarative redirect in `createRouter` (`lib/core/routing/app_router.dart`):
+  - Unauthenticated access to protected routes redirects immediately to `/onboarding`.
+  - Authenticated access to public onboarding/login/otp routes redirects to `/dashboard`.
+  - Changing authentication state automatically re-evaluates routes via `refreshListenable`.
+- Implemented `GoRouterAppRouter` providing concrete implementation of `AppRouterContract`.
+- Created lightweight `PlaceholderScreen` using core constants without cross-layer dependency leaks.
+- Updated `FitKarmaApp` in `lib/app/fitkarma_app.dart` to use `MaterialApp.router`.
+
+### 3. Verification & Quality Gates
+- Added comprehensive unit and widget tests in `test/core/routing/app_router_test.dart` (16 tests):
+  - Initial unauthenticated landing on Onboarding.
+  - Redirect from protected routes to Onboarding when unauthenticated.
+  - Public route access for Login and OTP.
+  - Redirect from Onboarding to Dashboard when authenticated.
+  - Verified access to all 11 authenticated top-level product areas.
+  - Verified reactive route updates on dynamic authentication status changes.
+- `dart format .`: Formatted cleanly.
+- `flutter analyze`: 0 issues found.
+- `flutter test`: 39/39 tests passed.
+- `node scripts/doc_link_check.js`: 0 errors.
+- `node scripts/doc_lint.js`: 0 errors.
+
+### 4. Next Step
+- Ready for TASK 007 (Error and Result Primitives).
+
+---
+
 ## [2026-11-04] — Riverpod Application Architecture (TASK 005)
 
 ### 1. State Management & Dependency Injection
