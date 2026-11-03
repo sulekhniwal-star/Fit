@@ -1,4 +1,4 @@
-import 'package:fitkarma/main.dart';
+import 'package:fitkarma/app/fitkarma_app.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

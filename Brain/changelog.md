@@ -4,6 +4,35 @@ All notable changes, documentation audits, and architecture decisions for FitKar
 
 ---
 
+## [2026-11-03] — Establish Project Folder Architecture (TASK 004)
+
+### 1. Folder Structure & Modular Domain Scaffolding
+- Implemented modular folder architecture per `Brain/architecture.md`:
+  - `lib/app/`: Bootstrap lifecycle (`bootstrap.dart`) and root widget (`fitkarma_app.dart`).
+  - `lib/core/`: Downstream foundational contracts (`constants/`, `database/`, `errors/`, `routing/`, `services/`, `sync/`).
+  - `lib/shared/`: Reusable presentation primitives (`theme/app_colors.dart`, `widgets/bento_card.dart`).
+  - `lib/features/`: Modular domain boundaries for `auth`, `profile`, `dashboard`, `nutrition`, `health_tracking`, `family`, `payments`, and `data_vault`.
+  - `test/helpers/`: Reusable test harnesses and pump utilities (`test_helpers.dart`).
+
+### 2. Dependency Direction Enforcement
+- Created automated architecture test (`test/architecture/dependency_direction_test.dart`):
+  - Enforces Rule 1: `lib/core/` must never import from `features/` or `shared/`.
+  - Enforces Rule 2: `lib/shared/` must never import from `features/`.
+  - Enforces Rule 3: All feature modules exist as isolated domains.
+- Added widget tests for `BentoCard` and `FitKarmaApp`.
+
+### 3. Verification & Quality Gates
+- `dart format .`: Formatted cleanly.
+- `flutter analyze`: 0 issues found.
+- `flutter test`: 18/18 tests passed.
+- `node scripts/doc_link_check.js`: 0 errors.
+- `node scripts/doc_lint.js`: 0 errors.
+
+### 4. Next Step
+- Ready for TASK 005 (Riverpod Application Architecture).
+
+---
+
 ## [2026-11-03] — Git Ignore, Environment, and Secret Boundaries (TASK 003)
 
 ### 1. Git Ignore & Boundary Protection
