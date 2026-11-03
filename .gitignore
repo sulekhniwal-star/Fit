@@ -46,3 +46,40 @@ app.*.map.json
 
 # Widget Preview related
 .widget_preview/
+
+# ==============================================================================
+# FitKarma Secret & Environment Boundaries
+# ==============================================================================
+# Environment files (never commit real credentials)
+.env
+.env.*
+!.env.example
+
+# Local SQLite databases & backups
+*.db
+*.sqlite
+*.sqlite-journal
+*.sqlite3
+
+# Keys, certificates, and credentials
+*.jks
+*.keystore
+*.p12
+*.pem
+*.key
+*.mobileprovision
+*.cer
+
+# Sentry & Crashlytics private properties
+sentry.properties
+
+# Platform credentials containing secrets
+google-services.json
+GoogleService-Info.plist
+ios/Runner/GoogleService-Info.plist
+android/app/google-services.json
+
+# Supabase local environment secrets
+supabase/.env
+supabase/.env.local
+supabase/.temp/

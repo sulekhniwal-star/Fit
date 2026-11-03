@@ -4,6 +4,28 @@ All notable changes, documentation audits, and architecture decisions for FitKar
 
 ---
 
+## [2026-11-03] — Git Ignore, Environment, and Secret Boundaries (TASK 003)
+
+### 1. Git Ignore & Boundary Protection
+- Hardened `.gitignore` to explicitly exclude all `.env` and `.env.*` files (retaining strictly `.env.example`).
+- Excluded private keystores, certificates, and provisioning profiles (`*.jks`, `*.keystore`, `*.p12`, `*.key`, `*.mobileprovision`).
+- Excluded local SQLite databases (`*.db`, `*.sqlite`, `*.sqlite3`).
+- Excluded platform credentials (`google-services.json`, `GoogleService-Info.plist`) and Supabase local secrets (`supabase/.env*`).
+
+### 2. Environment Configuration Template
+- Created `.env.example` defining public client variables (`APP_ENV`, `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `SENTRY_DSN`, `ENABLE_ANALYTICS`).
+- Explicitly documented that server secrets (`SUPABASE_SERVICE_ROLE_KEY`, `RAZORPAY_KEY_SECRET`, `RAZORPAY_WEBHOOK_SECRET`, `GROQ_API_KEY`, `WHATSAPP_ACCESS_TOKEN`, `WHATSAPP_WEBHOOK_VERIFY_TOKEN`) are strictly prohibited in the client.
+
+### 3. Client Secret Boundary Enforcement
+- Implemented `AppConfig` and `SecurityViolationException` in `lib/core/config/app_config.dart`.
+- Added runtime and compile-time validation blocking all prohibited server keys if supplied to the client.
+- Added 12 unit tests in `test/core/config/app_config_test.dart` verifying parsing, secret rejection, and `.gitignore` integrity.
+
+### 4. Next Step
+- Ready for TASK 004 (Establish Project Folder Architecture).
+
+---
+
 ## [2026-11-03] — Bootstrap Flutter Application & Smoke Test (TASK 002)
 
 ### 1. Flutter Project Scaffold
