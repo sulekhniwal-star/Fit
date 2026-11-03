@@ -4,6 +4,44 @@ All notable changes, documentation audits, and architecture decisions for FitKar
 
 ---
 
+## [2026-11-04] — Feature Flags and Backend-Configurable Remote Config (TASK 008A) — Phase 0 Gate Passed
+
+### 1. Dynamic Plan Configuration
+- Implemented `PlanConfig` in `lib/core/config/plan_config.dart`:
+  - Plan names, prices, billing cadence, and entitlements are backend-configurable, never hard-coded architectural constants.
+  - Defined standard defaults per master documentation: `Yogi Free` (₹0), `Karma Pro` (₹199/month), `FitKarma Elite` (₹1999/month), and `Sachet Sprint` (₹49/one-time).
+
+### 2. Feature Flags & Kill Switches
+- Implemented `FeatureFlags` in `lib/core/config/feature_flags.dart`:
+  - **Feature Gates**: `photoLoggingEnabled` (P1), `aqiWeatherEnabled` (P1/P2), `vernacularLanguagesEnabled` (P2), `familyDashboardEnabled` (P1/P2), `cgmPipelineEnabled` (P2).
+  - **Kill Switches**: `aiEnabled`, `whatsappEnabled`, `externalProvidersEnabled`.
+  - Added dynamic evaluation via `isFeatureEnabled(key)`.
+
+### 3. Offline Caching & Fallback Service
+- Implemented `RemoteConfig` and `RemoteConfigService` in `lib/core/config/`:
+  - In-memory and local cache persistence for seamless offline resilience.
+  - `RemoteConfig.defaultConfig()` provides safe fallback when network is unavailable.
+  - Secret boundary enforcement: rejects remote configuration updates containing prohibited server keys (`SUPABASE_SERVICE_ROLE_KEY`, `RAZORPAY_KEY_SECRET`, etc.).
+- Wired `remoteConfigServiceProvider`, `remoteConfigProvider`, and `featureFlagsProvider` into Riverpod (`lib/core/providers/app_providers.dart`).
+
+### 4. Phase 0 Gate Completion
+- **Phase 0 (Repository Initialization & Engineering Foundation) Gate is COMPLETE and VERIFIED**:
+  - Repo audited (TASK 001).
+  - Documentation contract verified with doc-lint & link-check scripts (TASK 001A).
+  - Clean Flutter app scaffold booted targeting Android and iOS (TASK 002).
+  - Git ignore, environment template, and secret boundaries established (TASK 003).
+  - Project folder architecture and strict dependency direction verified (TASK 004).
+  - Riverpod state container and DI foundation verified (TASK 005).
+  - Auth-aware GoRouter navigation skeleton verified (TASK 006).
+  - FK-xxxx error taxonomy and Result primitives verified (TASK 007).
+  - Observability, PII redactor, and Sentry integration boundary verified (TASK 008).
+  - Backend-configurable remote config, flags, and kill switches verified (TASK 008A).
+
+### 5. Next Step
+- Ready for PHASE 1: Design System & UI Foundation (starting with TASK 009 — FitKarma Design System).
+
+---
+
 ## [2026-11-04] — Logging and Observability Foundation (TASK 008)
 
 ### 1. PII Scrubbing & Secret Masking

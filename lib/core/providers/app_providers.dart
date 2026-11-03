@@ -1,4 +1,8 @@
 import 'package:fitkarma/core/config/app_config.dart';
+import 'package:fitkarma/core/config/feature_flags.dart';
+import 'package:fitkarma/core/config/remote_config.dart';
+import 'package:fitkarma/core/config/remote_config_service.dart';
+import 'package:fitkarma/core/config/remote_config_service_contract.dart';
 import 'package:fitkarma/core/database/local_database_contract.dart';
 import 'package:fitkarma/core/services/console_logging_service.dart';
 import 'package:fitkarma/core/services/crash_reporter_contract.dart';
@@ -35,6 +39,25 @@ final loggingServiceProvider = Provider<LoggingServiceContract>((ref) {
     redactor: redactor,
     crashReporter: crashReporter,
   );
+});
+
+/// Remote configuration and feature-flag service provider.
+final remoteConfigServiceProvider = Provider<RemoteConfigServiceContract>((
+  ref,
+) {
+  final logger = ref.watch(loggingServiceProvider);
+  return RemoteConfigService(logger: logger);
+});
+
+/// Active [RemoteConfig] snapshot provider.
+final remoteConfigProvider = Provider<RemoteConfig>((ref) {
+  final service = ref.watch(remoteConfigServiceProvider);
+  return service.currentConfig;
+});
+
+/// Active [FeatureFlags] snapshot provider.
+final featureFlagsProvider = Provider<FeatureFlags>((ref) {
+  return ref.watch(remoteConfigProvider).flags;
 });
 
 /// Contract provider for local database persistence (Drift + SQLCipher).
