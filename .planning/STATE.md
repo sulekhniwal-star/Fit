@@ -9,17 +9,17 @@ See: `.planning/PROJECT.md` (updated 2026-11-03)
 
 ## Current Position
 
-Phase: 11 of 24 (WhatsApp AI Logging)  
-Plan: 0 of 3 in current phase  
-Status: Ready to execute (/gsd-execute-phase 11)  
-Last activity: 2026-11-03 — Phase 11 planned (3 plans created: 11-01, 11-02, 11-03).
+Phase: 12 of 24 (Festivals, Fasting, AQI & India-First UX)  
+Plan: 0 of TBD in current phase  
+Status: Phase 11 complete, ready to plan Phase 12 (/gsd-plan-phase 12)  
+Last activity: 2026-11-03 — Phase 11 executed (3 plans completed: 11-01, 11-02, 11-03).
 
-Progress: [██████████] 41.7%
+Progress: [███████████] 45.8%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 30
+- Total plans completed: 33
 - Average duration: 11.2 min
 - Total execution time: 5.6 hours
 
@@ -37,6 +37,7 @@ Progress: [██████████] 41.7%
 | 8. OS Health Integration | 3 | 35 min | 11.6 min |
 | 9. Daily Intelligence Package & Health OS Brain | 3 | 35 min | 11.6 min |
 | 10. AI Foundation & Server-Side Gateway | 3 | 35 min | 11.6 min |
+| 11. WhatsApp AI Logging | 3 | 35 min | 11.6 min |
 
 **Recent Trend:**
 - Last 5 plans: [11m, 12m, 11m, 12m, 12m]
@@ -49,6 +50,13 @@ Progress: [██████████] 41.7%
 ### Decisions
 
 Decisions are logged in `PROJECT.md` Key Decisions table.
+
+Phase 11 decisions:
+- [Phase 11]: WhatsApp Business Cloud API v21.0 integration implemented via Supabase Edge Function (`whatsapp-webhook`) with HMAC-SHA256 signature verification (`X-Hub-Signature-256`) and constant-time comparison to prevent timing attacks.
+- [Phase 11]: Inbound sender phone numbers normalized to strict E.164 (+91XXXXXXXXXX) and resolved against `public.profiles.phone_number`. Unlinked senders receive an automated onboarding invitation with app download links.
+- [Phase 11]: DPDP Act 2023 compliance strictly enforced: voice notes downloaded in-memory, transcribed via Groq Whisper (`whisper-large-v3`), and memory buffers are immediately purged (`Uint8Array.fill(0)`). Zero permanent audio retention on server or cloud storage.
+- [Phase 11]: Medical Boundary Guardrail (TASK 063, ADR-005): automatically detects clinical inquiries or curative claims in WhatsApp messages and issues immediate statutory refusal messages with emergency referrals.
+- [Phase 11]: Human-in-the-Loop Confirmation (TASK 060, ADR-005): raw AI meal extractions are presented as Meta Quick Reply interactive cards (`✅ Confirm & Log`, `❌ Cancel`) with a 6-hour expiration window; meals are only committed to `public.food_logs` and synced to Drift upon explicit user tap.
 
 Phase 10 decisions:
 - [Phase 10]: Multi-model task routing deployed on Supabase Edge Function (`ai-gateway`) via Groq: `llama-3.3-70b-versatile` for natural text meal parsing, `llama-3.2-11b-vision-preview` for photo food recognition, and `llama-3.1-8b-instant` for low-latency Hinglish coaching.
