@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../features/health/presentation/health_dashboard_screen.dart';
 import '../../features/nutrition/presentation/nutrition_dashboard_screen.dart';
+import '../../features/workout/presentation/workout_dashboard_screen.dart';
 import 'route_names.dart';
 
 final isAuthenticatedProvider = StateProvider<bool>((ref) => false);
@@ -50,7 +51,7 @@ final appRouterProvider = Provider<GoRouter>((ref) {
       ),
       GoRoute(
         path: RouteNames.workouts,
-        builder: (context, state) => const _PlaceholderScreen(title: 'Workouts'),
+        builder: (context, state) => const WorkoutDashboardScreen(),
       ),
       GoRoute(
         path: RouteNames.profile,
