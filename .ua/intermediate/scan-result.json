@@ -1,0 +1,2333 @@
+{
+  "name": "fitkarma",
+  "description": "FitKarma — India's Intelligent Health Operating System built with Flutter, Riverpod, Drift, and Supabase. Note: this project has over 100 source files; consider scoping analysis to a subdirectory for faster results.",
+  "languages": [
+    "c",
+    "config",
+    "dart",
+    "json",
+    "kotlin",
+    "markdown",
+    "pbxproj",
+    "properties",
+    "sql",
+    "storyboard",
+    "swift",
+    "toml",
+    "typescript",
+    "unknown",
+    "xcconfig",
+    "xcscheme",
+    "xcsettings",
+    "xcworkspacedata",
+    "xml",
+    "yaml"
+  ],
+  "frameworks": [
+    "Flutter",
+    "Riverpod",
+    "Drift",
+    "Supabase"
+  ],
+  "files": [
+    {
+      "path": ".env.example",
+      "language": "config",
+      "sizeLines": 13,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".metadata",
+      "language": "unknown",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".planning/PROJECT.md",
+      "language": "markdown",
+      "sizeLines": 72,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/REQUIREMENTS.md",
+      "language": "markdown",
+      "sizeLines": 146,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/ROADMAP.md",
+      "language": "markdown",
+      "sizeLines": 401,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/STATE.md",
+      "language": "markdown",
+      "sizeLines": 130,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/config.json",
+      "language": "json",
+      "sizeLines": 64,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".planning/phases/01-repository-initialization-engineering-foundation/01-01-PLAN.md",
+      "language": "markdown",
+      "sizeLines": 113,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/01-repository-initialization-engineering-foundation/01-01-SUMMARY.md",
+      "language": "markdown",
+      "sizeLines": 72,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/01-repository-initialization-engineering-foundation/01-02-PLAN.md",
+      "language": "markdown",
+      "sizeLines": 120,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/01-repository-initialization-engineering-foundation/01-02-SUMMARY.md",
+      "language": "markdown",
+      "sizeLines": 78,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/01-repository-initialization-engineering-foundation/01-03-PLAN.md",
+      "language": "markdown",
+      "sizeLines": 147,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/01-repository-initialization-engineering-foundation/01-03-SUMMARY.md",
+      "language": "markdown",
+      "sizeLines": 92,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/01-repository-initialization-engineering-foundation/01-CONTEXT.md",
+      "language": "markdown",
+      "sizeLines": 102,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/01-repository-initialization-engineering-foundation/01-RESEARCH.md",
+      "language": "markdown",
+      "sizeLines": 127,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/01-repository-initialization-engineering-foundation/01-VERIFICATION.md",
+      "language": "markdown",
+      "sizeLines": 49,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/02-design-system-ui-foundation/02-01-PLAN.md",
+      "language": "markdown",
+      "sizeLines": 110,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/02-design-system-ui-foundation/02-01-SUMMARY.md",
+      "language": "markdown",
+      "sizeLines": 67,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/02-design-system-ui-foundation/02-02-PLAN.md",
+      "language": "markdown",
+      "sizeLines": 102,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/02-design-system-ui-foundation/02-02-SUMMARY.md",
+      "language": "markdown",
+      "sizeLines": 64,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/02-design-system-ui-foundation/02-03-PLAN.md",
+      "language": "markdown",
+      "sizeLines": 136,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/02-design-system-ui-foundation/02-03-SUMMARY.md",
+      "language": "markdown",
+      "sizeLines": 78,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/02-design-system-ui-foundation/02-CONTEXT.md",
+      "language": "markdown",
+      "sizeLines": 78,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/02-design-system-ui-foundation/02-RESEARCH.md",
+      "language": "markdown",
+      "sizeLines": 75,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/02-design-system-ui-foundation/02-VERIFICATION.md",
+      "language": "markdown",
+      "sizeLines": 54,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/03-backend-authentication-user-onboarding/03-01-PLAN.md",
+      "language": "markdown",
+      "sizeLines": 132,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/03-backend-authentication-user-onboarding/03-01-SUMMARY.md",
+      "language": "markdown",
+      "sizeLines": 68,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/03-backend-authentication-user-onboarding/03-02-PLAN.md",
+      "language": "markdown",
+      "sizeLines": 143,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/03-backend-authentication-user-onboarding/03-02-SUMMARY.md",
+      "language": "markdown",
+      "sizeLines": 55,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/03-backend-authentication-user-onboarding/03-03-PLAN.md",
+      "language": "markdown",
+      "sizeLines": 120,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/03-backend-authentication-user-onboarding/03-03-SUMMARY.md",
+      "language": "markdown",
+      "sizeLines": 54,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/03-backend-authentication-user-onboarding/03-CONTEXT.md",
+      "language": "markdown",
+      "sizeLines": 76,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/03-backend-authentication-user-onboarding/03-RESEARCH.md",
+      "language": "markdown",
+      "sizeLines": 70,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/03-backend-authentication-user-onboarding/03-VERIFICATION.md",
+      "language": "markdown",
+      "sizeLines": 78,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/04-offline-first-data-foundation/04-01-PLAN.md",
+      "language": "markdown",
+      "sizeLines": 105,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/04-offline-first-data-foundation/04-01-SUMMARY.md",
+      "language": "markdown",
+      "sizeLines": 45,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/04-offline-first-data-foundation/04-02-PLAN.md",
+      "language": "markdown",
+      "sizeLines": 111,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/04-offline-first-data-foundation/04-02-SUMMARY.md",
+      "language": "markdown",
+      "sizeLines": 49,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/04-offline-first-data-foundation/04-03-PLAN.md",
+      "language": "markdown",
+      "sizeLines": 118,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/04-offline-first-data-foundation/04-03-SUMMARY.md",
+      "language": "markdown",
+      "sizeLines": 56,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/04-offline-first-data-foundation/04-CONTEXT.md",
+      "language": "markdown",
+      "sizeLines": 55,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/04-offline-first-data-foundation/04-RESEARCH.md",
+      "language": "markdown",
+      "sizeLines": 67,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/04-offline-first-data-foundation/04-VERIFICATION.md",
+      "language": "markdown",
+      "sizeLines": 80,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/05-health-data-core/05-01-PLAN.md",
+      "language": "markdown",
+      "sizeLines": 120,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/05-health-data-core/05-01-SUMMARY.md",
+      "language": "markdown",
+      "sizeLines": 59,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/05-health-data-core/05-02-PLAN.md",
+      "language": "markdown",
+      "sizeLines": 121,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/05-health-data-core/05-02-SUMMARY.md",
+      "language": "markdown",
+      "sizeLines": 53,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/05-health-data-core/05-03-PLAN.md",
+      "language": "markdown",
+      "sizeLines": 118,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/05-health-data-core/05-03-SUMMARY.md",
+      "language": "markdown",
+      "sizeLines": 45,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/05-health-data-core/05-CONTEXT.md",
+      "language": "markdown",
+      "sizeLines": 52,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/05-health-data-core/05-RESEARCH.md",
+      "language": "markdown",
+      "sizeLines": 46,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/05-health-data-core/05-VERIFICATION.md",
+      "language": "markdown",
+      "sizeLines": 60,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/06-indian-nutrition-engine/06-01-PLAN.md",
+      "language": "markdown",
+      "sizeLines": 121,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/06-indian-nutrition-engine/06-01-SUMMARY.md",
+      "language": "markdown",
+      "sizeLines": 37,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/06-indian-nutrition-engine/06-02-PLAN.md",
+      "language": "markdown",
+      "sizeLines": 132,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/06-indian-nutrition-engine/06-02-SUMMARY.md",
+      "language": "markdown",
+      "sizeLines": 36,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/06-indian-nutrition-engine/06-03-PLAN.md",
+      "language": "markdown",
+      "sizeLines": 139,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/06-indian-nutrition-engine/06-03-SUMMARY.md",
+      "language": "markdown",
+      "sizeLines": 44,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/06-indian-nutrition-engine/06-CONTEXT.md",
+      "language": "markdown",
+      "sizeLines": 65,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/06-indian-nutrition-engine/06-RESEARCH.md",
+      "language": "markdown",
+      "sizeLines": 73,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/06-indian-nutrition-engine/06-VERIFICATION.md",
+      "language": "markdown",
+      "sizeLines": 61,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/07-workout-fitness-core/07-01-PLAN.md",
+      "language": "markdown",
+      "sizeLines": 117,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/07-workout-fitness-core/07-01-SUMMARY.md",
+      "language": "markdown",
+      "sizeLines": 26,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/07-workout-fitness-core/07-02-PLAN.md",
+      "language": "markdown",
+      "sizeLines": 125,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/07-workout-fitness-core/07-02-SUMMARY.md",
+      "language": "markdown",
+      "sizeLines": 20,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/07-workout-fitness-core/07-03-PLAN.md",
+      "language": "markdown",
+      "sizeLines": 121,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/07-workout-fitness-core/07-03-SUMMARY.md",
+      "language": "markdown",
+      "sizeLines": 21,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/07-workout-fitness-core/07-CONTEXT.md",
+      "language": "markdown",
+      "sizeLines": 47,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/07-workout-fitness-core/07-RESEARCH.md",
+      "language": "markdown",
+      "sizeLines": 56,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/08-os-health-integration/08-01-PLAN.md",
+      "language": "markdown",
+      "sizeLines": 116,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/08-os-health-integration/08-01-SUMMARY.md",
+      "language": "markdown",
+      "sizeLines": 20,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/08-os-health-integration/08-02-PLAN.md",
+      "language": "markdown",
+      "sizeLines": 117,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/08-os-health-integration/08-02-SUMMARY.md",
+      "language": "markdown",
+      "sizeLines": 17,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/08-os-health-integration/08-03-PLAN.md",
+      "language": "markdown",
+      "sizeLines": 123,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/08-os-health-integration/08-03-SUMMARY.md",
+      "language": "markdown",
+      "sizeLines": 25,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/08-os-health-integration/08-CONTEXT.md",
+      "language": "markdown",
+      "sizeLines": 31,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/08-os-health-integration/08-RESEARCH.md",
+      "language": "markdown",
+      "sizeLines": 30,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/09-daily-intelligence-package-health-os-brain/09-01-PLAN.md",
+      "language": "markdown",
+      "sizeLines": 76,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/09-daily-intelligence-package-health-os-brain/09-01-SUMMARY.md",
+      "language": "markdown",
+      "sizeLines": 24,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/09-daily-intelligence-package-health-os-brain/09-02-PLAN.md",
+      "language": "markdown",
+      "sizeLines": 54,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/09-daily-intelligence-package-health-os-brain/09-02-SUMMARY.md",
+      "language": "markdown",
+      "sizeLines": 26,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/09-daily-intelligence-package-health-os-brain/09-03-PLAN.md",
+      "language": "markdown",
+      "sizeLines": 59,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/09-daily-intelligence-package-health-os-brain/09-03-SUMMARY.md",
+      "language": "markdown",
+      "sizeLines": 24,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/09-daily-intelligence-package-health-os-brain/09-CONTEXT.md",
+      "language": "markdown",
+      "sizeLines": 33,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/09-daily-intelligence-package-health-os-brain/09-RESEARCH.md",
+      "language": "markdown",
+      "sizeLines": 62,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/10-ai-foundation-server-side-gateway/10-01-PLAN.md",
+      "language": "markdown",
+      "sizeLines": 53,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/10-ai-foundation-server-side-gateway/10-01-SUMMARY.md",
+      "language": "markdown",
+      "sizeLines": 33,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/10-ai-foundation-server-side-gateway/10-02-PLAN.md",
+      "language": "markdown",
+      "sizeLines": 80,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/10-ai-foundation-server-side-gateway/10-03-PLAN.md",
+      "language": "markdown",
+      "sizeLines": 49,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/10-ai-foundation-server-side-gateway/10-CONTEXT.md",
+      "language": "markdown",
+      "sizeLines": 45,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".planning/phases/10-ai-foundation-server-side-gateway/10-RESEARCH.md",
+      "language": "markdown",
+      "sizeLines": 63,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "Brain/admob_spec.md",
+      "language": "markdown",
+      "sizeLines": 37,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "Brain/api_contract.md",
+      "language": "markdown",
+      "sizeLines": 69,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "Brain/architecture.md",
+      "language": "markdown",
+      "sizeLines": 111,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "Brain/changelog.md",
+      "language": "markdown",
+      "sizeLines": 55,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "Brain/data_model.md",
+      "language": "markdown",
+      "sizeLines": 141,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "Brain/data_sources.md",
+      "language": "markdown",
+      "sizeLines": 31,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "Brain/decisions.md",
+      "language": "markdown",
+      "sizeLines": 436,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "Brain/error_handling.md",
+      "language": "markdown",
+      "sizeLines": 44,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "Brain/github_actions.md",
+      "language": "markdown",
+      "sizeLines": 37,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "Brain/implementation_audit.md",
+      "language": "markdown",
+      "sizeLines": 86,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "Brain/master_rules.md",
+      "language": "markdown",
+      "sizeLines": 77,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "Brain/microtasks.md",
+      "language": "markdown",
+      "sizeLines": 25,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "Brain/pdr.md",
+      "language": "markdown",
+      "sizeLines": 130,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "Brain/production_checklist.md",
+      "language": "markdown",
+      "sizeLines": 70,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "Brain/scrapping_spec.md",
+      "language": "markdown",
+      "sizeLines": 30,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "Brain/security.md",
+      "language": "markdown",
+      "sizeLines": 66,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "Brain/testing.md",
+      "language": "markdown",
+      "sizeLines": 91,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "Brain/trd.md",
+      "language": "markdown",
+      "sizeLines": 83,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "Brain/ui_spec.md",
+      "language": "markdown",
+      "sizeLines": 115,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "CLAUDE.md",
+      "language": "markdown",
+      "sizeLines": 62,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FitKarma_Master_Documentation_v1.0.md",
+      "language": "markdown",
+      "sizeLines": 437,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "sizeLines": 17,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "Todo.md",
+      "language": "markdown",
+      "sizeLines": 4776,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "analysis_options.yaml",
+      "language": "yaml",
+      "sizeLines": 22,
+      "fileCategory": "config"
+    },
+    {
+      "path": "android/app/build.gradle.kts",
+      "language": "kotlin",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "android/app/src/debug/AndroidManifest.xml",
+      "language": "xml",
+      "sizeLines": 7,
+      "fileCategory": "config"
+    },
+    {
+      "path": "android/app/src/main/AndroidManifest.xml",
+      "language": "xml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "android/app/src/main/kotlin/com/sulekhniwal/fitkarma/MainActivity.kt",
+      "language": "kotlin",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": "android/app/src/main/res/drawable-v21/launch_background.xml",
+      "language": "xml",
+      "sizeLines": 12,
+      "fileCategory": "config"
+    },
+    {
+      "path": "android/app/src/main/res/drawable/launch_background.xml",
+      "language": "xml",
+      "sizeLines": 12,
+      "fileCategory": "config"
+    },
+    {
+      "path": "android/app/src/main/res/values-night/styles.xml",
+      "language": "xml",
+      "sizeLines": 18,
+      "fileCategory": "config"
+    },
+    {
+      "path": "android/app/src/main/res/values/styles.xml",
+      "language": "xml",
+      "sizeLines": 18,
+      "fileCategory": "config"
+    },
+    {
+      "path": "android/app/src/profile/AndroidManifest.xml",
+      "language": "xml",
+      "sizeLines": 7,
+      "fileCategory": "config"
+    },
+    {
+      "path": "android/build.gradle.kts",
+      "language": "kotlin",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "android/gradle.properties",
+      "language": "properties",
+      "sizeLines": 9,
+      "fileCategory": "config"
+    },
+    {
+      "path": "android/gradle/wrapper/gradle-wrapper.properties",
+      "language": "properties",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    },
+    {
+      "path": "android/settings.gradle.kts",
+      "language": "kotlin",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "ios/Flutter/AppFrameworkInfo.plist",
+      "language": "xml",
+      "sizeLines": 24,
+      "fileCategory": "config"
+    },
+    {
+      "path": "ios/Flutter/Debug.xcconfig",
+      "language": "xcconfig",
+      "sizeLines": 1,
+      "fileCategory": "code"
+    },
+    {
+      "path": "ios/Flutter/Release.xcconfig",
+      "language": "xcconfig",
+      "sizeLines": 1,
+      "fileCategory": "code"
+    },
+    {
+      "path": "ios/Runner.xcodeproj/project.pbxproj",
+      "language": "pbxproj",
+      "sizeLines": 647,
+      "fileCategory": "code"
+    },
+    {
+      "path": "ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata",
+      "language": "xcworkspacedata",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist",
+      "language": "xml",
+      "sizeLines": 8,
+      "fileCategory": "config"
+    },
+    {
+      "path": "ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings",
+      "language": "xcsettings",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme",
+      "language": "xcscheme",
+      "sizeLines": 119,
+      "fileCategory": "code"
+    },
+    {
+      "path": "ios/Runner.xcworkspace/contents.xcworkspacedata",
+      "language": "xcworkspacedata",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist",
+      "language": "xml",
+      "sizeLines": 8,
+      "fileCategory": "config"
+    },
+    {
+      "path": "ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings",
+      "language": "xcsettings",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "ios/Runner/AppDelegate.swift",
+      "language": "swift",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "language": "json",
+      "sizeLines": 122,
+      "fileCategory": "config"
+    },
+    {
+      "path": "ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json",
+      "language": "json",
+      "sizeLines": 23,
+      "fileCategory": "config"
+    },
+    {
+      "path": "ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md",
+      "language": "markdown",
+      "sizeLines": 4,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "ios/Runner/Base.lproj/LaunchScreen.storyboard",
+      "language": "storyboard",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": "ios/Runner/Base.lproj/Main.storyboard",
+      "language": "storyboard",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "ios/Runner/Info.plist",
+      "language": "xml",
+      "sizeLines": 70,
+      "fileCategory": "config"
+    },
+    {
+      "path": "ios/Runner/Runner-Bridging-Header.h",
+      "language": "c",
+      "sizeLines": 1,
+      "fileCategory": "code"
+    },
+    {
+      "path": "ios/Runner/SceneDelegate.swift",
+      "language": "swift",
+      "sizeLines": 6,
+      "fileCategory": "code"
+    },
+    {
+      "path": "ios/RunnerTests/RunnerTests.swift",
+      "language": "swift",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/README.md",
+      "language": "markdown",
+      "sizeLines": 23,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "lib/app/router/app_router.dart",
+      "language": "dart",
+      "sizeLines": 94,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/app/router/route_names.dart",
+      "language": "dart",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/core/config/app_config.dart",
+      "language": "dart",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/core/config/feature_flags.dart",
+      "language": "dart",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/core/config/remote_config.dart",
+      "language": "dart",
+      "sizeLines": 101,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/core/database/app_database.dart",
+      "language": "dart",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/core/database/app_database.g.dart",
+      "language": "dart",
+      "sizeLines": 15826,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/core/database/encryption_key_provider.dart",
+      "language": "dart",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/core/database/tables/activity_and_wellness_tables.dart",
+      "language": "dart",
+      "sizeLines": 52,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/core/database/tables/body_metrics_table.dart",
+      "language": "dart",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/core/database/tables/nutrition_tables.dart",
+      "language": "dart",
+      "sizeLines": 74,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/core/database/tables/outbox_table.dart",
+      "language": "dart",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/core/database/tables/user_profiles_table.dart",
+      "language": "dart",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/core/database/tables/vitals_and_habits_tables.dart",
+      "language": "dart",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/core/database/tables/workout_tables.dart",
+      "language": "dart",
+      "sizeLines": 53,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/core/errors/failures.dart",
+      "language": "dart",
+      "sizeLines": 144,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/core/errors/result.dart",
+      "language": "dart",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/core/localization/app_localizations.dart",
+      "language": "dart",
+      "sizeLines": 96,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/core/localization/locale_provider.dart",
+      "language": "dart",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/core/logging/app_logger.dart",
+      "language": "dart",
+      "sizeLines": 71,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/core/logging/pii_redactor.dart",
+      "language": "dart",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/core/providers/app_providers.dart",
+      "language": "dart",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/core/services/supabase_service.dart",
+      "language": "dart",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/core/sync/conflict/conflict_resolution.dart",
+      "language": "dart",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/core/sync/models/outbox_mutation.dart",
+      "language": "dart",
+      "sizeLines": 104,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/core/sync/outbox_queue.dart",
+      "language": "dart",
+      "sizeLines": 143,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/core/sync/presentation/conflict_resolution_dialog.dart",
+      "language": "dart",
+      "sizeLines": 162,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/core/sync/realtime_sync_bridge.dart",
+      "language": "dart",
+      "sizeLines": 52,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/core/sync/sync_coordinator.dart",
+      "language": "dart",
+      "sizeLines": 117,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/core/sync/sync_state.dart",
+      "language": "dart",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/core/sync/syncable_repository.dart",
+      "language": "dart",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/auth/data/supabase_auth_repository.dart",
+      "language": "dart",
+      "sizeLines": 222,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/auth/domain/auth_repository.dart",
+      "language": "dart",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/auth/domain/auth_user.dart",
+      "language": "dart",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/auth/presentation/auth_state_notifier.dart",
+      "language": "dart",
+      "sizeLines": 136,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/auth/presentation/otp_verification_screen.dart",
+      "language": "dart",
+      "sizeLines": 247,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/auth/presentation/phone_login_screen.dart",
+      "language": "dart",
+      "sizeLines": 271,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/brain/data/dip_repository.dart",
+      "language": "dart",
+      "sizeLines": 179,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/brain/domain/daily_readiness_calculator.dart",
+      "language": "dart",
+      "sizeLines": 230,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/brain/domain/dip_models.dart",
+      "language": "dart",
+      "sizeLines": 313,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/brain/domain/dip_rule_engine.dart",
+      "language": "dart",
+      "sizeLines": 319,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/brain/presentation/daily_readiness_card.dart",
+      "language": "dart",
+      "sizeLines": 220,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/brain/presentation/dip_action_feed.dart",
+      "language": "dart",
+      "sizeLines": 204,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/brain/presentation/home_dashboard_screen.dart",
+      "language": "dart",
+      "sizeLines": 386,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/brain/presentation/quick_log_action_bar.dart",
+      "language": "dart",
+      "sizeLines": 121,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/health/data/drift_body_metrics_repository.dart",
+      "language": "dart",
+      "sizeLines": 146,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/health/data/drift_health_repositories.dart",
+      "language": "dart",
+      "sizeLines": 350,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/health/data/drift_vitals_repositories.dart",
+      "language": "dart",
+      "sizeLines": 275,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/health/domain/body_metric.dart",
+      "language": "dart",
+      "sizeLines": 125,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/health/domain/habit_entry.dart",
+      "language": "dart",
+      "sizeLines": 102,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/health/domain/health_primitives.dart",
+      "language": "dart",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/health/domain/medication_entry.dart",
+      "language": "dart",
+      "sizeLines": 81,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/health/domain/mood_log.dart",
+      "language": "dart",
+      "sizeLines": 62,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/health/domain/sleep_record.dart",
+      "language": "dart",
+      "sizeLines": 116,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/health/domain/step_record.dart",
+      "language": "dart",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/health/domain/vital_record.dart",
+      "language": "dart",
+      "sizeLines": 97,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/health/domain/water_log.dart",
+      "language": "dart",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/health/domain/weight_trend_calculator.dart",
+      "language": "dart",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/health/presentation/health_dashboard_screen.dart",
+      "language": "dart",
+      "sizeLines": 522,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/health/presentation/mood_selector_card.dart",
+      "language": "dart",
+      "sizeLines": 133,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/health/presentation/water_quick_add_card.dart",
+      "language": "dart",
+      "sizeLines": 129,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/health/presentation/weight_logger_sheet.dart",
+      "language": "dart",
+      "sizeLines": 233,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/nutrition/data/cooking_multipliers_seed.dart",
+      "language": "dart",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/nutrition/data/drift_cooking_repository.dart",
+      "language": "dart",
+      "sizeLines": 100,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/nutrition/data/drift_food_catalog_repository.dart",
+      "language": "dart",
+      "sizeLines": 133,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/nutrition/data/drift_meal_log_repository.dart",
+      "language": "dart",
+      "sizeLines": 227,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/nutrition/data/food_catalog_seed.dart",
+      "language": "dart",
+      "sizeLines": 848,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/nutrition/domain/cooking_multiplier.dart",
+      "language": "dart",
+      "sizeLines": 127,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/nutrition/domain/dynamic_tdee_calculator.dart",
+      "language": "dart",
+      "sizeLines": 106,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/nutrition/domain/family_recipe.dart",
+      "language": "dart",
+      "sizeLines": 138,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/nutrition/domain/food_item.dart",
+      "language": "dart",
+      "sizeLines": 238,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/nutrition/domain/food_log_entry.dart",
+      "language": "dart",
+      "sizeLines": 115,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/nutrition/domain/portion_unit.dart",
+      "language": "dart",
+      "sizeLines": 127,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/nutrition/domain/tadka_model.dart",
+      "language": "dart",
+      "sizeLines": 119,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/nutrition/presentation/nutrition_dashboard_screen.dart",
+      "language": "dart",
+      "sizeLines": 416,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/nutrition/presentation/recipe_splitter_sheet.dart",
+      "language": "dart",
+      "sizeLines": 250,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/nutrition/presentation/tadka_slider_widget.dart",
+      "language": "dart",
+      "sizeLines": 206,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/onboarding/presentation/onboarding_wizard_screen.dart",
+      "language": "dart",
+      "sizeLines": 662,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/os_health/data/apple_health_adapter.dart",
+      "language": "dart",
+      "sizeLines": 175,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/os_health/data/health_background_sync_manager.dart",
+      "language": "dart",
+      "sizeLines": 140,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/os_health/data/health_connect_adapter.dart",
+      "language": "dart",
+      "sizeLines": 177,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/os_health/data/health_integration_service.dart",
+      "language": "dart",
+      "sizeLines": 293,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/os_health/data/mock_platform_health_adapter.dart",
+      "language": "dart",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/os_health/domain/biometric_deduplication_engine.dart",
+      "language": "dart",
+      "sizeLines": 111,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/os_health/domain/health_data_types.dart",
+      "language": "dart",
+      "sizeLines": 97,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/os_health/domain/platform_health_adapter.dart",
+      "language": "dart",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/os_health/presentation/os_health_settings_screen.dart",
+      "language": "dart",
+      "sizeLines": 136,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/os_health/presentation/os_health_sync_card.dart",
+      "language": "dart",
+      "sizeLines": 266,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/profile/data/drift_profile_repository.dart",
+      "language": "dart",
+      "sizeLines": 158,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/profile/data/local_profile_repository.dart",
+      "language": "dart",
+      "sizeLines": 52,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/profile/domain/dosha_calculator.dart",
+      "language": "dart",
+      "sizeLines": 95,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/profile/domain/profile_repository.dart",
+      "language": "dart",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/profile/domain/user_profile.dart",
+      "language": "dart",
+      "sizeLines": 166,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/workout/data/drift_exercise_repository.dart",
+      "language": "dart",
+      "sizeLines": 183,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/workout/data/drift_workout_repository.dart",
+      "language": "dart",
+      "sizeLines": 329,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/workout/data/exercise_library_seed.dart",
+      "language": "dart",
+      "sizeLines": 729,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/workout/domain/exercise.dart",
+      "language": "dart",
+      "sizeLines": 194,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/workout/domain/recovery_readiness_calculator.dart",
+      "language": "dart",
+      "sizeLines": 104,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/workout/domain/volume_progression_calculator.dart",
+      "language": "dart",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/workout/domain/workout_session.dart",
+      "language": "dart",
+      "sizeLines": 145,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/workout/domain/workout_set.dart",
+      "language": "dart",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/workout/presentation/active_workout_screen.dart",
+      "language": "dart",
+      "sizeLines": 555,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/workout/presentation/rest_timer_widget.dart",
+      "language": "dart",
+      "sizeLines": 247,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/features/workout/presentation/workout_dashboard_screen.dart",
+      "language": "dart",
+      "sizeLines": 513,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/main.dart",
+      "language": "dart",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/shared/accessibility/accessibility_helpers.dart",
+      "language": "dart",
+      "sizeLines": 75,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/shared/theme/app_colors.dart",
+      "language": "dart",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/shared/theme/app_motion.dart",
+      "language": "dart",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/shared/theme/app_radii.dart",
+      "language": "dart",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/shared/theme/app_spacing.dart",
+      "language": "dart",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/shared/theme/app_theme.dart",
+      "language": "dart",
+      "sizeLines": 46,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/shared/theme/app_typography.dart",
+      "language": "dart",
+      "sizeLines": 61,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/shared/widgets/action_button.dart",
+      "language": "dart",
+      "sizeLines": 115,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/shared/widgets/app_scaffold.dart",
+      "language": "dart",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/shared/widgets/bento_card.dart",
+      "language": "dart",
+      "sizeLines": 70,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/shared/widgets/design_system_showcase.dart",
+      "language": "dart",
+      "sizeLines": 138,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/shared/widgets/loading_skeleton.dart",
+      "language": "dart",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/shared/widgets/metric_card.dart",
+      "language": "dart",
+      "sizeLines": 87,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/shared/widgets/offline_banner.dart",
+      "language": "dart",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/shared/widgets/sync_status_badge.dart",
+      "language": "dart",
+      "sizeLines": 100,
+      "fileCategory": "code"
+    },
+    {
+      "path": "pubspec.yaml",
+      "language": "yaml",
+      "sizeLines": 32,
+      "fileCategory": "config"
+    },
+    {
+      "path": "supabase/config.toml",
+      "language": "toml",
+      "sizeLines": 41,
+      "fileCategory": "config"
+    },
+    {
+      "path": "supabase/functions/_shared/envelope.ts",
+      "language": "typescript",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "supabase/functions/ai-gateway/groq_client.ts",
+      "language": "typescript",
+      "sizeLines": 331,
+      "fileCategory": "code"
+    },
+    {
+      "path": "supabase/functions/ai-gateway/guardrails.ts",
+      "language": "typescript",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    },
+    {
+      "path": "supabase/functions/ai-gateway/index.ts",
+      "language": "typescript",
+      "sizeLines": 149,
+      "fileCategory": "code"
+    },
+    {
+      "path": "supabase/functions/ai-gateway/schemas.ts",
+      "language": "typescript",
+      "sizeLines": 175,
+      "fileCategory": "code"
+    },
+    {
+      "path": "supabase/functions/ai-gateway/test.ts",
+      "language": "typescript",
+      "sizeLines": 84,
+      "fileCategory": "code"
+    },
+    {
+      "path": "supabase/functions/health-check/index.ts",
+      "language": "typescript",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "supabase/migrations/20261102000001_baseline_schema_and_rls.sql",
+      "language": "sql",
+      "sizeLines": 385,
+      "fileCategory": "data"
+    },
+    {
+      "path": "test/app/router/app_router_test.dart",
+      "language": "dart",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/core/config/remote_config_test.dart",
+      "language": "dart",
+      "sizeLines": 56,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/core/database/app_database_test.dart",
+      "language": "dart",
+      "sizeLines": 126,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/core/errors/failures_test.dart",
+      "language": "dart",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/core/localization/app_localizations_test.dart",
+      "language": "dart",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/core/logging/app_logger_test.dart",
+      "language": "dart",
+      "sizeLines": 56,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/core/providers/app_providers_test.dart",
+      "language": "dart",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/core/sync/conflict_resolution_test.dart",
+      "language": "dart",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/core/sync/outbox_queue_test.dart",
+      "language": "dart",
+      "sizeLines": 154,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/core/sync/sync_coordinator_test.dart",
+      "language": "dart",
+      "sizeLines": 143,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/core/sync/syncable_repository_test.dart",
+      "language": "dart",
+      "sizeLines": 159,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/features/auth/auth_repository_test.dart",
+      "language": "dart",
+      "sizeLines": 133,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/features/auth/phone_login_screen_test.dart",
+      "language": "dart",
+      "sizeLines": 149,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/features/brain/daily_readiness_calculator_test.dart",
+      "language": "dart",
+      "sizeLines": 154,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/features/brain/dip_repository_test.dart",
+      "language": "dart",
+      "sizeLines": 172,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/features/brain/dip_rule_engine_test.dart",
+      "language": "dart",
+      "sizeLines": 178,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/features/brain/home_dashboard_screen_test.dart",
+      "language": "dart",
+      "sizeLines": 273,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/features/health/body_metrics_repository_test.dart",
+      "language": "dart",
+      "sizeLines": 97,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/features/health/health_dashboard_screen_test.dart",
+      "language": "dart",
+      "sizeLines": 157,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/features/health/health_primitives_test.dart",
+      "language": "dart",
+      "sizeLines": 70,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/features/health/sleep_and_step_test.dart",
+      "language": "dart",
+      "sizeLines": 110,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/features/health/vitals_and_habits_test.dart",
+      "language": "dart",
+      "sizeLines": 243,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/features/health/water_and_mood_test.dart",
+      "language": "dart",
+      "sizeLines": 123,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/features/health/weight_logger_sheet_test.dart",
+      "language": "dart",
+      "sizeLines": 80,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/features/health/weight_trend_calculator_test.dart",
+      "language": "dart",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/features/nutrition/cooking_multipliers_and_tadka_test.dart",
+      "language": "dart",
+      "sizeLines": 156,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/features/nutrition/family_recipe_and_meal_log_test.dart",
+      "language": "dart",
+      "sizeLines": 236,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/features/nutrition/food_catalog_and_portions_test.dart",
+      "language": "dart",
+      "sizeLines": 185,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/features/nutrition/nutrition_dashboard_screen_test.dart",
+      "language": "dart",
+      "sizeLines": 121,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/features/onboarding/onboarding_wizard_screen_test.dart",
+      "language": "dart",
+      "sizeLines": 101,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/features/os_health/health_abstraction_and_deduplication_test.dart",
+      "language": "dart",
+      "sizeLines": 252,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/features/os_health/health_background_sync_test.dart",
+      "language": "dart",
+      "sizeLines": 111,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/features/os_health/health_integration_service_test.dart",
+      "language": "dart",
+      "sizeLines": 166,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/features/os_health/os_health_sync_card_test.dart",
+      "language": "dart",
+      "sizeLines": 110,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/features/profile/user_profile_test.dart",
+      "language": "dart",
+      "sizeLines": 177,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/features/workout/active_workout_test.dart",
+      "language": "dart",
+      "sizeLines": 286,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/features/workout/exercise_library_test.dart",
+      "language": "dart",
+      "sizeLines": 122,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/features/workout/volume_and_readiness_test.dart",
+      "language": "dart",
+      "sizeLines": 182,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/features/workout/workout_dashboard_screen_test.dart",
+      "language": "dart",
+      "sizeLines": 122,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/shared/accessibility/accessibility_helpers_test.dart",
+      "language": "dart",
+      "sizeLines": 53,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/shared/theme/app_theme_test.dart",
+      "language": "dart",
+      "sizeLines": 40,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/shared/widgets/action_button_test.dart",
+      "language": "dart",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/shared/widgets/app_scaffold_test.dart",
+      "language": "dart",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/shared/widgets/bento_card_test.dart",
+      "language": "dart",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/shared/widgets/sync_status_badge_test.dart",
+      "language": "dart",
+      "sizeLines": 80,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/widget_test.dart",
+      "language": "dart",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    }
+  ],
+  "totalFiles": 326,
+  "filteredByIgnore": 0,
+  "estimatedComplexity": "large",
+  "importMap": {
+    ".env.example": [],
+    ".metadata": [],
+    ".planning/PROJECT.md": [],
+    ".planning/REQUIREMENTS.md": [],
+    ".planning/ROADMAP.md": [],
+    ".planning/STATE.md": [],
+    ".planning/config.json": [],
+    ".planning/phases/01-repository-initialization-engineering-foundation/01-01-PLAN.md": [],
+    ".planning/phases/01-repository-initialization-engineering-foundation/01-01-SUMMARY.md": [],
+    ".planning/phases/01-repository-initialization-engineering-foundation/01-02-PLAN.md": [],
+    ".planning/phases/01-repository-initialization-engineering-foundation/01-02-SUMMARY.md": [],
+    ".planning/phases/01-repository-initialization-engineering-foundation/01-03-PLAN.md": [],
+    ".planning/phases/01-repository-initialization-engineering-foundation/01-03-SUMMARY.md": [],
+    ".planning/phases/01-repository-initialization-engineering-foundation/01-CONTEXT.md": [],
+    ".planning/phases/01-repository-initialization-engineering-foundation/01-RESEARCH.md": [],
+    ".planning/phases/01-repository-initialization-engineering-foundation/01-VERIFICATION.md": [],
+    ".planning/phases/02-design-system-ui-foundation/02-01-PLAN.md": [],
+    ".planning/phases/02-design-system-ui-foundation/02-01-SUMMARY.md": [],
+    ".planning/phases/02-design-system-ui-foundation/02-02-PLAN.md": [],
+    ".planning/phases/02-design-system-ui-foundation/02-02-SUMMARY.md": [],
+    ".planning/phases/02-design-system-ui-foundation/02-03-PLAN.md": [],
+    ".planning/phases/02-design-system-ui-foundation/02-03-SUMMARY.md": [],
+    ".planning/phases/02-design-system-ui-foundation/02-CONTEXT.md": [],
+    ".planning/phases/02-design-system-ui-foundation/02-RESEARCH.md": [],
+    ".planning/phases/02-design-system-ui-foundation/02-VERIFICATION.md": [],
+    ".planning/phases/03-backend-authentication-user-onboarding/03-01-PLAN.md": [],
+    ".planning/phases/03-backend-authentication-user-onboarding/03-01-SUMMARY.md": [],
+    ".planning/phases/03-backend-authentication-user-onboarding/03-02-PLAN.md": [],
+    ".planning/phases/03-backend-authentication-user-onboarding/03-02-SUMMARY.md": [],
+    ".planning/phases/03-backend-authentication-user-onboarding/03-03-PLAN.md": [],
+    ".planning/phases/03-backend-authentication-user-onboarding/03-03-SUMMARY.md": [],
+    ".planning/phases/03-backend-authentication-user-onboarding/03-CONTEXT.md": [],
+    ".planning/phases/03-backend-authentication-user-onboarding/03-RESEARCH.md": [],
+    ".planning/phases/03-backend-authentication-user-onboarding/03-VERIFICATION.md": [],
+    ".planning/phases/04-offline-first-data-foundation/04-01-PLAN.md": [],
+    ".planning/phases/04-offline-first-data-foundation/04-01-SUMMARY.md": [],
+    ".planning/phases/04-offline-first-data-foundation/04-02-PLAN.md": [],
+    ".planning/phases/04-offline-first-data-foundation/04-02-SUMMARY.md": [],
+    ".planning/phases/04-offline-first-data-foundation/04-03-PLAN.md": [],
+    ".planning/phases/04-offline-first-data-foundation/04-03-SUMMARY.md": [],
+    ".planning/phases/04-offline-first-data-foundation/04-CONTEXT.md": [],
+    ".planning/phases/04-offline-first-data-foundation/04-RESEARCH.md": [],
+    ".planning/phases/04-offline-first-data-foundation/04-VERIFICATION.md": [],
+    ".planning/phases/05-health-data-core/05-01-PLAN.md": [],
+    ".planning/phases/05-health-data-core/05-01-SUMMARY.md": [],
+    ".planning/phases/05-health-data-core/05-02-PLAN.md": [],
+    ".planning/phases/05-health-data-core/05-02-SUMMARY.md": [],
+    ".planning/phases/05-health-data-core/05-03-PLAN.md": [],
+    ".planning/phases/05-health-data-core/05-03-SUMMARY.md": [],
+    ".planning/phases/05-health-data-core/05-CONTEXT.md": [],
+    ".planning/phases/05-health-data-core/05-RESEARCH.md": [],
+    ".planning/phases/05-health-data-core/05-VERIFICATION.md": [],
+    ".planning/phases/06-indian-nutrition-engine/06-01-PLAN.md": [],
+    ".planning/phases/06-indian-nutrition-engine/06-01-SUMMARY.md": [],
+    ".planning/phases/06-indian-nutrition-engine/06-02-PLAN.md": [],
+    ".planning/phases/06-indian-nutrition-engine/06-02-SUMMARY.md": [],
+    ".planning/phases/06-indian-nutrition-engine/06-03-PLAN.md": [],
+    ".planning/phases/06-indian-nutrition-engine/06-03-SUMMARY.md": [],
+    ".planning/phases/06-indian-nutrition-engine/06-CONTEXT.md": [],
+    ".planning/phases/06-indian-nutrition-engine/06-RESEARCH.md": [],
+    ".planning/phases/06-indian-nutrition-engine/06-VERIFICATION.md": [],
+    ".planning/phases/07-workout-fitness-core/07-01-PLAN.md": [],
+    ".planning/phases/07-workout-fitness-core/07-01-SUMMARY.md": [],
+    ".planning/phases/07-workout-fitness-core/07-02-PLAN.md": [],
+    ".planning/phases/07-workout-fitness-core/07-02-SUMMARY.md": [],
+    ".planning/phases/07-workout-fitness-core/07-03-PLAN.md": [],
+    ".planning/phases/07-workout-fitness-core/07-03-SUMMARY.md": [],
+    ".planning/phases/07-workout-fitness-core/07-CONTEXT.md": [],
+    ".planning/phases/07-workout-fitness-core/07-RESEARCH.md": [],
+    ".planning/phases/08-os-health-integration/08-01-PLAN.md": [],
+    ".planning/phases/08-os-health-integration/08-01-SUMMARY.md": [],
+    ".planning/phases/08-os-health-integration/08-02-PLAN.md": [],
+    ".planning/phases/08-os-health-integration/08-02-SUMMARY.md": [],
+    ".planning/phases/08-os-health-integration/08-03-PLAN.md": [],
+    ".planning/phases/08-os-health-integration/08-03-SUMMARY.md": [],
+    ".planning/phases/08-os-health-integration/08-CONTEXT.md": [],
+    ".planning/phases/08-os-health-integration/08-RESEARCH.md": [],
+    ".planning/phases/09-daily-intelligence-package-health-os-brain/09-01-PLAN.md": [],
+    ".planning/phases/09-daily-intelligence-package-health-os-brain/09-01-SUMMARY.md": [],
+    ".planning/phases/09-daily-intelligence-package-health-os-brain/09-02-PLAN.md": [],
+    ".planning/phases/09-daily-intelligence-package-health-os-brain/09-02-SUMMARY.md": [],
+    ".planning/phases/09-daily-intelligence-package-health-os-brain/09-03-PLAN.md": [],
+    ".planning/phases/09-daily-intelligence-package-health-os-brain/09-03-SUMMARY.md": [],
+    ".planning/phases/09-daily-intelligence-package-health-os-brain/09-CONTEXT.md": [],
+    ".planning/phases/09-daily-intelligence-package-health-os-brain/09-RESEARCH.md": [],
+    ".planning/phases/10-ai-foundation-server-side-gateway/10-01-PLAN.md": [],
+    ".planning/phases/10-ai-foundation-server-side-gateway/10-01-SUMMARY.md": [],
+    ".planning/phases/10-ai-foundation-server-side-gateway/10-02-PLAN.md": [],
+    ".planning/phases/10-ai-foundation-server-side-gateway/10-03-PLAN.md": [],
+    ".planning/phases/10-ai-foundation-server-side-gateway/10-CONTEXT.md": [],
+    ".planning/phases/10-ai-foundation-server-side-gateway/10-RESEARCH.md": [],
+    "Brain/admob_spec.md": [],
+    "Brain/api_contract.md": [],
+    "Brain/architecture.md": [],
+    "Brain/changelog.md": [],
+    "Brain/data_model.md": [],
+    "Brain/data_sources.md": [],
+    "Brain/decisions.md": [],
+    "Brain/error_handling.md": [],
+    "Brain/github_actions.md": [],
+    "Brain/implementation_audit.md": [],
+    "Brain/master_rules.md": [],
+    "Brain/microtasks.md": [],
+    "Brain/pdr.md": [],
+    "Brain/production_checklist.md": [],
+    "Brain/scrapping_spec.md": [],
+    "Brain/security.md": [],
+    "Brain/testing.md": [],
+    "Brain/trd.md": [],
+    "Brain/ui_spec.md": [],
+    "CLAUDE.md": [],
+    "FitKarma_Master_Documentation_v1.0.md": [],
+    "README.md": [],
+    "Todo.md": [],
+    "analysis_options.yaml": [],
+    "android/app/build.gradle.kts": [],
+    "android/app/src/debug/AndroidManifest.xml": [],
+    "android/app/src/main/AndroidManifest.xml": [],
+    "android/app/src/main/kotlin/com/sulekhniwal/fitkarma/MainActivity.kt": [],
+    "android/app/src/main/res/drawable-v21/launch_background.xml": [],
+    "android/app/src/main/res/drawable/launch_background.xml": [],
+    "android/app/src/main/res/values-night/styles.xml": [],
+    "android/app/src/main/res/values/styles.xml": [],
+    "android/app/src/profile/AndroidManifest.xml": [],
+    "android/build.gradle.kts": [],
+    "android/gradle.properties": [],
+    "android/gradle/wrapper/gradle-wrapper.properties": [],
+    "android/settings.gradle.kts": [],
+    "ios/Flutter/AppFrameworkInfo.plist": [],
+    "ios/Flutter/Debug.xcconfig": [],
+    "ios/Flutter/Release.xcconfig": [],
+    "ios/Runner.xcodeproj/project.pbxproj": [],
+    "ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata": [],
+    "ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist": [],
+    "ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings": [],
+    "ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme": [],
+    "ios/Runner.xcworkspace/contents.xcworkspacedata": [],
+    "ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist": [],
+    "ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings": [],
+    "ios/Runner/AppDelegate.swift": [],
+    "ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json": [],
+    "ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json": [],
+    "ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md": [],
+    "ios/Runner/Base.lproj/LaunchScreen.storyboard": [],
+    "ios/Runner/Base.lproj/Main.storyboard": [],
+    "ios/Runner/Info.plist": [],
+    "ios/Runner/Runner-Bridging-Header.h": [],
+    "ios/Runner/SceneDelegate.swift": [],
+    "ios/RunnerTests/RunnerTests.swift": [],
+    "lib/README.md": [],
+    "lib/app/router/app_router.dart": [],
+    "lib/app/router/route_names.dart": [],
+    "lib/core/config/app_config.dart": [],
+    "lib/core/config/feature_flags.dart": [],
+    "lib/core/config/remote_config.dart": [],
+    "lib/core/database/app_database.dart": [],
+    "lib/core/database/app_database.g.dart": [],
+    "lib/core/database/encryption_key_provider.dart": [],
+    "lib/core/database/tables/activity_and_wellness_tables.dart": [],
+    "lib/core/database/tables/body_metrics_table.dart": [],
+    "lib/core/database/tables/nutrition_tables.dart": [],
+    "lib/core/database/tables/outbox_table.dart": [],
+    "lib/core/database/tables/user_profiles_table.dart": [],
+    "lib/core/database/tables/vitals_and_habits_tables.dart": [],
+    "lib/core/database/tables/workout_tables.dart": [],
+    "lib/core/errors/failures.dart": [],
+    "lib/core/errors/result.dart": [],
+    "lib/core/localization/app_localizations.dart": [],
+    "lib/core/localization/locale_provider.dart": [],
+    "lib/core/logging/app_logger.dart": [],
+    "lib/core/logging/pii_redactor.dart": [],
+    "lib/core/providers/app_providers.dart": [],
+    "lib/core/services/supabase_service.dart": [],
+    "lib/core/sync/conflict/conflict_resolution.dart": [],
+    "lib/core/sync/models/outbox_mutation.dart": [],
+    "lib/core/sync/outbox_queue.dart": [],
+    "lib/core/sync/presentation/conflict_resolution_dialog.dart": [],
+    "lib/core/sync/realtime_sync_bridge.dart": [],
+    "lib/core/sync/sync_coordinator.dart": [],
+    "lib/core/sync/sync_state.dart": [],
+    "lib/core/sync/syncable_repository.dart": [],
+    "lib/features/auth/data/supabase_auth_repository.dart": [],
+    "lib/features/auth/domain/auth_repository.dart": [],
+    "lib/features/auth/domain/auth_user.dart": [],
+    "lib/features/auth/presentation/auth_state_notifier.dart": [],
+    "lib/features/auth/presentation/otp_verification_screen.dart": [],
+    "lib/features/auth/presentation/phone_login_screen.dart": [],
+    "lib/features/brain/data/dip_repository.dart": [],
+    "lib/features/brain/domain/daily_readiness_calculator.dart": [],
+    "lib/features/brain/domain/dip_models.dart": [],
+    "lib/features/brain/domain/dip_rule_engine.dart": [],
+    "lib/features/brain/presentation/daily_readiness_card.dart": [],
+    "lib/features/brain/presentation/dip_action_feed.dart": [],
+    "lib/features/brain/presentation/home_dashboard_screen.dart": [],
+    "lib/features/brain/presentation/quick_log_action_bar.dart": [],
+    "lib/features/health/data/drift_body_metrics_repository.dart": [],
+    "lib/features/health/data/drift_health_repositories.dart": [],
+    "lib/features/health/data/drift_vitals_repositories.dart": [],
+    "lib/features/health/domain/body_metric.dart": [],
+    "lib/features/health/domain/habit_entry.dart": [],
+    "lib/features/health/domain/health_primitives.dart": [],
+    "lib/features/health/domain/medication_entry.dart": [],
+    "lib/features/health/domain/mood_log.dart": [],
+    "lib/features/health/domain/sleep_record.dart": [],
+    "lib/features/health/domain/step_record.dart": [],
+    "lib/features/health/domain/vital_record.dart": [],
+    "lib/features/health/domain/water_log.dart": [],
+    "lib/features/health/domain/weight_trend_calculator.dart": [],
+    "lib/features/health/presentation/health_dashboard_screen.dart": [],
+    "lib/features/health/presentation/mood_selector_card.dart": [],
+    "lib/features/health/presentation/water_quick_add_card.dart": [],
+    "lib/features/health/presentation/weight_logger_sheet.dart": [],
+    "lib/features/nutrition/data/cooking_multipliers_seed.dart": [],
+    "lib/features/nutrition/data/drift_cooking_repository.dart": [],
+    "lib/features/nutrition/data/drift_food_catalog_repository.dart": [],
+    "lib/features/nutrition/data/drift_meal_log_repository.dart": [],
+    "lib/features/nutrition/data/food_catalog_seed.dart": [],
+    "lib/features/nutrition/domain/cooking_multiplier.dart": [],
+    "lib/features/nutrition/domain/dynamic_tdee_calculator.dart": [],
+    "lib/features/nutrition/domain/family_recipe.dart": [],
+    "lib/features/nutrition/domain/food_item.dart": [],
+    "lib/features/nutrition/domain/food_log_entry.dart": [],
+    "lib/features/nutrition/domain/portion_unit.dart": [],
+    "lib/features/nutrition/domain/tadka_model.dart": [],
+    "lib/features/nutrition/presentation/nutrition_dashboard_screen.dart": [],
+    "lib/features/nutrition/presentation/recipe_splitter_sheet.dart": [],
+    "lib/features/nutrition/presentation/tadka_slider_widget.dart": [],
+    "lib/features/onboarding/presentation/onboarding_wizard_screen.dart": [],
+    "lib/features/os_health/data/apple_health_adapter.dart": [],
+    "lib/features/os_health/data/health_background_sync_manager.dart": [],
+    "lib/features/os_health/data/health_connect_adapter.dart": [],
+    "lib/features/os_health/data/health_integration_service.dart": [],
+    "lib/features/os_health/data/mock_platform_health_adapter.dart": [],
+    "lib/features/os_health/domain/biometric_deduplication_engine.dart": [],
+    "lib/features/os_health/domain/health_data_types.dart": [],
+    "lib/features/os_health/domain/platform_health_adapter.dart": [],
+    "lib/features/os_health/presentation/os_health_settings_screen.dart": [],
+    "lib/features/os_health/presentation/os_health_sync_card.dart": [],
+    "lib/features/profile/data/drift_profile_repository.dart": [],
+    "lib/features/profile/data/local_profile_repository.dart": [],
+    "lib/features/profile/domain/dosha_calculator.dart": [],
+    "lib/features/profile/domain/profile_repository.dart": [],
+    "lib/features/profile/domain/user_profile.dart": [],
+    "lib/features/workout/data/drift_exercise_repository.dart": [],
+    "lib/features/workout/data/drift_workout_repository.dart": [],
+    "lib/features/workout/data/exercise_library_seed.dart": [],
+    "lib/features/workout/domain/exercise.dart": [],
+    "lib/features/workout/domain/recovery_readiness_calculator.dart": [],
+    "lib/features/workout/domain/volume_progression_calculator.dart": [],
+    "lib/features/workout/domain/workout_session.dart": [],
+    "lib/features/workout/domain/workout_set.dart": [],
+    "lib/features/workout/presentation/active_workout_screen.dart": [],
+    "lib/features/workout/presentation/rest_timer_widget.dart": [],
+    "lib/features/workout/presentation/workout_dashboard_screen.dart": [],
+    "lib/main.dart": [],
+    "lib/shared/accessibility/accessibility_helpers.dart": [],
+    "lib/shared/theme/app_colors.dart": [],
+    "lib/shared/theme/app_motion.dart": [],
+    "lib/shared/theme/app_radii.dart": [],
+    "lib/shared/theme/app_spacing.dart": [],
+    "lib/shared/theme/app_theme.dart": [],
+    "lib/shared/theme/app_typography.dart": [],
+    "lib/shared/widgets/action_button.dart": [],
+    "lib/shared/widgets/app_scaffold.dart": [],
+    "lib/shared/widgets/bento_card.dart": [],
+    "lib/shared/widgets/design_system_showcase.dart": [],
+    "lib/shared/widgets/loading_skeleton.dart": [],
+    "lib/shared/widgets/metric_card.dart": [],
+    "lib/shared/widgets/offline_banner.dart": [],
+    "lib/shared/widgets/sync_status_badge.dart": [],
+    "pubspec.yaml": [],
+    "supabase/config.toml": [],
+    "supabase/functions/_shared/envelope.ts": [],
+    "supabase/functions/ai-gateway/groq_client.ts": [
+      "supabase/functions/ai-gateway/schemas.ts"
+    ],
+    "supabase/functions/ai-gateway/guardrails.ts": [],
+    "supabase/functions/ai-gateway/index.ts": [
+      "supabase/functions/_shared/envelope.ts",
+      "supabase/functions/ai-gateway/groq_client.ts",
+      "supabase/functions/ai-gateway/guardrails.ts"
+    ],
+    "supabase/functions/ai-gateway/schemas.ts": [],
+    "supabase/functions/ai-gateway/test.ts": [
+      "supabase/functions/ai-gateway/groq_client.ts",
+      "supabase/functions/ai-gateway/guardrails.ts",
+      "supabase/functions/ai-gateway/schemas.ts"
+    ],
+    "supabase/functions/health-check/index.ts": [
+      "supabase/functions/_shared/envelope.ts"
+    ],
+    "supabase/migrations/20261102000001_baseline_schema_and_rls.sql": [],
+    "test/app/router/app_router_test.dart": [],
+    "test/core/config/remote_config_test.dart": [],
+    "test/core/database/app_database_test.dart": [],
+    "test/core/errors/failures_test.dart": [],
+    "test/core/localization/app_localizations_test.dart": [],
+    "test/core/logging/app_logger_test.dart": [],
+    "test/core/providers/app_providers_test.dart": [],
+    "test/core/sync/conflict_resolution_test.dart": [],
+    "test/core/sync/outbox_queue_test.dart": [],
+    "test/core/sync/sync_coordinator_test.dart": [],
+    "test/core/sync/syncable_repository_test.dart": [],
+    "test/features/auth/auth_repository_test.dart": [],
+    "test/features/auth/phone_login_screen_test.dart": [],
+    "test/features/brain/daily_readiness_calculator_test.dart": [],
+    "test/features/brain/dip_repository_test.dart": [],
+    "test/features/brain/dip_rule_engine_test.dart": [],
+    "test/features/brain/home_dashboard_screen_test.dart": [],
+    "test/features/health/body_metrics_repository_test.dart": [],
+    "test/features/health/health_dashboard_screen_test.dart": [],
+    "test/features/health/health_primitives_test.dart": [],
+    "test/features/health/sleep_and_step_test.dart": [],
+    "test/features/health/vitals_and_habits_test.dart": [],
+    "test/features/health/water_and_mood_test.dart": [],
+    "test/features/health/weight_logger_sheet_test.dart": [],
+    "test/features/health/weight_trend_calculator_test.dart": [],
+    "test/features/nutrition/cooking_multipliers_and_tadka_test.dart": [],
+    "test/features/nutrition/family_recipe_and_meal_log_test.dart": [],
+    "test/features/nutrition/food_catalog_and_portions_test.dart": [],
+    "test/features/nutrition/nutrition_dashboard_screen_test.dart": [],
+    "test/features/onboarding/onboarding_wizard_screen_test.dart": [],
+    "test/features/os_health/health_abstraction_and_deduplication_test.dart": [],
+    "test/features/os_health/health_background_sync_test.dart": [],
+    "test/features/os_health/health_integration_service_test.dart": [],
+    "test/features/os_health/os_health_sync_card_test.dart": [],
+    "test/features/profile/user_profile_test.dart": [],
+    "test/features/workout/active_workout_test.dart": [],
+    "test/features/workout/exercise_library_test.dart": [],
+    "test/features/workout/volume_and_readiness_test.dart": [],
+    "test/features/workout/workout_dashboard_screen_test.dart": [],
+    "test/shared/accessibility/accessibility_helpers_test.dart": [],
+    "test/shared/theme/app_theme_test.dart": [],
+    "test/shared/widgets/action_button_test.dart": [],
+    "test/shared/widgets/app_scaffold_test.dart": [],
+    "test/shared/widgets/bento_card_test.dart": [],
+    "test/shared/widgets/sync_status_badge_test.dart": [],
+    "test/widget_test.dart": []
+  }
+}
