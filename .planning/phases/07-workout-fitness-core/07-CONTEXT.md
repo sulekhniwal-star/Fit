@@ -44,3 +44,4 @@ FitKarma's Workout & Fitness Core delivers an offline-first fitness logging syst
   - On-device MediaPipe computer vision pose estimation (deferred to Post-MVP / Phase 24).
   - Heavy streaming video library (app relies on lightweight diagrammatic/text cues).
   - Automated smartwatch workout detection (handled via Health Connect/Apple Health in Phase 8).
+

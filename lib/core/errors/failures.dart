@@ -133,3 +133,12 @@ class PrivacyOperationFailure extends Failure {
   });
 }
 
+class DatabaseFailure extends Failure {
+  const DatabaseFailure(
+    String message, {
+    super.code = 'FK-8001',
+    super.retryable = false,
+    super.requestId,
+  }) : super(message: message);
+}
+

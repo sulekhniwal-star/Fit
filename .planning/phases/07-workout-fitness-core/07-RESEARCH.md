@@ -53,3 +53,4 @@
 ## 2. Threat Model (ASVS L1)
 - **Local Storage Encryption**: Workout logs and active session notes must reside inside SQLCipher encrypted tables.
 - **Injury Prevention Guidance**: Rest timers and volume indicators must clearly state they are educational training logs, not licensed personal training or physical therapy prescriptions.
+

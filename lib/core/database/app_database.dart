@@ -10,6 +10,7 @@ import 'tables/nutrition_tables.dart';
 import 'tables/outbox_table.dart';
 import 'tables/user_profiles_table.dart';
 import 'tables/vitals_and_habits_tables.dart';
+import 'tables/workout_tables.dart';
 
 part 'app_database.g.dart';
 
@@ -28,6 +29,9 @@ part 'app_database.g.dart';
   CookingMultipliersTable,
   MealLogsTable,
   RecipesTable,
+  ExercisesTable,
+  WorkoutSessionsTable,
+  WorkoutSetsTable,
 ])
 class AppDatabase extends _$AppDatabase {
   AppDatabase([QueryExecutor? executor]) : super(executor ?? _openConnection());

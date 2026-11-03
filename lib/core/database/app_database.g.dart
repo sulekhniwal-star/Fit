@@ -8280,6 +8280,2024 @@ class RecipesTableCompanion extends UpdateCompanion<RecipesTableData> {
   }
 }
 
+class $ExercisesTableTable extends ExercisesTable
+    with TableInfo<$ExercisesTableTable, ExercisesTableData> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $ExercisesTableTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<String> id = GeneratedColumn<String>(
+    'id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _nameMeta = const VerificationMeta('name');
+  @override
+  late final GeneratedColumn<String> name = GeneratedColumn<String>(
+    'name',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _hindiNameMeta = const VerificationMeta(
+    'hindiName',
+  );
+  @override
+  late final GeneratedColumn<String> hindiName = GeneratedColumn<String>(
+    'hindi_name',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(''),
+  );
+  static const VerificationMeta _primaryMuscleMeta = const VerificationMeta(
+    'primaryMuscle',
+  );
+  @override
+  late final GeneratedColumn<String> primaryMuscle = GeneratedColumn<String>(
+    'primary_muscle',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _secondaryMusclesJsonMeta =
+      const VerificationMeta('secondaryMusclesJson');
+  @override
+  late final GeneratedColumn<String> secondaryMusclesJson =
+      GeneratedColumn<String>(
+        'secondary_muscles_json',
+        aliasedName,
+        false,
+        type: DriftSqlType.string,
+        requiredDuringInsert: false,
+        defaultValue: const Constant('[]'),
+      );
+  static const VerificationMeta _equipmentMeta = const VerificationMeta(
+    'equipment',
+  );
+  @override
+  late final GeneratedColumn<String> equipment = GeneratedColumn<String>(
+    'equipment',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _workoutTypeMeta = const VerificationMeta(
+    'workoutType',
+  );
+  @override
+  late final GeneratedColumn<String> workoutType = GeneratedColumn<String>(
+    'workout_type',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _difficultyMeta = const VerificationMeta(
+    'difficulty',
+  );
+  @override
+  late final GeneratedColumn<String> difficulty = GeneratedColumn<String>(
+    'difficulty',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant('beginner'),
+  );
+  static const VerificationMeta _instructionsMeta = const VerificationMeta(
+    'instructions',
+  );
+  @override
+  late final GeneratedColumn<String> instructions = GeneratedColumn<String>(
+    'instructions',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(''),
+  );
+  static const VerificationMeta _isHomeFriendlyMeta = const VerificationMeta(
+    'isHomeFriendly',
+  );
+  @override
+  late final GeneratedColumn<bool> isHomeFriendly = GeneratedColumn<bool>(
+    'is_home_friendly',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("is_home_friendly" IN (0, 1))',
+    ),
+    defaultValue: const Constant(true),
+  );
+  static const VerificationMeta _isSystemMeta = const VerificationMeta(
+    'isSystem',
+  );
+  @override
+  late final GeneratedColumn<bool> isSystem = GeneratedColumn<bool>(
+    'is_system',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("is_system" IN (0, 1))',
+    ),
+    defaultValue: const Constant(true),
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    name,
+    hindiName,
+    primaryMuscle,
+    secondaryMusclesJson,
+    equipment,
+    workoutType,
+    difficulty,
+    instructions,
+    isHomeFriendly,
+    isSystem,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'exercises_table';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<ExercisesTableData> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    } else if (isInserting) {
+      context.missing(_idMeta);
+    }
+    if (data.containsKey('name')) {
+      context.handle(
+        _nameMeta,
+        name.isAcceptableOrUnknown(data['name']!, _nameMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_nameMeta);
+    }
+    if (data.containsKey('hindi_name')) {
+      context.handle(
+        _hindiNameMeta,
+        hindiName.isAcceptableOrUnknown(data['hindi_name']!, _hindiNameMeta),
+      );
+    }
+    if (data.containsKey('primary_muscle')) {
+      context.handle(
+        _primaryMuscleMeta,
+        primaryMuscle.isAcceptableOrUnknown(
+          data['primary_muscle']!,
+          _primaryMuscleMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_primaryMuscleMeta);
+    }
+    if (data.containsKey('secondary_muscles_json')) {
+      context.handle(
+        _secondaryMusclesJsonMeta,
+        secondaryMusclesJson.isAcceptableOrUnknown(
+          data['secondary_muscles_json']!,
+          _secondaryMusclesJsonMeta,
+        ),
+      );
+    }
+    if (data.containsKey('equipment')) {
+      context.handle(
+        _equipmentMeta,
+        equipment.isAcceptableOrUnknown(data['equipment']!, _equipmentMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_equipmentMeta);
+    }
+    if (data.containsKey('workout_type')) {
+      context.handle(
+        _workoutTypeMeta,
+        workoutType.isAcceptableOrUnknown(
+          data['workout_type']!,
+          _workoutTypeMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_workoutTypeMeta);
+    }
+    if (data.containsKey('difficulty')) {
+      context.handle(
+        _difficultyMeta,
+        difficulty.isAcceptableOrUnknown(data['difficulty']!, _difficultyMeta),
+      );
+    }
+    if (data.containsKey('instructions')) {
+      context.handle(
+        _instructionsMeta,
+        instructions.isAcceptableOrUnknown(
+          data['instructions']!,
+          _instructionsMeta,
+        ),
+      );
+    }
+    if (data.containsKey('is_home_friendly')) {
+      context.handle(
+        _isHomeFriendlyMeta,
+        isHomeFriendly.isAcceptableOrUnknown(
+          data['is_home_friendly']!,
+          _isHomeFriendlyMeta,
+        ),
+      );
+    }
+    if (data.containsKey('is_system')) {
+      context.handle(
+        _isSystemMeta,
+        isSystem.isAcceptableOrUnknown(data['is_system']!, _isSystemMeta),
+      );
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  ExercisesTableData map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return ExercisesTableData(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}id'],
+      )!,
+      name: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}name'],
+      )!,
+      hindiName: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}hindi_name'],
+      )!,
+      primaryMuscle: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}primary_muscle'],
+      )!,
+      secondaryMusclesJson: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}secondary_muscles_json'],
+      )!,
+      equipment: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}equipment'],
+      )!,
+      workoutType: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}workout_type'],
+      )!,
+      difficulty: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}difficulty'],
+      )!,
+      instructions: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}instructions'],
+      )!,
+      isHomeFriendly: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}is_home_friendly'],
+      )!,
+      isSystem: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}is_system'],
+      )!,
+    );
+  }
+
+  @override
+  $ExercisesTableTable createAlias(String alias) {
+    return $ExercisesTableTable(attachedDatabase, alias);
+  }
+}
+
+class ExercisesTableData extends DataClass
+    implements Insertable<ExercisesTableData> {
+  final String id;
+  final String name;
+  final String hindiName;
+  final String primaryMuscle;
+  final String secondaryMusclesJson;
+  final String equipment;
+  final String workoutType;
+  final String difficulty;
+  final String instructions;
+  final bool isHomeFriendly;
+  final bool isSystem;
+  const ExercisesTableData({
+    required this.id,
+    required this.name,
+    required this.hindiName,
+    required this.primaryMuscle,
+    required this.secondaryMusclesJson,
+    required this.equipment,
+    required this.workoutType,
+    required this.difficulty,
+    required this.instructions,
+    required this.isHomeFriendly,
+    required this.isSystem,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<String>(id);
+    map['name'] = Variable<String>(name);
+    map['hindi_name'] = Variable<String>(hindiName);
+    map['primary_muscle'] = Variable<String>(primaryMuscle);
+    map['secondary_muscles_json'] = Variable<String>(secondaryMusclesJson);
+    map['equipment'] = Variable<String>(equipment);
+    map['workout_type'] = Variable<String>(workoutType);
+    map['difficulty'] = Variable<String>(difficulty);
+    map['instructions'] = Variable<String>(instructions);
+    map['is_home_friendly'] = Variable<bool>(isHomeFriendly);
+    map['is_system'] = Variable<bool>(isSystem);
+    return map;
+  }
+
+  ExercisesTableCompanion toCompanion(bool nullToAbsent) {
+    return ExercisesTableCompanion(
+      id: Value(id),
+      name: Value(name),
+      hindiName: Value(hindiName),
+      primaryMuscle: Value(primaryMuscle),
+      secondaryMusclesJson: Value(secondaryMusclesJson),
+      equipment: Value(equipment),
+      workoutType: Value(workoutType),
+      difficulty: Value(difficulty),
+      instructions: Value(instructions),
+      isHomeFriendly: Value(isHomeFriendly),
+      isSystem: Value(isSystem),
+    );
+  }
+
+  factory ExercisesTableData.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return ExercisesTableData(
+      id: serializer.fromJson<String>(json['id']),
+      name: serializer.fromJson<String>(json['name']),
+      hindiName: serializer.fromJson<String>(json['hindiName']),
+      primaryMuscle: serializer.fromJson<String>(json['primaryMuscle']),
+      secondaryMusclesJson: serializer.fromJson<String>(
+        json['secondaryMusclesJson'],
+      ),
+      equipment: serializer.fromJson<String>(json['equipment']),
+      workoutType: serializer.fromJson<String>(json['workoutType']),
+      difficulty: serializer.fromJson<String>(json['difficulty']),
+      instructions: serializer.fromJson<String>(json['instructions']),
+      isHomeFriendly: serializer.fromJson<bool>(json['isHomeFriendly']),
+      isSystem: serializer.fromJson<bool>(json['isSystem']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<String>(id),
+      'name': serializer.toJson<String>(name),
+      'hindiName': serializer.toJson<String>(hindiName),
+      'primaryMuscle': serializer.toJson<String>(primaryMuscle),
+      'secondaryMusclesJson': serializer.toJson<String>(secondaryMusclesJson),
+      'equipment': serializer.toJson<String>(equipment),
+      'workoutType': serializer.toJson<String>(workoutType),
+      'difficulty': serializer.toJson<String>(difficulty),
+      'instructions': serializer.toJson<String>(instructions),
+      'isHomeFriendly': serializer.toJson<bool>(isHomeFriendly),
+      'isSystem': serializer.toJson<bool>(isSystem),
+    };
+  }
+
+  ExercisesTableData copyWith({
+    String? id,
+    String? name,
+    String? hindiName,
+    String? primaryMuscle,
+    String? secondaryMusclesJson,
+    String? equipment,
+    String? workoutType,
+    String? difficulty,
+    String? instructions,
+    bool? isHomeFriendly,
+    bool? isSystem,
+  }) => ExercisesTableData(
+    id: id ?? this.id,
+    name: name ?? this.name,
+    hindiName: hindiName ?? this.hindiName,
+    primaryMuscle: primaryMuscle ?? this.primaryMuscle,
+    secondaryMusclesJson: secondaryMusclesJson ?? this.secondaryMusclesJson,
+    equipment: equipment ?? this.equipment,
+    workoutType: workoutType ?? this.workoutType,
+    difficulty: difficulty ?? this.difficulty,
+    instructions: instructions ?? this.instructions,
+    isHomeFriendly: isHomeFriendly ?? this.isHomeFriendly,
+    isSystem: isSystem ?? this.isSystem,
+  );
+  ExercisesTableData copyWithCompanion(ExercisesTableCompanion data) {
+    return ExercisesTableData(
+      id: data.id.present ? data.id.value : this.id,
+      name: data.name.present ? data.name.value : this.name,
+      hindiName: data.hindiName.present ? data.hindiName.value : this.hindiName,
+      primaryMuscle: data.primaryMuscle.present
+          ? data.primaryMuscle.value
+          : this.primaryMuscle,
+      secondaryMusclesJson: data.secondaryMusclesJson.present
+          ? data.secondaryMusclesJson.value
+          : this.secondaryMusclesJson,
+      equipment: data.equipment.present ? data.equipment.value : this.equipment,
+      workoutType: data.workoutType.present
+          ? data.workoutType.value
+          : this.workoutType,
+      difficulty: data.difficulty.present
+          ? data.difficulty.value
+          : this.difficulty,
+      instructions: data.instructions.present
+          ? data.instructions.value
+          : this.instructions,
+      isHomeFriendly: data.isHomeFriendly.present
+          ? data.isHomeFriendly.value
+          : this.isHomeFriendly,
+      isSystem: data.isSystem.present ? data.isSystem.value : this.isSystem,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('ExercisesTableData(')
+          ..write('id: $id, ')
+          ..write('name: $name, ')
+          ..write('hindiName: $hindiName, ')
+          ..write('primaryMuscle: $primaryMuscle, ')
+          ..write('secondaryMusclesJson: $secondaryMusclesJson, ')
+          ..write('equipment: $equipment, ')
+          ..write('workoutType: $workoutType, ')
+          ..write('difficulty: $difficulty, ')
+          ..write('instructions: $instructions, ')
+          ..write('isHomeFriendly: $isHomeFriendly, ')
+          ..write('isSystem: $isSystem')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    name,
+    hindiName,
+    primaryMuscle,
+    secondaryMusclesJson,
+    equipment,
+    workoutType,
+    difficulty,
+    instructions,
+    isHomeFriendly,
+    isSystem,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is ExercisesTableData &&
+          other.id == this.id &&
+          other.name == this.name &&
+          other.hindiName == this.hindiName &&
+          other.primaryMuscle == this.primaryMuscle &&
+          other.secondaryMusclesJson == this.secondaryMusclesJson &&
+          other.equipment == this.equipment &&
+          other.workoutType == this.workoutType &&
+          other.difficulty == this.difficulty &&
+          other.instructions == this.instructions &&
+          other.isHomeFriendly == this.isHomeFriendly &&
+          other.isSystem == this.isSystem);
+}
+
+class ExercisesTableCompanion extends UpdateCompanion<ExercisesTableData> {
+  final Value<String> id;
+  final Value<String> name;
+  final Value<String> hindiName;
+  final Value<String> primaryMuscle;
+  final Value<String> secondaryMusclesJson;
+  final Value<String> equipment;
+  final Value<String> workoutType;
+  final Value<String> difficulty;
+  final Value<String> instructions;
+  final Value<bool> isHomeFriendly;
+  final Value<bool> isSystem;
+  final Value<int> rowid;
+  const ExercisesTableCompanion({
+    this.id = const Value.absent(),
+    this.name = const Value.absent(),
+    this.hindiName = const Value.absent(),
+    this.primaryMuscle = const Value.absent(),
+    this.secondaryMusclesJson = const Value.absent(),
+    this.equipment = const Value.absent(),
+    this.workoutType = const Value.absent(),
+    this.difficulty = const Value.absent(),
+    this.instructions = const Value.absent(),
+    this.isHomeFriendly = const Value.absent(),
+    this.isSystem = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  ExercisesTableCompanion.insert({
+    required String id,
+    required String name,
+    this.hindiName = const Value.absent(),
+    required String primaryMuscle,
+    this.secondaryMusclesJson = const Value.absent(),
+    required String equipment,
+    required String workoutType,
+    this.difficulty = const Value.absent(),
+    this.instructions = const Value.absent(),
+    this.isHomeFriendly = const Value.absent(),
+    this.isSystem = const Value.absent(),
+    this.rowid = const Value.absent(),
+  }) : id = Value(id),
+       name = Value(name),
+       primaryMuscle = Value(primaryMuscle),
+       equipment = Value(equipment),
+       workoutType = Value(workoutType);
+  static Insertable<ExercisesTableData> custom({
+    Expression<String>? id,
+    Expression<String>? name,
+    Expression<String>? hindiName,
+    Expression<String>? primaryMuscle,
+    Expression<String>? secondaryMusclesJson,
+    Expression<String>? equipment,
+    Expression<String>? workoutType,
+    Expression<String>? difficulty,
+    Expression<String>? instructions,
+    Expression<bool>? isHomeFriendly,
+    Expression<bool>? isSystem,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (name != null) 'name': name,
+      if (hindiName != null) 'hindi_name': hindiName,
+      if (primaryMuscle != null) 'primary_muscle': primaryMuscle,
+      if (secondaryMusclesJson != null)
+        'secondary_muscles_json': secondaryMusclesJson,
+      if (equipment != null) 'equipment': equipment,
+      if (workoutType != null) 'workout_type': workoutType,
+      if (difficulty != null) 'difficulty': difficulty,
+      if (instructions != null) 'instructions': instructions,
+      if (isHomeFriendly != null) 'is_home_friendly': isHomeFriendly,
+      if (isSystem != null) 'is_system': isSystem,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  ExercisesTableCompanion copyWith({
+    Value<String>? id,
+    Value<String>? name,
+    Value<String>? hindiName,
+    Value<String>? primaryMuscle,
+    Value<String>? secondaryMusclesJson,
+    Value<String>? equipment,
+    Value<String>? workoutType,
+    Value<String>? difficulty,
+    Value<String>? instructions,
+    Value<bool>? isHomeFriendly,
+    Value<bool>? isSystem,
+    Value<int>? rowid,
+  }) {
+    return ExercisesTableCompanion(
+      id: id ?? this.id,
+      name: name ?? this.name,
+      hindiName: hindiName ?? this.hindiName,
+      primaryMuscle: primaryMuscle ?? this.primaryMuscle,
+      secondaryMusclesJson: secondaryMusclesJson ?? this.secondaryMusclesJson,
+      equipment: equipment ?? this.equipment,
+      workoutType: workoutType ?? this.workoutType,
+      difficulty: difficulty ?? this.difficulty,
+      instructions: instructions ?? this.instructions,
+      isHomeFriendly: isHomeFriendly ?? this.isHomeFriendly,
+      isSystem: isSystem ?? this.isSystem,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<String>(id.value);
+    }
+    if (name.present) {
+      map['name'] = Variable<String>(name.value);
+    }
+    if (hindiName.present) {
+      map['hindi_name'] = Variable<String>(hindiName.value);
+    }
+    if (primaryMuscle.present) {
+      map['primary_muscle'] = Variable<String>(primaryMuscle.value);
+    }
+    if (secondaryMusclesJson.present) {
+      map['secondary_muscles_json'] = Variable<String>(
+        secondaryMusclesJson.value,
+      );
+    }
+    if (equipment.present) {
+      map['equipment'] = Variable<String>(equipment.value);
+    }
+    if (workoutType.present) {
+      map['workout_type'] = Variable<String>(workoutType.value);
+    }
+    if (difficulty.present) {
+      map['difficulty'] = Variable<String>(difficulty.value);
+    }
+    if (instructions.present) {
+      map['instructions'] = Variable<String>(instructions.value);
+    }
+    if (isHomeFriendly.present) {
+      map['is_home_friendly'] = Variable<bool>(isHomeFriendly.value);
+    }
+    if (isSystem.present) {
+      map['is_system'] = Variable<bool>(isSystem.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('ExercisesTableCompanion(')
+          ..write('id: $id, ')
+          ..write('name: $name, ')
+          ..write('hindiName: $hindiName, ')
+          ..write('primaryMuscle: $primaryMuscle, ')
+          ..write('secondaryMusclesJson: $secondaryMusclesJson, ')
+          ..write('equipment: $equipment, ')
+          ..write('workoutType: $workoutType, ')
+          ..write('difficulty: $difficulty, ')
+          ..write('instructions: $instructions, ')
+          ..write('isHomeFriendly: $isHomeFriendly, ')
+          ..write('isSystem: $isSystem, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $WorkoutSessionsTableTable extends WorkoutSessionsTable
+    with TableInfo<$WorkoutSessionsTableTable, WorkoutSessionsTableData> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $WorkoutSessionsTableTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<String> id = GeneratedColumn<String>(
+    'id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _userIdMeta = const VerificationMeta('userId');
+  @override
+  late final GeneratedColumn<String> userId = GeneratedColumn<String>(
+    'user_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _titleMeta = const VerificationMeta('title');
+  @override
+  late final GeneratedColumn<String> title = GeneratedColumn<String>(
+    'title',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _workoutTypeMeta = const VerificationMeta(
+    'workoutType',
+  );
+  @override
+  late final GeneratedColumn<String> workoutType = GeneratedColumn<String>(
+    'workout_type',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _startedAtMeta = const VerificationMeta(
+    'startedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> startedAt = GeneratedColumn<DateTime>(
+    'started_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _endedAtMeta = const VerificationMeta(
+    'endedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> endedAt = GeneratedColumn<DateTime>(
+    'ended_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _totalVolumeKgMeta = const VerificationMeta(
+    'totalVolumeKg',
+  );
+  @override
+  late final GeneratedColumn<double> totalVolumeKg = GeneratedColumn<double>(
+    'total_volume_kg',
+    aliasedName,
+    false,
+    type: DriftSqlType.double,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0.0),
+  );
+  static const VerificationMeta _durationSecondsMeta = const VerificationMeta(
+    'durationSeconds',
+  );
+  @override
+  late final GeneratedColumn<int> durationSeconds = GeneratedColumn<int>(
+    'duration_seconds',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  static const VerificationMeta _caloriesBurnedMeta = const VerificationMeta(
+    'caloriesBurned',
+  );
+  @override
+  late final GeneratedColumn<double> caloriesBurned = GeneratedColumn<double>(
+    'calories_burned',
+    aliasedName,
+    false,
+    type: DriftSqlType.double,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0.0),
+  );
+  static const VerificationMeta _statusMeta = const VerificationMeta('status');
+  @override
+  late final GeneratedColumn<String> status = GeneratedColumn<String>(
+    'status',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant('inProgress'),
+  );
+  static const VerificationMeta _notesMeta = const VerificationMeta('notes');
+  @override
+  late final GeneratedColumn<String> notes = GeneratedColumn<String>(
+    'notes',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    userId,
+    title,
+    workoutType,
+    startedAt,
+    endedAt,
+    totalVolumeKg,
+    durationSeconds,
+    caloriesBurned,
+    status,
+    notes,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'workout_sessions_table';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<WorkoutSessionsTableData> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    } else if (isInserting) {
+      context.missing(_idMeta);
+    }
+    if (data.containsKey('user_id')) {
+      context.handle(
+        _userIdMeta,
+        userId.isAcceptableOrUnknown(data['user_id']!, _userIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_userIdMeta);
+    }
+    if (data.containsKey('title')) {
+      context.handle(
+        _titleMeta,
+        title.isAcceptableOrUnknown(data['title']!, _titleMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_titleMeta);
+    }
+    if (data.containsKey('workout_type')) {
+      context.handle(
+        _workoutTypeMeta,
+        workoutType.isAcceptableOrUnknown(
+          data['workout_type']!,
+          _workoutTypeMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_workoutTypeMeta);
+    }
+    if (data.containsKey('started_at')) {
+      context.handle(
+        _startedAtMeta,
+        startedAt.isAcceptableOrUnknown(data['started_at']!, _startedAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_startedAtMeta);
+    }
+    if (data.containsKey('ended_at')) {
+      context.handle(
+        _endedAtMeta,
+        endedAt.isAcceptableOrUnknown(data['ended_at']!, _endedAtMeta),
+      );
+    }
+    if (data.containsKey('total_volume_kg')) {
+      context.handle(
+        _totalVolumeKgMeta,
+        totalVolumeKg.isAcceptableOrUnknown(
+          data['total_volume_kg']!,
+          _totalVolumeKgMeta,
+        ),
+      );
+    }
+    if (data.containsKey('duration_seconds')) {
+      context.handle(
+        _durationSecondsMeta,
+        durationSeconds.isAcceptableOrUnknown(
+          data['duration_seconds']!,
+          _durationSecondsMeta,
+        ),
+      );
+    }
+    if (data.containsKey('calories_burned')) {
+      context.handle(
+        _caloriesBurnedMeta,
+        caloriesBurned.isAcceptableOrUnknown(
+          data['calories_burned']!,
+          _caloriesBurnedMeta,
+        ),
+      );
+    }
+    if (data.containsKey('status')) {
+      context.handle(
+        _statusMeta,
+        status.isAcceptableOrUnknown(data['status']!, _statusMeta),
+      );
+    }
+    if (data.containsKey('notes')) {
+      context.handle(
+        _notesMeta,
+        notes.isAcceptableOrUnknown(data['notes']!, _notesMeta),
+      );
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  WorkoutSessionsTableData map(
+    Map<String, dynamic> data, {
+    String? tablePrefix,
+  }) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return WorkoutSessionsTableData(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}id'],
+      )!,
+      userId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}user_id'],
+      )!,
+      title: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}title'],
+      )!,
+      workoutType: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}workout_type'],
+      )!,
+      startedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}started_at'],
+      )!,
+      endedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}ended_at'],
+      ),
+      totalVolumeKg: attachedDatabase.typeMapping.read(
+        DriftSqlType.double,
+        data['${effectivePrefix}total_volume_kg'],
+      )!,
+      durationSeconds: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}duration_seconds'],
+      )!,
+      caloriesBurned: attachedDatabase.typeMapping.read(
+        DriftSqlType.double,
+        data['${effectivePrefix}calories_burned'],
+      )!,
+      status: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}status'],
+      )!,
+      notes: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}notes'],
+      ),
+    );
+  }
+
+  @override
+  $WorkoutSessionsTableTable createAlias(String alias) {
+    return $WorkoutSessionsTableTable(attachedDatabase, alias);
+  }
+}
+
+class WorkoutSessionsTableData extends DataClass
+    implements Insertable<WorkoutSessionsTableData> {
+  final String id;
+  final String userId;
+  final String title;
+  final String workoutType;
+  final DateTime startedAt;
+  final DateTime? endedAt;
+  final double totalVolumeKg;
+  final int durationSeconds;
+  final double caloriesBurned;
+  final String status;
+  final String? notes;
+  const WorkoutSessionsTableData({
+    required this.id,
+    required this.userId,
+    required this.title,
+    required this.workoutType,
+    required this.startedAt,
+    this.endedAt,
+    required this.totalVolumeKg,
+    required this.durationSeconds,
+    required this.caloriesBurned,
+    required this.status,
+    this.notes,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<String>(id);
+    map['user_id'] = Variable<String>(userId);
+    map['title'] = Variable<String>(title);
+    map['workout_type'] = Variable<String>(workoutType);
+    map['started_at'] = Variable<DateTime>(startedAt);
+    if (!nullToAbsent || endedAt != null) {
+      map['ended_at'] = Variable<DateTime>(endedAt);
+    }
+    map['total_volume_kg'] = Variable<double>(totalVolumeKg);
+    map['duration_seconds'] = Variable<int>(durationSeconds);
+    map['calories_burned'] = Variable<double>(caloriesBurned);
+    map['status'] = Variable<String>(status);
+    if (!nullToAbsent || notes != null) {
+      map['notes'] = Variable<String>(notes);
+    }
+    return map;
+  }
+
+  WorkoutSessionsTableCompanion toCompanion(bool nullToAbsent) {
+    return WorkoutSessionsTableCompanion(
+      id: Value(id),
+      userId: Value(userId),
+      title: Value(title),
+      workoutType: Value(workoutType),
+      startedAt: Value(startedAt),
+      endedAt: endedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(endedAt),
+      totalVolumeKg: Value(totalVolumeKg),
+      durationSeconds: Value(durationSeconds),
+      caloriesBurned: Value(caloriesBurned),
+      status: Value(status),
+      notes: notes == null && nullToAbsent
+          ? const Value.absent()
+          : Value(notes),
+    );
+  }
+
+  factory WorkoutSessionsTableData.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return WorkoutSessionsTableData(
+      id: serializer.fromJson<String>(json['id']),
+      userId: serializer.fromJson<String>(json['userId']),
+      title: serializer.fromJson<String>(json['title']),
+      workoutType: serializer.fromJson<String>(json['workoutType']),
+      startedAt: serializer.fromJson<DateTime>(json['startedAt']),
+      endedAt: serializer.fromJson<DateTime?>(json['endedAt']),
+      totalVolumeKg: serializer.fromJson<double>(json['totalVolumeKg']),
+      durationSeconds: serializer.fromJson<int>(json['durationSeconds']),
+      caloriesBurned: serializer.fromJson<double>(json['caloriesBurned']),
+      status: serializer.fromJson<String>(json['status']),
+      notes: serializer.fromJson<String?>(json['notes']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<String>(id),
+      'userId': serializer.toJson<String>(userId),
+      'title': serializer.toJson<String>(title),
+      'workoutType': serializer.toJson<String>(workoutType),
+      'startedAt': serializer.toJson<DateTime>(startedAt),
+      'endedAt': serializer.toJson<DateTime?>(endedAt),
+      'totalVolumeKg': serializer.toJson<double>(totalVolumeKg),
+      'durationSeconds': serializer.toJson<int>(durationSeconds),
+      'caloriesBurned': serializer.toJson<double>(caloriesBurned),
+      'status': serializer.toJson<String>(status),
+      'notes': serializer.toJson<String?>(notes),
+    };
+  }
+
+  WorkoutSessionsTableData copyWith({
+    String? id,
+    String? userId,
+    String? title,
+    String? workoutType,
+    DateTime? startedAt,
+    Value<DateTime?> endedAt = const Value.absent(),
+    double? totalVolumeKg,
+    int? durationSeconds,
+    double? caloriesBurned,
+    String? status,
+    Value<String?> notes = const Value.absent(),
+  }) => WorkoutSessionsTableData(
+    id: id ?? this.id,
+    userId: userId ?? this.userId,
+    title: title ?? this.title,
+    workoutType: workoutType ?? this.workoutType,
+    startedAt: startedAt ?? this.startedAt,
+    endedAt: endedAt.present ? endedAt.value : this.endedAt,
+    totalVolumeKg: totalVolumeKg ?? this.totalVolumeKg,
+    durationSeconds: durationSeconds ?? this.durationSeconds,
+    caloriesBurned: caloriesBurned ?? this.caloriesBurned,
+    status: status ?? this.status,
+    notes: notes.present ? notes.value : this.notes,
+  );
+  WorkoutSessionsTableData copyWithCompanion(
+    WorkoutSessionsTableCompanion data,
+  ) {
+    return WorkoutSessionsTableData(
+      id: data.id.present ? data.id.value : this.id,
+      userId: data.userId.present ? data.userId.value : this.userId,
+      title: data.title.present ? data.title.value : this.title,
+      workoutType: data.workoutType.present
+          ? data.workoutType.value
+          : this.workoutType,
+      startedAt: data.startedAt.present ? data.startedAt.value : this.startedAt,
+      endedAt: data.endedAt.present ? data.endedAt.value : this.endedAt,
+      totalVolumeKg: data.totalVolumeKg.present
+          ? data.totalVolumeKg.value
+          : this.totalVolumeKg,
+      durationSeconds: data.durationSeconds.present
+          ? data.durationSeconds.value
+          : this.durationSeconds,
+      caloriesBurned: data.caloriesBurned.present
+          ? data.caloriesBurned.value
+          : this.caloriesBurned,
+      status: data.status.present ? data.status.value : this.status,
+      notes: data.notes.present ? data.notes.value : this.notes,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('WorkoutSessionsTableData(')
+          ..write('id: $id, ')
+          ..write('userId: $userId, ')
+          ..write('title: $title, ')
+          ..write('workoutType: $workoutType, ')
+          ..write('startedAt: $startedAt, ')
+          ..write('endedAt: $endedAt, ')
+          ..write('totalVolumeKg: $totalVolumeKg, ')
+          ..write('durationSeconds: $durationSeconds, ')
+          ..write('caloriesBurned: $caloriesBurned, ')
+          ..write('status: $status, ')
+          ..write('notes: $notes')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    userId,
+    title,
+    workoutType,
+    startedAt,
+    endedAt,
+    totalVolumeKg,
+    durationSeconds,
+    caloriesBurned,
+    status,
+    notes,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is WorkoutSessionsTableData &&
+          other.id == this.id &&
+          other.userId == this.userId &&
+          other.title == this.title &&
+          other.workoutType == this.workoutType &&
+          other.startedAt == this.startedAt &&
+          other.endedAt == this.endedAt &&
+          other.totalVolumeKg == this.totalVolumeKg &&
+          other.durationSeconds == this.durationSeconds &&
+          other.caloriesBurned == this.caloriesBurned &&
+          other.status == this.status &&
+          other.notes == this.notes);
+}
+
+class WorkoutSessionsTableCompanion
+    extends UpdateCompanion<WorkoutSessionsTableData> {
+  final Value<String> id;
+  final Value<String> userId;
+  final Value<String> title;
+  final Value<String> workoutType;
+  final Value<DateTime> startedAt;
+  final Value<DateTime?> endedAt;
+  final Value<double> totalVolumeKg;
+  final Value<int> durationSeconds;
+  final Value<double> caloriesBurned;
+  final Value<String> status;
+  final Value<String?> notes;
+  final Value<int> rowid;
+  const WorkoutSessionsTableCompanion({
+    this.id = const Value.absent(),
+    this.userId = const Value.absent(),
+    this.title = const Value.absent(),
+    this.workoutType = const Value.absent(),
+    this.startedAt = const Value.absent(),
+    this.endedAt = const Value.absent(),
+    this.totalVolumeKg = const Value.absent(),
+    this.durationSeconds = const Value.absent(),
+    this.caloriesBurned = const Value.absent(),
+    this.status = const Value.absent(),
+    this.notes = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  WorkoutSessionsTableCompanion.insert({
+    required String id,
+    required String userId,
+    required String title,
+    required String workoutType,
+    required DateTime startedAt,
+    this.endedAt = const Value.absent(),
+    this.totalVolumeKg = const Value.absent(),
+    this.durationSeconds = const Value.absent(),
+    this.caloriesBurned = const Value.absent(),
+    this.status = const Value.absent(),
+    this.notes = const Value.absent(),
+    this.rowid = const Value.absent(),
+  }) : id = Value(id),
+       userId = Value(userId),
+       title = Value(title),
+       workoutType = Value(workoutType),
+       startedAt = Value(startedAt);
+  static Insertable<WorkoutSessionsTableData> custom({
+    Expression<String>? id,
+    Expression<String>? userId,
+    Expression<String>? title,
+    Expression<String>? workoutType,
+    Expression<DateTime>? startedAt,
+    Expression<DateTime>? endedAt,
+    Expression<double>? totalVolumeKg,
+    Expression<int>? durationSeconds,
+    Expression<double>? caloriesBurned,
+    Expression<String>? status,
+    Expression<String>? notes,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (userId != null) 'user_id': userId,
+      if (title != null) 'title': title,
+      if (workoutType != null) 'workout_type': workoutType,
+      if (startedAt != null) 'started_at': startedAt,
+      if (endedAt != null) 'ended_at': endedAt,
+      if (totalVolumeKg != null) 'total_volume_kg': totalVolumeKg,
+      if (durationSeconds != null) 'duration_seconds': durationSeconds,
+      if (caloriesBurned != null) 'calories_burned': caloriesBurned,
+      if (status != null) 'status': status,
+      if (notes != null) 'notes': notes,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  WorkoutSessionsTableCompanion copyWith({
+    Value<String>? id,
+    Value<String>? userId,
+    Value<String>? title,
+    Value<String>? workoutType,
+    Value<DateTime>? startedAt,
+    Value<DateTime?>? endedAt,
+    Value<double>? totalVolumeKg,
+    Value<int>? durationSeconds,
+    Value<double>? caloriesBurned,
+    Value<String>? status,
+    Value<String?>? notes,
+    Value<int>? rowid,
+  }) {
+    return WorkoutSessionsTableCompanion(
+      id: id ?? this.id,
+      userId: userId ?? this.userId,
+      title: title ?? this.title,
+      workoutType: workoutType ?? this.workoutType,
+      startedAt: startedAt ?? this.startedAt,
+      endedAt: endedAt ?? this.endedAt,
+      totalVolumeKg: totalVolumeKg ?? this.totalVolumeKg,
+      durationSeconds: durationSeconds ?? this.durationSeconds,
+      caloriesBurned: caloriesBurned ?? this.caloriesBurned,
+      status: status ?? this.status,
+      notes: notes ?? this.notes,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<String>(id.value);
+    }
+    if (userId.present) {
+      map['user_id'] = Variable<String>(userId.value);
+    }
+    if (title.present) {
+      map['title'] = Variable<String>(title.value);
+    }
+    if (workoutType.present) {
+      map['workout_type'] = Variable<String>(workoutType.value);
+    }
+    if (startedAt.present) {
+      map['started_at'] = Variable<DateTime>(startedAt.value);
+    }
+    if (endedAt.present) {
+      map['ended_at'] = Variable<DateTime>(endedAt.value);
+    }
+    if (totalVolumeKg.present) {
+      map['total_volume_kg'] = Variable<double>(totalVolumeKg.value);
+    }
+    if (durationSeconds.present) {
+      map['duration_seconds'] = Variable<int>(durationSeconds.value);
+    }
+    if (caloriesBurned.present) {
+      map['calories_burned'] = Variable<double>(caloriesBurned.value);
+    }
+    if (status.present) {
+      map['status'] = Variable<String>(status.value);
+    }
+    if (notes.present) {
+      map['notes'] = Variable<String>(notes.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('WorkoutSessionsTableCompanion(')
+          ..write('id: $id, ')
+          ..write('userId: $userId, ')
+          ..write('title: $title, ')
+          ..write('workoutType: $workoutType, ')
+          ..write('startedAt: $startedAt, ')
+          ..write('endedAt: $endedAt, ')
+          ..write('totalVolumeKg: $totalVolumeKg, ')
+          ..write('durationSeconds: $durationSeconds, ')
+          ..write('caloriesBurned: $caloriesBurned, ')
+          ..write('status: $status, ')
+          ..write('notes: $notes, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $WorkoutSetsTableTable extends WorkoutSetsTable
+    with TableInfo<$WorkoutSetsTableTable, WorkoutSetsTableData> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $WorkoutSetsTableTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<String> id = GeneratedColumn<String>(
+    'id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _sessionIdMeta = const VerificationMeta(
+    'sessionId',
+  );
+  @override
+  late final GeneratedColumn<String> sessionId = GeneratedColumn<String>(
+    'session_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _exerciseIdMeta = const VerificationMeta(
+    'exerciseId',
+  );
+  @override
+  late final GeneratedColumn<String> exerciseId = GeneratedColumn<String>(
+    'exercise_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _exerciseNameMeta = const VerificationMeta(
+    'exerciseName',
+  );
+  @override
+  late final GeneratedColumn<String> exerciseName = GeneratedColumn<String>(
+    'exercise_name',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _setNumberMeta = const VerificationMeta(
+    'setNumber',
+  );
+  @override
+  late final GeneratedColumn<int> setNumber = GeneratedColumn<int>(
+    'set_number',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _weightKgMeta = const VerificationMeta(
+    'weightKg',
+  );
+  @override
+  late final GeneratedColumn<double> weightKg = GeneratedColumn<double>(
+    'weight_kg',
+    aliasedName,
+    false,
+    type: DriftSqlType.double,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0.0),
+  );
+  static const VerificationMeta _repsMeta = const VerificationMeta('reps');
+  @override
+  late final GeneratedColumn<int> reps = GeneratedColumn<int>(
+    'reps',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  static const VerificationMeta _isWarmupMeta = const VerificationMeta(
+    'isWarmup',
+  );
+  @override
+  late final GeneratedColumn<bool> isWarmup = GeneratedColumn<bool>(
+    'is_warmup',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("is_warmup" IN (0, 1))',
+    ),
+    defaultValue: const Constant(false),
+  );
+  static const VerificationMeta _isCompletedMeta = const VerificationMeta(
+    'isCompleted',
+  );
+  @override
+  late final GeneratedColumn<bool> isCompleted = GeneratedColumn<bool>(
+    'is_completed',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("is_completed" IN (0, 1))',
+    ),
+    defaultValue: const Constant(false),
+  );
+  static const VerificationMeta _rpeMeta = const VerificationMeta('rpe');
+  @override
+  late final GeneratedColumn<int> rpe = GeneratedColumn<int>(
+    'rpe',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _completedAtMeta = const VerificationMeta(
+    'completedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> completedAt = GeneratedColumn<DateTime>(
+    'completed_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: false,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    sessionId,
+    exerciseId,
+    exerciseName,
+    setNumber,
+    weightKg,
+    reps,
+    isWarmup,
+    isCompleted,
+    rpe,
+    completedAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'workout_sets_table';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<WorkoutSetsTableData> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    } else if (isInserting) {
+      context.missing(_idMeta);
+    }
+    if (data.containsKey('session_id')) {
+      context.handle(
+        _sessionIdMeta,
+        sessionId.isAcceptableOrUnknown(data['session_id']!, _sessionIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_sessionIdMeta);
+    }
+    if (data.containsKey('exercise_id')) {
+      context.handle(
+        _exerciseIdMeta,
+        exerciseId.isAcceptableOrUnknown(data['exercise_id']!, _exerciseIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_exerciseIdMeta);
+    }
+    if (data.containsKey('exercise_name')) {
+      context.handle(
+        _exerciseNameMeta,
+        exerciseName.isAcceptableOrUnknown(
+          data['exercise_name']!,
+          _exerciseNameMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_exerciseNameMeta);
+    }
+    if (data.containsKey('set_number')) {
+      context.handle(
+        _setNumberMeta,
+        setNumber.isAcceptableOrUnknown(data['set_number']!, _setNumberMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_setNumberMeta);
+    }
+    if (data.containsKey('weight_kg')) {
+      context.handle(
+        _weightKgMeta,
+        weightKg.isAcceptableOrUnknown(data['weight_kg']!, _weightKgMeta),
+      );
+    }
+    if (data.containsKey('reps')) {
+      context.handle(
+        _repsMeta,
+        reps.isAcceptableOrUnknown(data['reps']!, _repsMeta),
+      );
+    }
+    if (data.containsKey('is_warmup')) {
+      context.handle(
+        _isWarmupMeta,
+        isWarmup.isAcceptableOrUnknown(data['is_warmup']!, _isWarmupMeta),
+      );
+    }
+    if (data.containsKey('is_completed')) {
+      context.handle(
+        _isCompletedMeta,
+        isCompleted.isAcceptableOrUnknown(
+          data['is_completed']!,
+          _isCompletedMeta,
+        ),
+      );
+    }
+    if (data.containsKey('rpe')) {
+      context.handle(
+        _rpeMeta,
+        rpe.isAcceptableOrUnknown(data['rpe']!, _rpeMeta),
+      );
+    }
+    if (data.containsKey('completed_at')) {
+      context.handle(
+        _completedAtMeta,
+        completedAt.isAcceptableOrUnknown(
+          data['completed_at']!,
+          _completedAtMeta,
+        ),
+      );
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  WorkoutSetsTableData map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return WorkoutSetsTableData(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}id'],
+      )!,
+      sessionId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}session_id'],
+      )!,
+      exerciseId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}exercise_id'],
+      )!,
+      exerciseName: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}exercise_name'],
+      )!,
+      setNumber: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}set_number'],
+      )!,
+      weightKg: attachedDatabase.typeMapping.read(
+        DriftSqlType.double,
+        data['${effectivePrefix}weight_kg'],
+      )!,
+      reps: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}reps'],
+      )!,
+      isWarmup: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}is_warmup'],
+      )!,
+      isCompleted: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}is_completed'],
+      )!,
+      rpe: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}rpe'],
+      ),
+      completedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}completed_at'],
+      ),
+    );
+  }
+
+  @override
+  $WorkoutSetsTableTable createAlias(String alias) {
+    return $WorkoutSetsTableTable(attachedDatabase, alias);
+  }
+}
+
+class WorkoutSetsTableData extends DataClass
+    implements Insertable<WorkoutSetsTableData> {
+  final String id;
+  final String sessionId;
+  final String exerciseId;
+  final String exerciseName;
+  final int setNumber;
+  final double weightKg;
+  final int reps;
+  final bool isWarmup;
+  final bool isCompleted;
+  final int? rpe;
+  final DateTime? completedAt;
+  const WorkoutSetsTableData({
+    required this.id,
+    required this.sessionId,
+    required this.exerciseId,
+    required this.exerciseName,
+    required this.setNumber,
+    required this.weightKg,
+    required this.reps,
+    required this.isWarmup,
+    required this.isCompleted,
+    this.rpe,
+    this.completedAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<String>(id);
+    map['session_id'] = Variable<String>(sessionId);
+    map['exercise_id'] = Variable<String>(exerciseId);
+    map['exercise_name'] = Variable<String>(exerciseName);
+    map['set_number'] = Variable<int>(setNumber);
+    map['weight_kg'] = Variable<double>(weightKg);
+    map['reps'] = Variable<int>(reps);
+    map['is_warmup'] = Variable<bool>(isWarmup);
+    map['is_completed'] = Variable<bool>(isCompleted);
+    if (!nullToAbsent || rpe != null) {
+      map['rpe'] = Variable<int>(rpe);
+    }
+    if (!nullToAbsent || completedAt != null) {
+      map['completed_at'] = Variable<DateTime>(completedAt);
+    }
+    return map;
+  }
+
+  WorkoutSetsTableCompanion toCompanion(bool nullToAbsent) {
+    return WorkoutSetsTableCompanion(
+      id: Value(id),
+      sessionId: Value(sessionId),
+      exerciseId: Value(exerciseId),
+      exerciseName: Value(exerciseName),
+      setNumber: Value(setNumber),
+      weightKg: Value(weightKg),
+      reps: Value(reps),
+      isWarmup: Value(isWarmup),
+      isCompleted: Value(isCompleted),
+      rpe: rpe == null && nullToAbsent ? const Value.absent() : Value(rpe),
+      completedAt: completedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(completedAt),
+    );
+  }
+
+  factory WorkoutSetsTableData.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return WorkoutSetsTableData(
+      id: serializer.fromJson<String>(json['id']),
+      sessionId: serializer.fromJson<String>(json['sessionId']),
+      exerciseId: serializer.fromJson<String>(json['exerciseId']),
+      exerciseName: serializer.fromJson<String>(json['exerciseName']),
+      setNumber: serializer.fromJson<int>(json['setNumber']),
+      weightKg: serializer.fromJson<double>(json['weightKg']),
+      reps: serializer.fromJson<int>(json['reps']),
+      isWarmup: serializer.fromJson<bool>(json['isWarmup']),
+      isCompleted: serializer.fromJson<bool>(json['isCompleted']),
+      rpe: serializer.fromJson<int?>(json['rpe']),
+      completedAt: serializer.fromJson<DateTime?>(json['completedAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<String>(id),
+      'sessionId': serializer.toJson<String>(sessionId),
+      'exerciseId': serializer.toJson<String>(exerciseId),
+      'exerciseName': serializer.toJson<String>(exerciseName),
+      'setNumber': serializer.toJson<int>(setNumber),
+      'weightKg': serializer.toJson<double>(weightKg),
+      'reps': serializer.toJson<int>(reps),
+      'isWarmup': serializer.toJson<bool>(isWarmup),
+      'isCompleted': serializer.toJson<bool>(isCompleted),
+      'rpe': serializer.toJson<int?>(rpe),
+      'completedAt': serializer.toJson<DateTime?>(completedAt),
+    };
+  }
+
+  WorkoutSetsTableData copyWith({
+    String? id,
+    String? sessionId,
+    String? exerciseId,
+    String? exerciseName,
+    int? setNumber,
+    double? weightKg,
+    int? reps,
+    bool? isWarmup,
+    bool? isCompleted,
+    Value<int?> rpe = const Value.absent(),
+    Value<DateTime?> completedAt = const Value.absent(),
+  }) => WorkoutSetsTableData(
+    id: id ?? this.id,
+    sessionId: sessionId ?? this.sessionId,
+    exerciseId: exerciseId ?? this.exerciseId,
+    exerciseName: exerciseName ?? this.exerciseName,
+    setNumber: setNumber ?? this.setNumber,
+    weightKg: weightKg ?? this.weightKg,
+    reps: reps ?? this.reps,
+    isWarmup: isWarmup ?? this.isWarmup,
+    isCompleted: isCompleted ?? this.isCompleted,
+    rpe: rpe.present ? rpe.value : this.rpe,
+    completedAt: completedAt.present ? completedAt.value : this.completedAt,
+  );
+  WorkoutSetsTableData copyWithCompanion(WorkoutSetsTableCompanion data) {
+    return WorkoutSetsTableData(
+      id: data.id.present ? data.id.value : this.id,
+      sessionId: data.sessionId.present ? data.sessionId.value : this.sessionId,
+      exerciseId: data.exerciseId.present
+          ? data.exerciseId.value
+          : this.exerciseId,
+      exerciseName: data.exerciseName.present
+          ? data.exerciseName.value
+          : this.exerciseName,
+      setNumber: data.setNumber.present ? data.setNumber.value : this.setNumber,
+      weightKg: data.weightKg.present ? data.weightKg.value : this.weightKg,
+      reps: data.reps.present ? data.reps.value : this.reps,
+      isWarmup: data.isWarmup.present ? data.isWarmup.value : this.isWarmup,
+      isCompleted: data.isCompleted.present
+          ? data.isCompleted.value
+          : this.isCompleted,
+      rpe: data.rpe.present ? data.rpe.value : this.rpe,
+      completedAt: data.completedAt.present
+          ? data.completedAt.value
+          : this.completedAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('WorkoutSetsTableData(')
+          ..write('id: $id, ')
+          ..write('sessionId: $sessionId, ')
+          ..write('exerciseId: $exerciseId, ')
+          ..write('exerciseName: $exerciseName, ')
+          ..write('setNumber: $setNumber, ')
+          ..write('weightKg: $weightKg, ')
+          ..write('reps: $reps, ')
+          ..write('isWarmup: $isWarmup, ')
+          ..write('isCompleted: $isCompleted, ')
+          ..write('rpe: $rpe, ')
+          ..write('completedAt: $completedAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    sessionId,
+    exerciseId,
+    exerciseName,
+    setNumber,
+    weightKg,
+    reps,
+    isWarmup,
+    isCompleted,
+    rpe,
+    completedAt,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is WorkoutSetsTableData &&
+          other.id == this.id &&
+          other.sessionId == this.sessionId &&
+          other.exerciseId == this.exerciseId &&
+          other.exerciseName == this.exerciseName &&
+          other.setNumber == this.setNumber &&
+          other.weightKg == this.weightKg &&
+          other.reps == this.reps &&
+          other.isWarmup == this.isWarmup &&
+          other.isCompleted == this.isCompleted &&
+          other.rpe == this.rpe &&
+          other.completedAt == this.completedAt);
+}
+
+class WorkoutSetsTableCompanion extends UpdateCompanion<WorkoutSetsTableData> {
+  final Value<String> id;
+  final Value<String> sessionId;
+  final Value<String> exerciseId;
+  final Value<String> exerciseName;
+  final Value<int> setNumber;
+  final Value<double> weightKg;
+  final Value<int> reps;
+  final Value<bool> isWarmup;
+  final Value<bool> isCompleted;
+  final Value<int?> rpe;
+  final Value<DateTime?> completedAt;
+  final Value<int> rowid;
+  const WorkoutSetsTableCompanion({
+    this.id = const Value.absent(),
+    this.sessionId = const Value.absent(),
+    this.exerciseId = const Value.absent(),
+    this.exerciseName = const Value.absent(),
+    this.setNumber = const Value.absent(),
+    this.weightKg = const Value.absent(),
+    this.reps = const Value.absent(),
+    this.isWarmup = const Value.absent(),
+    this.isCompleted = const Value.absent(),
+    this.rpe = const Value.absent(),
+    this.completedAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  WorkoutSetsTableCompanion.insert({
+    required String id,
+    required String sessionId,
+    required String exerciseId,
+    required String exerciseName,
+    required int setNumber,
+    this.weightKg = const Value.absent(),
+    this.reps = const Value.absent(),
+    this.isWarmup = const Value.absent(),
+    this.isCompleted = const Value.absent(),
+    this.rpe = const Value.absent(),
+    this.completedAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  }) : id = Value(id),
+       sessionId = Value(sessionId),
+       exerciseId = Value(exerciseId),
+       exerciseName = Value(exerciseName),
+       setNumber = Value(setNumber);
+  static Insertable<WorkoutSetsTableData> custom({
+    Expression<String>? id,
+    Expression<String>? sessionId,
+    Expression<String>? exerciseId,
+    Expression<String>? exerciseName,
+    Expression<int>? setNumber,
+    Expression<double>? weightKg,
+    Expression<int>? reps,
+    Expression<bool>? isWarmup,
+    Expression<bool>? isCompleted,
+    Expression<int>? rpe,
+    Expression<DateTime>? completedAt,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (sessionId != null) 'session_id': sessionId,
+      if (exerciseId != null) 'exercise_id': exerciseId,
+      if (exerciseName != null) 'exercise_name': exerciseName,
+      if (setNumber != null) 'set_number': setNumber,
+      if (weightKg != null) 'weight_kg': weightKg,
+      if (reps != null) 'reps': reps,
+      if (isWarmup != null) 'is_warmup': isWarmup,
+      if (isCompleted != null) 'is_completed': isCompleted,
+      if (rpe != null) 'rpe': rpe,
+      if (completedAt != null) 'completed_at': completedAt,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  WorkoutSetsTableCompanion copyWith({
+    Value<String>? id,
+    Value<String>? sessionId,
+    Value<String>? exerciseId,
+    Value<String>? exerciseName,
+    Value<int>? setNumber,
+    Value<double>? weightKg,
+    Value<int>? reps,
+    Value<bool>? isWarmup,
+    Value<bool>? isCompleted,
+    Value<int?>? rpe,
+    Value<DateTime?>? completedAt,
+    Value<int>? rowid,
+  }) {
+    return WorkoutSetsTableCompanion(
+      id: id ?? this.id,
+      sessionId: sessionId ?? this.sessionId,
+      exerciseId: exerciseId ?? this.exerciseId,
+      exerciseName: exerciseName ?? this.exerciseName,
+      setNumber: setNumber ?? this.setNumber,
+      weightKg: weightKg ?? this.weightKg,
+      reps: reps ?? this.reps,
+      isWarmup: isWarmup ?? this.isWarmup,
+      isCompleted: isCompleted ?? this.isCompleted,
+      rpe: rpe ?? this.rpe,
+      completedAt: completedAt ?? this.completedAt,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<String>(id.value);
+    }
+    if (sessionId.present) {
+      map['session_id'] = Variable<String>(sessionId.value);
+    }
+    if (exerciseId.present) {
+      map['exercise_id'] = Variable<String>(exerciseId.value);
+    }
+    if (exerciseName.present) {
+      map['exercise_name'] = Variable<String>(exerciseName.value);
+    }
+    if (setNumber.present) {
+      map['set_number'] = Variable<int>(setNumber.value);
+    }
+    if (weightKg.present) {
+      map['weight_kg'] = Variable<double>(weightKg.value);
+    }
+    if (reps.present) {
+      map['reps'] = Variable<int>(reps.value);
+    }
+    if (isWarmup.present) {
+      map['is_warmup'] = Variable<bool>(isWarmup.value);
+    }
+    if (isCompleted.present) {
+      map['is_completed'] = Variable<bool>(isCompleted.value);
+    }
+    if (rpe.present) {
+      map['rpe'] = Variable<int>(rpe.value);
+    }
+    if (completedAt.present) {
+      map['completed_at'] = Variable<DateTime>(completedAt.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('WorkoutSetsTableCompanion(')
+          ..write('id: $id, ')
+          ..write('sessionId: $sessionId, ')
+          ..write('exerciseId: $exerciseId, ')
+          ..write('exerciseName: $exerciseName, ')
+          ..write('setNumber: $setNumber, ')
+          ..write('weightKg: $weightKg, ')
+          ..write('reps: $reps, ')
+          ..write('isWarmup: $isWarmup, ')
+          ..write('isCompleted: $isCompleted, ')
+          ..write('rpe: $rpe, ')
+          ..write('completedAt: $completedAt, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
 abstract class _$AppDatabase extends GeneratedDatabase {
   _$AppDatabase(QueryExecutor e) : super(e);
   $AppDatabaseManager get managers => $AppDatabaseManager(this);
@@ -8309,6 +10327,12 @@ abstract class _$AppDatabase extends GeneratedDatabase {
       $CookingMultipliersTableTable(this);
   late final $MealLogsTableTable mealLogsTable = $MealLogsTableTable(this);
   late final $RecipesTableTable recipesTable = $RecipesTableTable(this);
+  late final $ExercisesTableTable exercisesTable = $ExercisesTableTable(this);
+  late final $WorkoutSessionsTableTable workoutSessionsTable =
+      $WorkoutSessionsTableTable(this);
+  late final $WorkoutSetsTableTable workoutSetsTable = $WorkoutSetsTableTable(
+    this,
+  );
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
@@ -8328,6 +10352,9 @@ abstract class _$AppDatabase extends GeneratedDatabase {
     cookingMultipliersTable,
     mealLogsTable,
     recipesTable,
+    exercisesTable,
+    workoutSessionsTable,
+    workoutSetsTable,
   ];
 }
 
@@ -12712,6 +14739,1040 @@ typedef $$RecipesTableTableProcessedTableManager =
       RecipesTableData,
       PrefetchHooks Function()
     >;
+typedef $$ExercisesTableTableCreateCompanionBuilder =
+    ExercisesTableCompanion Function({
+      required String id,
+      required String name,
+      Value<String> hindiName,
+      required String primaryMuscle,
+      Value<String> secondaryMusclesJson,
+      required String equipment,
+      required String workoutType,
+      Value<String> difficulty,
+      Value<String> instructions,
+      Value<bool> isHomeFriendly,
+      Value<bool> isSystem,
+      Value<int> rowid,
+    });
+typedef $$ExercisesTableTableUpdateCompanionBuilder =
+    ExercisesTableCompanion Function({
+      Value<String> id,
+      Value<String> name,
+      Value<String> hindiName,
+      Value<String> primaryMuscle,
+      Value<String> secondaryMusclesJson,
+      Value<String> equipment,
+      Value<String> workoutType,
+      Value<String> difficulty,
+      Value<String> instructions,
+      Value<bool> isHomeFriendly,
+      Value<bool> isSystem,
+      Value<int> rowid,
+    });
+
+class $$ExercisesTableTableFilterComposer
+    extends Composer<_$AppDatabase, $ExercisesTableTable> {
+  $$ExercisesTableTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get name => $composableBuilder(
+    column: $table.name,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get hindiName => $composableBuilder(
+    column: $table.hindiName,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get primaryMuscle => $composableBuilder(
+    column: $table.primaryMuscle,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get secondaryMusclesJson => $composableBuilder(
+    column: $table.secondaryMusclesJson,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get equipment => $composableBuilder(
+    column: $table.equipment,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get workoutType => $composableBuilder(
+    column: $table.workoutType,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get difficulty => $composableBuilder(
+    column: $table.difficulty,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get instructions => $composableBuilder(
+    column: $table.instructions,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get isHomeFriendly => $composableBuilder(
+    column: $table.isHomeFriendly,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get isSystem => $composableBuilder(
+    column: $table.isSystem,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$ExercisesTableTableOrderingComposer
+    extends Composer<_$AppDatabase, $ExercisesTableTable> {
+  $$ExercisesTableTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get name => $composableBuilder(
+    column: $table.name,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get hindiName => $composableBuilder(
+    column: $table.hindiName,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get primaryMuscle => $composableBuilder(
+    column: $table.primaryMuscle,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get secondaryMusclesJson => $composableBuilder(
+    column: $table.secondaryMusclesJson,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get equipment => $composableBuilder(
+    column: $table.equipment,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get workoutType => $composableBuilder(
+    column: $table.workoutType,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get difficulty => $composableBuilder(
+    column: $table.difficulty,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get instructions => $composableBuilder(
+    column: $table.instructions,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get isHomeFriendly => $composableBuilder(
+    column: $table.isHomeFriendly,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get isSystem => $composableBuilder(
+    column: $table.isSystem,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$ExercisesTableTableAnnotationComposer
+    extends Composer<_$AppDatabase, $ExercisesTableTable> {
+  $$ExercisesTableTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get name =>
+      $composableBuilder(column: $table.name, builder: (column) => column);
+
+  GeneratedColumn<String> get hindiName =>
+      $composableBuilder(column: $table.hindiName, builder: (column) => column);
+
+  GeneratedColumn<String> get primaryMuscle => $composableBuilder(
+    column: $table.primaryMuscle,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get secondaryMusclesJson => $composableBuilder(
+    column: $table.secondaryMusclesJson,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get equipment =>
+      $composableBuilder(column: $table.equipment, builder: (column) => column);
+
+  GeneratedColumn<String> get workoutType => $composableBuilder(
+    column: $table.workoutType,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get difficulty => $composableBuilder(
+    column: $table.difficulty,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get instructions => $composableBuilder(
+    column: $table.instructions,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<bool> get isHomeFriendly => $composableBuilder(
+    column: $table.isHomeFriendly,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<bool> get isSystem =>
+      $composableBuilder(column: $table.isSystem, builder: (column) => column);
+}
+
+class $$ExercisesTableTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $ExercisesTableTable,
+          ExercisesTableData,
+          $$ExercisesTableTableFilterComposer,
+          $$ExercisesTableTableOrderingComposer,
+          $$ExercisesTableTableAnnotationComposer,
+          $$ExercisesTableTableCreateCompanionBuilder,
+          $$ExercisesTableTableUpdateCompanionBuilder,
+          (
+            ExercisesTableData,
+            BaseReferences<
+              _$AppDatabase,
+              $ExercisesTableTable,
+              ExercisesTableData
+            >,
+          ),
+          ExercisesTableData,
+          PrefetchHooks Function()
+        > {
+  $$ExercisesTableTableTableManager(
+    _$AppDatabase db,
+    $ExercisesTableTable table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$ExercisesTableTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$ExercisesTableTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$ExercisesTableTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<String> id = const Value.absent(),
+                Value<String> name = const Value.absent(),
+                Value<String> hindiName = const Value.absent(),
+                Value<String> primaryMuscle = const Value.absent(),
+                Value<String> secondaryMusclesJson = const Value.absent(),
+                Value<String> equipment = const Value.absent(),
+                Value<String> workoutType = const Value.absent(),
+                Value<String> difficulty = const Value.absent(),
+                Value<String> instructions = const Value.absent(),
+                Value<bool> isHomeFriendly = const Value.absent(),
+                Value<bool> isSystem = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => ExercisesTableCompanion(
+                id: id,
+                name: name,
+                hindiName: hindiName,
+                primaryMuscle: primaryMuscle,
+                secondaryMusclesJson: secondaryMusclesJson,
+                equipment: equipment,
+                workoutType: workoutType,
+                difficulty: difficulty,
+                instructions: instructions,
+                isHomeFriendly: isHomeFriendly,
+                isSystem: isSystem,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String id,
+                required String name,
+                Value<String> hindiName = const Value.absent(),
+                required String primaryMuscle,
+                Value<String> secondaryMusclesJson = const Value.absent(),
+                required String equipment,
+                required String workoutType,
+                Value<String> difficulty = const Value.absent(),
+                Value<String> instructions = const Value.absent(),
+                Value<bool> isHomeFriendly = const Value.absent(),
+                Value<bool> isSystem = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => ExercisesTableCompanion.insert(
+                id: id,
+                name: name,
+                hindiName: hindiName,
+                primaryMuscle: primaryMuscle,
+                secondaryMusclesJson: secondaryMusclesJson,
+                equipment: equipment,
+                workoutType: workoutType,
+                difficulty: difficulty,
+                instructions: instructions,
+                isHomeFriendly: isHomeFriendly,
+                isSystem: isSystem,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map(
+                (e) => (
+                  e.readTable<$ExercisesTableTable, ExercisesTableData>(table),
+                  BaseReferences<
+                    _$AppDatabase,
+                    $ExercisesTableTable,
+                    ExercisesTableData
+                  >(db, table, e),
+                ),
+              )
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$ExercisesTableTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $ExercisesTableTable,
+      ExercisesTableData,
+      $$ExercisesTableTableFilterComposer,
+      $$ExercisesTableTableOrderingComposer,
+      $$ExercisesTableTableAnnotationComposer,
+      $$ExercisesTableTableCreateCompanionBuilder,
+      $$ExercisesTableTableUpdateCompanionBuilder,
+      (
+        ExercisesTableData,
+        BaseReferences<_$AppDatabase, $ExercisesTableTable, ExercisesTableData>,
+      ),
+      ExercisesTableData,
+      PrefetchHooks Function()
+    >;
+typedef $$WorkoutSessionsTableTableCreateCompanionBuilder =
+    WorkoutSessionsTableCompanion Function({
+      required String id,
+      required String userId,
+      required String title,
+      required String workoutType,
+      required DateTime startedAt,
+      Value<DateTime?> endedAt,
+      Value<double> totalVolumeKg,
+      Value<int> durationSeconds,
+      Value<double> caloriesBurned,
+      Value<String> status,
+      Value<String?> notes,
+      Value<int> rowid,
+    });
+typedef $$WorkoutSessionsTableTableUpdateCompanionBuilder =
+    WorkoutSessionsTableCompanion Function({
+      Value<String> id,
+      Value<String> userId,
+      Value<String> title,
+      Value<String> workoutType,
+      Value<DateTime> startedAt,
+      Value<DateTime?> endedAt,
+      Value<double> totalVolumeKg,
+      Value<int> durationSeconds,
+      Value<double> caloriesBurned,
+      Value<String> status,
+      Value<String?> notes,
+      Value<int> rowid,
+    });
+
+class $$WorkoutSessionsTableTableFilterComposer
+    extends Composer<_$AppDatabase, $WorkoutSessionsTableTable> {
+  $$WorkoutSessionsTableTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get userId => $composableBuilder(
+    column: $table.userId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get title => $composableBuilder(
+    column: $table.title,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get workoutType => $composableBuilder(
+    column: $table.workoutType,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get startedAt => $composableBuilder(
+    column: $table.startedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get endedAt => $composableBuilder(
+    column: $table.endedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<double> get totalVolumeKg => $composableBuilder(
+    column: $table.totalVolumeKg,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get durationSeconds => $composableBuilder(
+    column: $table.durationSeconds,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<double> get caloriesBurned => $composableBuilder(
+    column: $table.caloriesBurned,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get status => $composableBuilder(
+    column: $table.status,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get notes => $composableBuilder(
+    column: $table.notes,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$WorkoutSessionsTableTableOrderingComposer
+    extends Composer<_$AppDatabase, $WorkoutSessionsTableTable> {
+  $$WorkoutSessionsTableTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get userId => $composableBuilder(
+    column: $table.userId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get title => $composableBuilder(
+    column: $table.title,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get workoutType => $composableBuilder(
+    column: $table.workoutType,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get startedAt => $composableBuilder(
+    column: $table.startedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get endedAt => $composableBuilder(
+    column: $table.endedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<double> get totalVolumeKg => $composableBuilder(
+    column: $table.totalVolumeKg,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get durationSeconds => $composableBuilder(
+    column: $table.durationSeconds,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<double> get caloriesBurned => $composableBuilder(
+    column: $table.caloriesBurned,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get status => $composableBuilder(
+    column: $table.status,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get notes => $composableBuilder(
+    column: $table.notes,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$WorkoutSessionsTableTableAnnotationComposer
+    extends Composer<_$AppDatabase, $WorkoutSessionsTableTable> {
+  $$WorkoutSessionsTableTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get userId =>
+      $composableBuilder(column: $table.userId, builder: (column) => column);
+
+  GeneratedColumn<String> get title =>
+      $composableBuilder(column: $table.title, builder: (column) => column);
+
+  GeneratedColumn<String> get workoutType => $composableBuilder(
+    column: $table.workoutType,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<DateTime> get startedAt =>
+      $composableBuilder(column: $table.startedAt, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get endedAt =>
+      $composableBuilder(column: $table.endedAt, builder: (column) => column);
+
+  GeneratedColumn<double> get totalVolumeKg => $composableBuilder(
+    column: $table.totalVolumeKg,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get durationSeconds => $composableBuilder(
+    column: $table.durationSeconds,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<double> get caloriesBurned => $composableBuilder(
+    column: $table.caloriesBurned,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get status =>
+      $composableBuilder(column: $table.status, builder: (column) => column);
+
+  GeneratedColumn<String> get notes =>
+      $composableBuilder(column: $table.notes, builder: (column) => column);
+}
+
+class $$WorkoutSessionsTableTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $WorkoutSessionsTableTable,
+          WorkoutSessionsTableData,
+          $$WorkoutSessionsTableTableFilterComposer,
+          $$WorkoutSessionsTableTableOrderingComposer,
+          $$WorkoutSessionsTableTableAnnotationComposer,
+          $$WorkoutSessionsTableTableCreateCompanionBuilder,
+          $$WorkoutSessionsTableTableUpdateCompanionBuilder,
+          (
+            WorkoutSessionsTableData,
+            BaseReferences<
+              _$AppDatabase,
+              $WorkoutSessionsTableTable,
+              WorkoutSessionsTableData
+            >,
+          ),
+          WorkoutSessionsTableData,
+          PrefetchHooks Function()
+        > {
+  $$WorkoutSessionsTableTableTableManager(
+    _$AppDatabase db,
+    $WorkoutSessionsTableTable table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$WorkoutSessionsTableTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$WorkoutSessionsTableTableOrderingComposer(
+                $db: db,
+                $table: table,
+              ),
+          createComputedFieldComposer: () =>
+              $$WorkoutSessionsTableTableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
+          updateCompanionCallback:
+              ({
+                Value<String> id = const Value.absent(),
+                Value<String> userId = const Value.absent(),
+                Value<String> title = const Value.absent(),
+                Value<String> workoutType = const Value.absent(),
+                Value<DateTime> startedAt = const Value.absent(),
+                Value<DateTime?> endedAt = const Value.absent(),
+                Value<double> totalVolumeKg = const Value.absent(),
+                Value<int> durationSeconds = const Value.absent(),
+                Value<double> caloriesBurned = const Value.absent(),
+                Value<String> status = const Value.absent(),
+                Value<String?> notes = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => WorkoutSessionsTableCompanion(
+                id: id,
+                userId: userId,
+                title: title,
+                workoutType: workoutType,
+                startedAt: startedAt,
+                endedAt: endedAt,
+                totalVolumeKg: totalVolumeKg,
+                durationSeconds: durationSeconds,
+                caloriesBurned: caloriesBurned,
+                status: status,
+                notes: notes,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String id,
+                required String userId,
+                required String title,
+                required String workoutType,
+                required DateTime startedAt,
+                Value<DateTime?> endedAt = const Value.absent(),
+                Value<double> totalVolumeKg = const Value.absent(),
+                Value<int> durationSeconds = const Value.absent(),
+                Value<double> caloriesBurned = const Value.absent(),
+                Value<String> status = const Value.absent(),
+                Value<String?> notes = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => WorkoutSessionsTableCompanion.insert(
+                id: id,
+                userId: userId,
+                title: title,
+                workoutType: workoutType,
+                startedAt: startedAt,
+                endedAt: endedAt,
+                totalVolumeKg: totalVolumeKg,
+                durationSeconds: durationSeconds,
+                caloriesBurned: caloriesBurned,
+                status: status,
+                notes: notes,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map(
+                (e) => (
+                  e.readTable<
+                    $WorkoutSessionsTableTable,
+                    WorkoutSessionsTableData
+                  >(table),
+                  BaseReferences<
+                    _$AppDatabase,
+                    $WorkoutSessionsTableTable,
+                    WorkoutSessionsTableData
+                  >(db, table, e),
+                ),
+              )
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$WorkoutSessionsTableTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $WorkoutSessionsTableTable,
+      WorkoutSessionsTableData,
+      $$WorkoutSessionsTableTableFilterComposer,
+      $$WorkoutSessionsTableTableOrderingComposer,
+      $$WorkoutSessionsTableTableAnnotationComposer,
+      $$WorkoutSessionsTableTableCreateCompanionBuilder,
+      $$WorkoutSessionsTableTableUpdateCompanionBuilder,
+      (
+        WorkoutSessionsTableData,
+        BaseReferences<
+          _$AppDatabase,
+          $WorkoutSessionsTableTable,
+          WorkoutSessionsTableData
+        >,
+      ),
+      WorkoutSessionsTableData,
+      PrefetchHooks Function()
+    >;
+typedef $$WorkoutSetsTableTableCreateCompanionBuilder =
+    WorkoutSetsTableCompanion Function({
+      required String id,
+      required String sessionId,
+      required String exerciseId,
+      required String exerciseName,
+      required int setNumber,
+      Value<double> weightKg,
+      Value<int> reps,
+      Value<bool> isWarmup,
+      Value<bool> isCompleted,
+      Value<int?> rpe,
+      Value<DateTime?> completedAt,
+      Value<int> rowid,
+    });
+typedef $$WorkoutSetsTableTableUpdateCompanionBuilder =
+    WorkoutSetsTableCompanion Function({
+      Value<String> id,
+      Value<String> sessionId,
+      Value<String> exerciseId,
+      Value<String> exerciseName,
+      Value<int> setNumber,
+      Value<double> weightKg,
+      Value<int> reps,
+      Value<bool> isWarmup,
+      Value<bool> isCompleted,
+      Value<int?> rpe,
+      Value<DateTime?> completedAt,
+      Value<int> rowid,
+    });
+
+class $$WorkoutSetsTableTableFilterComposer
+    extends Composer<_$AppDatabase, $WorkoutSetsTableTable> {
+  $$WorkoutSetsTableTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get sessionId => $composableBuilder(
+    column: $table.sessionId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get exerciseId => $composableBuilder(
+    column: $table.exerciseId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get exerciseName => $composableBuilder(
+    column: $table.exerciseName,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get setNumber => $composableBuilder(
+    column: $table.setNumber,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<double> get weightKg => $composableBuilder(
+    column: $table.weightKg,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get reps => $composableBuilder(
+    column: $table.reps,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get isWarmup => $composableBuilder(
+    column: $table.isWarmup,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get isCompleted => $composableBuilder(
+    column: $table.isCompleted,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get rpe => $composableBuilder(
+    column: $table.rpe,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get completedAt => $composableBuilder(
+    column: $table.completedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$WorkoutSetsTableTableOrderingComposer
+    extends Composer<_$AppDatabase, $WorkoutSetsTableTable> {
+  $$WorkoutSetsTableTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get sessionId => $composableBuilder(
+    column: $table.sessionId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get exerciseId => $composableBuilder(
+    column: $table.exerciseId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get exerciseName => $composableBuilder(
+    column: $table.exerciseName,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get setNumber => $composableBuilder(
+    column: $table.setNumber,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<double> get weightKg => $composableBuilder(
+    column: $table.weightKg,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get reps => $composableBuilder(
+    column: $table.reps,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get isWarmup => $composableBuilder(
+    column: $table.isWarmup,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get isCompleted => $composableBuilder(
+    column: $table.isCompleted,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get rpe => $composableBuilder(
+    column: $table.rpe,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get completedAt => $composableBuilder(
+    column: $table.completedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$WorkoutSetsTableTableAnnotationComposer
+    extends Composer<_$AppDatabase, $WorkoutSetsTableTable> {
+  $$WorkoutSetsTableTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get sessionId =>
+      $composableBuilder(column: $table.sessionId, builder: (column) => column);
+
+  GeneratedColumn<String> get exerciseId => $composableBuilder(
+    column: $table.exerciseId,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get exerciseName => $composableBuilder(
+    column: $table.exerciseName,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get setNumber =>
+      $composableBuilder(column: $table.setNumber, builder: (column) => column);
+
+  GeneratedColumn<double> get weightKg =>
+      $composableBuilder(column: $table.weightKg, builder: (column) => column);
+
+  GeneratedColumn<int> get reps =>
+      $composableBuilder(column: $table.reps, builder: (column) => column);
+
+  GeneratedColumn<bool> get isWarmup =>
+      $composableBuilder(column: $table.isWarmup, builder: (column) => column);
+
+  GeneratedColumn<bool> get isCompleted => $composableBuilder(
+    column: $table.isCompleted,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get rpe =>
+      $composableBuilder(column: $table.rpe, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get completedAt => $composableBuilder(
+    column: $table.completedAt,
+    builder: (column) => column,
+  );
+}
+
+class $$WorkoutSetsTableTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $WorkoutSetsTableTable,
+          WorkoutSetsTableData,
+          $$WorkoutSetsTableTableFilterComposer,
+          $$WorkoutSetsTableTableOrderingComposer,
+          $$WorkoutSetsTableTableAnnotationComposer,
+          $$WorkoutSetsTableTableCreateCompanionBuilder,
+          $$WorkoutSetsTableTableUpdateCompanionBuilder,
+          (
+            WorkoutSetsTableData,
+            BaseReferences<
+              _$AppDatabase,
+              $WorkoutSetsTableTable,
+              WorkoutSetsTableData
+            >,
+          ),
+          WorkoutSetsTableData,
+          PrefetchHooks Function()
+        > {
+  $$WorkoutSetsTableTableTableManager(
+    _$AppDatabase db,
+    $WorkoutSetsTableTable table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$WorkoutSetsTableTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$WorkoutSetsTableTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$WorkoutSetsTableTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<String> id = const Value.absent(),
+                Value<String> sessionId = const Value.absent(),
+                Value<String> exerciseId = const Value.absent(),
+                Value<String> exerciseName = const Value.absent(),
+                Value<int> setNumber = const Value.absent(),
+                Value<double> weightKg = const Value.absent(),
+                Value<int> reps = const Value.absent(),
+                Value<bool> isWarmup = const Value.absent(),
+                Value<bool> isCompleted = const Value.absent(),
+                Value<int?> rpe = const Value.absent(),
+                Value<DateTime?> completedAt = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => WorkoutSetsTableCompanion(
+                id: id,
+                sessionId: sessionId,
+                exerciseId: exerciseId,
+                exerciseName: exerciseName,
+                setNumber: setNumber,
+                weightKg: weightKg,
+                reps: reps,
+                isWarmup: isWarmup,
+                isCompleted: isCompleted,
+                rpe: rpe,
+                completedAt: completedAt,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String id,
+                required String sessionId,
+                required String exerciseId,
+                required String exerciseName,
+                required int setNumber,
+                Value<double> weightKg = const Value.absent(),
+                Value<int> reps = const Value.absent(),
+                Value<bool> isWarmup = const Value.absent(),
+                Value<bool> isCompleted = const Value.absent(),
+                Value<int?> rpe = const Value.absent(),
+                Value<DateTime?> completedAt = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => WorkoutSetsTableCompanion.insert(
+                id: id,
+                sessionId: sessionId,
+                exerciseId: exerciseId,
+                exerciseName: exerciseName,
+                setNumber: setNumber,
+                weightKg: weightKg,
+                reps: reps,
+                isWarmup: isWarmup,
+                isCompleted: isCompleted,
+                rpe: rpe,
+                completedAt: completedAt,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map(
+                (e) => (
+                  e.readTable<$WorkoutSetsTableTable, WorkoutSetsTableData>(
+                    table,
+                  ),
+                  BaseReferences<
+                    _$AppDatabase,
+                    $WorkoutSetsTableTable,
+                    WorkoutSetsTableData
+                  >(db, table, e),
+                ),
+              )
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$WorkoutSetsTableTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $WorkoutSetsTableTable,
+      WorkoutSetsTableData,
+      $$WorkoutSetsTableTableFilterComposer,
+      $$WorkoutSetsTableTableOrderingComposer,
+      $$WorkoutSetsTableTableAnnotationComposer,
+      $$WorkoutSetsTableTableCreateCompanionBuilder,
+      $$WorkoutSetsTableTableUpdateCompanionBuilder,
+      (
+        WorkoutSetsTableData,
+        BaseReferences<
+          _$AppDatabase,
+          $WorkoutSetsTableTable,
+          WorkoutSetsTableData
+        >,
+      ),
+      WorkoutSetsTableData,
+      PrefetchHooks Function()
+    >;
 
 class $AppDatabaseManager {
   final _$AppDatabase _db;
@@ -12756,4 +15817,10 @@ class $AppDatabaseManager {
       $$MealLogsTableTableTableManager(_db, _db.mealLogsTable);
   $$RecipesTableTableTableManager get recipesTable =>
       $$RecipesTableTableTableManager(_db, _db.recipesTable);
+  $$ExercisesTableTableTableManager get exercisesTable =>
+      $$ExercisesTableTableTableManager(_db, _db.exercisesTable);
+  $$WorkoutSessionsTableTableTableManager get workoutSessionsTable =>
+      $$WorkoutSessionsTableTableTableManager(_db, _db.workoutSessionsTable);
+  $$WorkoutSetsTableTableTableManager get workoutSetsTable =>
+      $$WorkoutSetsTableTableTableManager(_db, _db.workoutSetsTable);
 }
