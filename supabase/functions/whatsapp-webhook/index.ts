@@ -5,6 +5,9 @@
 import { verifyMetaSignature } from './signature.ts';
 import { normalizeIndianPhoneNumber, resolveUserProfile } from './phone_matcher.ts';
 import { MetaWhatsAppClient } from './meta_client.ts';
+import { WhatsAppMediaFetcher } from './media_fetcher.ts';
+import { GroqAudioTranscriber } from './audio_transcriber.ts';
+import { ConversationalMealPipeline, type MealPipelineOutput } from './meal_pipeline.ts';
 import type { MetaWebhookPayload, MetaInboundMessage } from './schemas.ts';
 
 declare const Deno: {
@@ -21,26 +24,43 @@ function getEnv(key: string, defaultValue = ''): string {
   return (typeof process !== 'undefined' ? process.env[key] : defaultValue) || defaultValue;
 }
 
+export interface InboundProcessingDeps {
+  verifyToken?: string;
+  appSecret?: string;
+  metaClient?: MetaWhatsAppClient;
+  mediaFetcher?: WhatsAppMediaFetcher;
+  audioTranscriber?: GroqAudioTranscriber;
+  mealPipeline?: ConversationalMealPipeline;
+  lookupProfile?: (phone: string) => Promise<{ id: string; user_id: string; display_name: string | null; phone_number: string } | null>;
+  recordInteraction?: (interaction: {
+    wa_message_id: string;
+    user_id: string | null;
+    phone_number: string;
+    message_type: string;
+    raw_input: string | null;
+    status: string;
+    candidate_items?: unknown[];
+    total_calories?: number;
+    total_protein?: number;
+    total_carbs?: number;
+    total_fat?: number;
+  }) => Promise<boolean>; // returns false if duplicate
+  updateInteractionPrediction?: (
+    waMessageId: string,
+    output: MealPipelineOutput,
+  ) => Promise<void>;
+}
+
 export async function handleWebhookRequest(
   req: Request,
-  options?: {
-    verifyToken?: string;
-    appSecret?: string;
-    metaClient?: MetaWhatsAppClient;
-    lookupProfile?: (phone: string) => Promise<{ id: string; user_id: string; display_name: string | null; phone_number: string } | null>;
-    recordInteraction?: (interaction: {
-      wa_message_id: string;
-      user_id: string | null;
-      phone_number: string;
-      message_type: string;
-      raw_input: string | null;
-      status: string;
-    }) => Promise<boolean>; // returns false if duplicate
-  },
+  options?: InboundProcessingDeps,
 ): Promise<Response> {
   const verifyToken = options?.verifyToken || getEnv('WHATSAPP_WEBHOOK_VERIFY_TOKEN', 'fitkarma_test_verify_token');
   const appSecret = options?.appSecret || getEnv('WHATSAPP_APP_SECRET', 'test_app_secret');
   const client = options?.metaClient || new MetaWhatsAppClient({ isMock: true });
+  const mediaFetcher = options?.mediaFetcher || new WhatsAppMediaFetcher({ isMock: true });
+  const audioTranscriber = options?.audioTranscriber || new GroqAudioTranscriber({ isMock: true });
+  const mealPipeline = options?.mealPipeline || new ConversationalMealPipeline({ isMock: true });
 
   // --------------------------------------------------------------------------
   // 1. GET: META WEBHOOK VERIFICATION HANDSHAKE
@@ -95,8 +115,12 @@ export async function handleWebhookRequest(
         for (const msg of messages) {
           await processSingleInboundMessage(msg, {
             metaClient: client,
+            mediaFetcher,
+            audioTranscriber,
+            mealPipeline,
             lookupProfile: options?.lookupProfile,
             recordInteraction: options?.recordInteraction,
+            updateInteractionPrediction: options?.updateInteractionPrediction,
           });
         }
       }
@@ -116,6 +140,9 @@ async function processSingleInboundMessage(
   msg: MetaInboundMessage,
   deps: {
     metaClient: MetaWhatsAppClient;
+    mediaFetcher: WhatsAppMediaFetcher;
+    audioTranscriber: GroqAudioTranscriber;
+    mealPipeline: ConversationalMealPipeline;
     lookupProfile?: (phone: string) => Promise<{ id: string; user_id: string; display_name: string | null; phone_number: string } | null>;
     recordInteraction?: (interaction: {
       wa_message_id: string;
@@ -125,21 +152,34 @@ async function processSingleInboundMessage(
       raw_input: string | null;
       status: string;
     }) => Promise<boolean>;
+    updateInteractionPrediction?: (waMessageId: string, output: MealPipelineOutput) => Promise<void>;
   },
 ): Promise<void> {
   const waMessageId = msg.id;
   const rawFrom = msg.from;
   const normalizedPhone = normalizeIndianPhoneNumber(rawFrom);
 
-  // Default profile lookup if none injected
   const lookupFn = deps.lookupProfile || (async () => null);
   const profileResult = await resolveUserProfile(rawFrom, lookupFn);
 
   let rawInput: string | null = null;
+  let textToAnalyze: string | null = null;
+
   if (msg.type === 'text') {
     rawInput = msg.text.body;
+    textToAnalyze = msg.text.body;
   } else if (msg.type === 'audio' || msg.type === 'voice') {
     rawInput = `[audio_media_id:${msg.audio.id}]`;
+    try {
+      // 1. Fetch audio stream entirely in memory (DPDP Act 2023 compliant)
+      const media = await deps.mediaFetcher.fetchAudioBytes(msg.audio.id);
+      // 2. Transcribe voice note via Groq Whisper
+      const transcription = await deps.audioTranscriber.transcribeAudio(media);
+      textToAnalyze = transcription.text;
+      rawInput = `[voice_transcript]: ${transcription.text}`;
+    } catch (e) {
+      rawInput = `[audio_transcription_error]: ${e}`;
+    }
   } else if (msg.type === 'interactive') {
     rawInput = `[button_reply:${msg.interactive.button_reply.id}]`;
   }
@@ -156,15 +196,29 @@ async function processSingleInboundMessage(
     });
 
     if (!isNew) {
-      // Duplicate message wamid received, skip re-processing
-      return;
+      return; // duplicate message
     }
   }
 
-  // If user is not registered in FitKarma, send friendly onboarding invitation
+  // If sender is not linked to FitKarma, invite them to download & sign up
   if (!profileResult.isLinked) {
     await deps.metaClient.sendUnlinkedInvitation(normalizedPhone);
     return;
+  }
+
+  // If text or audio transcript is available, process through meal pipeline
+  if (textToAnalyze) {
+    const mealOutput = await deps.mealPipeline.processInboundMealText(textToAnalyze);
+
+    // If medical claim / query detected, send refusal message immediately
+    if (mealOutput.isMedicalQuery && mealOutput.medicalRefusalMessage) {
+      await deps.metaClient.sendTextMessage(normalizedPhone, mealOutput.medicalRefusalMessage);
+      return;
+    }
+
+    if (deps.updateInteractionPrediction) {
+      await deps.updateInteractionPrediction(waMessageId, mealOutput);
+    }
   }
 }
 
