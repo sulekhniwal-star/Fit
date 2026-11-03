@@ -5,23 +5,23 @@
 See: `.planning/PROJECT.md` (updated 2026-11-02)
 
 **Core value:** India's smartest, most private Health OS combining offline-first local storage, deep Indian cultural/nutritional realities, and zero-friction WhatsApp logging without compromising user data sovereignty.  
-**Current focus:** Phase 6: Indian Nutrition Engine
+**Current focus:** Phase 7: Workout & Fitness Core
 
 ## Current Position
 
-Phase: 6 of 24 (Indian Nutrition Engine)  
-Plan: 0 of 3 in current phase  
-Status: Ready to execute (`/gsd-execute-phase 6`)  
-Last activity: 2026-11-03 — Phase 6 planned (3 plans created: 06-01, 06-02, 06-03).
+Phase: 6 of 24 (Indian Nutrition Engine) — COMPLETED  
+Plan: 3 of 3 in Phase 6  
+Status: Phase 6 verified & closed. Ready to plan Phase 7 (`/gsd-plan-phase 7`)  
+Last activity: 2026-11-03 — Phase 6 executed, tested (141/141 passed), verified, and closed.
 
-Progress: [█████░░░░░] 20.8%
+Progress: [██████░░░░] 25.0%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 15
+- Total plans completed: 18
 - Average duration: 11 min
-- Total execution time: 2.7 hours
+- Total execution time: 3.3 hours
 
 **By Phase:**
 
@@ -32,6 +32,7 @@ Progress: [█████░░░░░] 20.8%
 | 3. Backend, Authentication & User Onboarding | 3 | 30 min | 10.0 min |
 | 4. Offline-First Data Foundation | 3 | 30 min | 10.0 min |
 | 5. Health Data Core | 3 | 35 min | 11.6 min |
+| 6. Indian Nutrition Engine | 3 | 35 min | 11.6 min |
 
 **Recent Trend:**
 - Last 5 plans: [10m, 10m, 11m, 12m, 12m]
@@ -44,6 +45,16 @@ Progress: [█████░░░░░] 20.8%
 ### Decisions
 
 Decisions are logged in `PROJECT.md` Key Decisions table.
+Phase 6 decisions:
+
+- [Phase 6]: Modeled authentic Indian portion units (`katori` 150/200/250ml with density scaling, `glass`, `spoon`, `roti count`, `idli count`) with deterministic conversion to base grams.
+- [Phase 6]: Cached 500+ authentic Indian regional dishes in encrypted Drift database with bilingual/Hinglish search capability.
+- [Phase 6]: Implemented versioned raw vs. cooked yield multipliers (Rice 2.8x, Dal 3.0x, Chicken 0.75x, Greens 0.5x) to maintain historical food log reproducibility.
+- [Phase 6]: Built interactive Tadka fat slider with statutory estimate label reflecting real-world oil/ghee tempering variability.
+- [Phase 6]: Implemented Family Recipe Splitter enabling proportional batch pot sharing calculations (0-100% or katori count).
+- [Phase 6]: Built Dynamic TDEE engine blending physiological baseline (Mifflin-St Jeor) with 7-day weight trend and intake history.
+- [Phase 6]: Built Bento `NutritionDashboardScreen` with macro tracking, meal slot logs, and routing under `/nutrition`.
+
 Phase 5 decisions:
 
 - [Phase 5]: Standardized unified `HealthQuantity` primitives with explicit `HealthSource` (`manual`, `device`, `healthConnect`, `appleHealth`) and `ConfidenceLevel`.

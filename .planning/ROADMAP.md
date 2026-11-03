@@ -134,9 +134,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 06-01: Food Catalog, Indian Portion Units & Nutrition Domain Foundation
-- [ ] 06-02: Raw vs. Cooked Conversion, Cooking Yield Multipliers & Tadka Fat Slider
-- [ ] 06-03: Family Recipe Splitter, Meal Logging, Dynamic TDEE & Nutrition Dashboard
+- [x] 06-01: Food Catalog, Indian Portion Units & Nutrition Domain Foundation
+- [x] 06-02: Raw vs. Cooked Conversion, Cooking Yield Multipliers & Tadka Fat Slider
+- [x] 06-03: Family Recipe Splitter, Meal Logging, Dynamic TDEE & Nutrition Dashboard
 
 ---
 
