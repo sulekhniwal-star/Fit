@@ -168,9 +168,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 08-01: Health Integration Abstraction & Deduplication Engine
-- [ ] 08-02: Android Health Connect & iOS HealthKit Adapters
-- [ ] 08-03: Background Sync Manager, Battery Safeguards & Sync Settings UI
+- [x] 08-01: Health Integration Abstraction & Deduplication Engine
+- [x] 08-02: Android Health Connect & iOS HealthKit Adapters
+- [x] 08-03: Background Sync Manager, Battery Safeguards & Sync Settings UI
 
 ---
 

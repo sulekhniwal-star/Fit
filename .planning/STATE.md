@@ -5,23 +5,23 @@
 See: `.planning/PROJECT.md` (updated 2026-11-03)
 
 **Core value:** India's smartest, most private Health OS combining offline-first local storage, deep Indian cultural/nutritional realities, and zero-friction WhatsApp logging without compromising user data sovereignty.  
-**Current focus:** Phase 8: OS Health Integration (Health Connect & Apple Health)
+**Current focus:** Phase 9: Daily Intelligence Package & Health OS Brain
 
 ## Current Position
 
-Phase: 8 of 24 (OS Health Integration)  
-Plan: 0 of 3 in current phase  
-Status: Ready to execute (`/gsd-execute-phase 8`)  
-Last activity: 2026-11-03 — Phase 8 planned (3 plans created: 08-01, 08-02, 08-03).
+Phase: 8 of 24 (OS Health Integration) — COMPLETED  
+Plan: 3 of 3 in phase completed  
+Status: Phase 8 completed. Ready to plan Phase 9 (`/gsd-plan-phase 9`)  
+Last activity: 2026-11-03 — Phase 8 completed (08-01, 08-02, 08-03).
 
-Progress: [███████░░░] 29.2%
+Progress: [████████░░] 33.3%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 21
-- Average duration: 11 min
-- Total execution time: 3.9 hours
+- Total plans completed: 24
+- Average duration: 11.2 min
+- Total execution time: 4.5 hours
 
 **By Phase:**
 
@@ -34,9 +34,10 @@ Progress: [███████░░░] 29.2%
 | 5. Health Data Core | 3 | 35 min | 11.6 min |
 | 6. Indian Nutrition Engine | 3 | 35 min | 11.6 min |
 | 7. Workout & Fitness Core | 3 | 35 min | 11.6 min |
+| 8. OS Health Integration | 3 | 35 min | 11.6 min |
 
 **Recent Trend:**
-- Last 5 plans: [10m, 11m, 12m, 11m, 12m]
+- Last 5 plans: [11m, 12m, 11m, 12m, 12m]
 - Trend: Stable / High velocity
 
 *Updated after each plan completion*
@@ -46,6 +47,12 @@ Progress: [███████░░░] 29.2%
 ### Decisions
 
 Decisions are logged in `PROJECT.md` Key Decisions table.
+
+Phase 8 decisions:
+- [Phase 8]: Zero vendor-specific SDK leakage into domain entities (ADR-004), mapping Health Connect and HealthKit data directly to canonical `HealthRecordPayload` and Drift health records.
+- [Phase 8]: Biometric deduplication engine protects manual user logs over wearable logs unless wearable step counts strictly exceed manual entry. Deduplicates sleep stages if overlap >= 80% while preserving manual quality ratings. Clamps weight transmissions within 15 mins (< 0.2kg delta) to prevent duplicate scale entries.
+- [Phase 8]: Battery conservation enforced via minimum 15-minute background sync throttling with exponential backoff on consecutive sync errors.
+- [Phase 8]: OS health settings UI provides glassmorphic Bento card with real-time toggle, granular permission chips, manual sync, DPDP 2023 compliance notice, and non-medical statutory disclaimers.
 
 Phase 7 decisions:
 - [Phase 7]: Seeded 35+ exercise catalog in local encrypted Drift database including authentic Indian wrestling Akhada bodyweight training (*Dand*, *Baithak*, *Hanuman Dand*, *Sapate*) and yogic asana cycles (*Surya Namaskar*).
