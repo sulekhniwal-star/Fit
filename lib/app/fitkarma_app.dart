@@ -1,9 +1,9 @@
 import 'package:fitkarma/core/routing/app_router.dart';
-import 'package:fitkarma/shared/presentation/theme/app_colors.dart';
+import 'package:fitkarma/shared/presentation/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-/// Root Application Widget for FitKarma with declarative GoRouter navigation.
+/// Root Application Widget for FitKarma with declarative GoRouter navigation and dark design system.
 class FitKarmaApp extends ConsumerWidget {
   const FitKarmaApp({super.key});
 
@@ -14,11 +14,7 @@ class FitKarmaApp extends ConsumerWidget {
     return MaterialApp.router(
       title: 'FitKarma',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        brightness: Brightness.dark,
-        scaffoldBackgroundColor: AppColors.darkBackground,
-        useMaterial3: true,
-      ),
+      theme: AppTheme.darkTheme,
       routerConfig: router,
     );
   }

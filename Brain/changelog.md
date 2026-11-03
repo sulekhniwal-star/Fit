@@ -4,6 +4,45 @@ All notable changes, documentation audits, and architecture decisions for FitKar
 
 ---
 
+## [2026-11-04] — FitKarma Design System (TASK 009)
+
+### 1. Design Tokens & Theme Foundation
+- Implemented comprehensive design system tokens aligned with `Brain/ui_spec.md`:
+  - **Color Palette** (`lib/shared/presentation/theme/app_colors.dart`): Primary dark scaffold (`#0D0F12`), surfaces (`#161A22`, `#1F2430`, glassmorphism `#1AFFFFFF`), brand accents (Neon Mint `#00E599`, Teal `#00BFA5`, Saffron `#FF9933`, Tech Blue `#38BDF8`), high-contrast text (`#F8FAFC`, `#94A3B8`), and status colors.
+  - **Spacing & Radii** (`lib/shared/presentation/theme/app_spacing.dart`): Spacing scale (`xxs: 2` to `xxxl: 48`), WCAG 2.1 touch target minimum (`48.0dp`), radii scale (`xs` to `full`, Bento card radius `16.0dp`), and spring physics motion tokens (`fast: 150ms`, `normal: 250ms`, `slow: 400ms`).
+  - **Typography** (`lib/shared/presentation/theme/app_typography.dart`): Type hierarchy from `displayLarge` (32sp) to `labelSmall` (12sp).
+  - **Theme Assembly** (`lib/shared/presentation/theme/app_theme.dart`): Material 3 dark `ThemeData` integrating all tokens, button themes, input decoration themes, chip themes, and card themes.
+- Updated `FitKarmaApp` in `lib/app/fitkarma_app.dart` to use `AppTheme.darkTheme`.
+
+### 2. Shared Reusable UI Components
+- Implemented core primitives in `lib/shared/presentation/widgets/`:
+  - `PrimaryButton`: Neon mint with 48dp touch target, spring feedback, loading spinner, disabled state, and accessible semantics.
+  - `AppTextField`: Surface-elevated text input with error borders, hint text, and semantic labels.
+  - `AppChip`: Filter/tag chip with spring border and selection states.
+  - `AppProgressIndicator` & `AppLinearProgressIndicator`: Circular and linear progress bars.
+  - `AppEmptyState`, `AppLoadingView`, and `AppErrorView`: Reusable state views with actionable buttons.
+- Created `DesignSystemShowcaseScreen` (`lib/shared/presentation/screens/design_system_showcase_screen.dart`): Storybook-style interactive showcase for all design tokens and primitives.
+
+### 3. Verification & Quality Gates
+- Added unit and widget tests in `test/shared/presentation/design_system_test.dart` (10 tests) covering:
+  - Exact token matching for colors, spacing, and radii.
+  - Button touch targets (>= 48dp), tap handlers, and loading states.
+  - Text input interaction and error handling.
+  - Filter chip toggles.
+  - Linear and circular progress indicators.
+  - Empty, loading, and error state views with action/retry callbacks.
+  - Showcase screen mounting and error-free rendering.
+- `dart format .`: Formatted cleanly.
+- `flutter analyze`: 0 issues found.
+- `flutter test`: 82/82 tests passed.
+- `node scripts/doc_link_check.js`: 0 errors.
+- `node scripts/doc_lint.js`: 0 errors.
+
+### 4. Next Step
+- Ready for TASK 010 (Localization Foundation).
+
+---
+
 ## [2026-11-04] — Feature Flags and Backend-Configurable Remote Config (TASK 008A) — Phase 0 Gate Passed
 
 ### 1. Dynamic Plan Configuration
