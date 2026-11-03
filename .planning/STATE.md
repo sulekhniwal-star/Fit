@@ -5,14 +5,14 @@
 See: `.planning/PROJECT.md` (updated 2026-11-03)
 
 **Core value:** India's smartest, most private Health OS combining offline-first local storage, deep Indian cultural/nutritional realities, and zero-friction WhatsApp logging without compromising user data sovereignty.  
-**Current focus:** Phase 7: Workout & Fitness Core (Complete) -> Ready for Phase 8
+**Current focus:** Phase 8: OS Health Integration (Health Connect & Apple Health)
 
 ## Current Position
 
-Phase: 7 of 24 (Workout & Fitness Core)  
-Plan: 3 of 3 completed in current phase  
-Status: Phase 7 Completed & Verified. Ready to plan Phase 8.  
-Last activity: 2026-11-03 — Phase 7 completed (Plan 07-01, 07-02, 07-03 verified with 163 passing tests).
+Phase: 8 of 24 (OS Health Integration)  
+Plan: 0 of 3 in current phase  
+Status: Ready to execute (`/gsd-execute-phase 8`)  
+Last activity: 2026-11-03 — Phase 8 planned (3 plans created: 08-01, 08-02, 08-03).
 
 Progress: [███████░░░] 29.2%
 

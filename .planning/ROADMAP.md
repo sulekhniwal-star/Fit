@@ -151,9 +151,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 07-01: Exercise Library, Muscle Groups, Equipment Filtering & Seed Catalog
-- [ ] 07-02: Active Workout Logger, Set/Rep Tracking, Rest Timer & State Machine
-- [ ] 07-03: Volume Progression Analysis, Recovery Readiness & Workout Dashboard
+- [x] 07-01: Exercise Library, Muscle Groups, Equipment Filtering & Seed Catalog
+- [x] 07-02: Active Workout Logger, Set/Rep Tracking, Rest Timer & State Machine
+- [x] 07-03: Volume Progression Analysis, Recovery Readiness & Workout Dashboard
 
 ---
 
@@ -165,7 +165,12 @@ Plans:
   1. App reads steps, sleep, and heart rate from OS health stores with proper permission handling.
   2. Deduplication engine resolves collisions between manual logs and wearable telemetry.
   3. User revocation of permissions is handled gracefully without crashing or corrupting local stores.
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 08-01: Health Integration Abstraction & Deduplication Engine
+- [ ] 08-02: Android Health Connect & iOS HealthKit Adapters
+- [ ] 08-03: Background Sync Manager, Battery Safeguards & Sync Settings UI
 
 ---
 

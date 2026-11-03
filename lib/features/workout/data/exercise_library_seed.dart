@@ -726,3 +726,4 @@ const List<Exercise> kDefaultExerciseSeedCatalog = [
     isSystem: true,
   ),
 ];
+

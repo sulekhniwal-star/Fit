@@ -17,3 +17,4 @@
 3. **Active Workout Experience**:
    - `RestTimerWidget`: Interval presets (30s, 60s, 90s, 120s), animated circular countdown, play/pause toggle, +15s increment, skip button, and visual completion state.
    - `ActiveWorkoutScreen`: Full screen workout logger with continuous timer, live volume and set counters, sets table with check-off integration triggering rest timer, exercise selection modal sheet, and finish workout confirmation dialog with non-medical statutory disclosures.
+

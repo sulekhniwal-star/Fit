@@ -244,3 +244,4 @@ class _RestTimerWidgetState extends State<RestTimerWidget> {
     );
   }
 }
+

@@ -18,3 +18,4 @@
    - Quick Start Routines Card for rapid launch (Blank Workout, Surya Namaskar 12-Flow, Akhada Dand & Baithak).
    - Recent Workouts history list displaying volume, duration, status, and workout type icons.
    - FAB navigating seamlessly to `ActiveWorkoutScreen`.
+

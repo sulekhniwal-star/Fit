@@ -50,3 +50,4 @@ class WorkoutSetsTable extends Table {
   @override
   Set<Column> get primaryKey => {id};
 }
+

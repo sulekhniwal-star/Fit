@@ -23,3 +23,4 @@
 4. **Repository & Riverpod Provider**:
    - `DriftExerciseRepository` with automated seeding, bilingual search (English/Hindi), muscle group, equipment, and home-friendly filtering, plus custom exercise insertion.
    - `exerciseRepositoryProvider` registered for dependency injection.
+

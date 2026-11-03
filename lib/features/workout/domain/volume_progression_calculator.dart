@@ -55,3 +55,4 @@ class VolumeProgressionCalculator {
     return double.parse(delta.toStringAsFixed(1));
   }
 }
+
