@@ -83,3 +83,4 @@ final aqiStateNotifierProvider = StateNotifierProvider<AqiStateNotifier, AqiStat
   final service = ref.watch(aqiServiceProvider);
   return AqiStateNotifier(service);
 });
+

@@ -94,6 +94,7 @@ void main() {
       final splitPotBtn = find.text('Split Pot');
       expect(splitPotBtn, findsOneWidget);
 
+      await tester.ensureVisible(splitPotBtn);
       await tester.tap(splitPotBtn);
       await tester.pumpAndSettle();
 

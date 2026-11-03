@@ -146,3 +146,4 @@ final fastingStateNotifierProvider = StateNotifierProvider<FastingStateNotifier,
   final userId = authState is AuthAuthenticated ? authState.user.id : 'default_user';
   return FastingStateNotifier(repo, userId);
 });
+

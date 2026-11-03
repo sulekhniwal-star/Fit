@@ -68,3 +68,4 @@ class SafeRefeedingGuide {
       'Individuals who are pregnant, nursing, under 18, underweight, or managing type 1 diabetes '
       'should not fast without medical supervision.';
 }
+

@@ -26,3 +26,4 @@ Plan 12-02 implements a privacy-first, CPCB-calibrated Air Quality Index (AQI) e
 - **Unit & Widget Tests**: 25/25 passing across cultural and workout test suites.
 - **Flutter Code Analysis**: 0 issues (`No issues found!`, ran with `--fatal-infos`).
 - **Core Constraints**: Coarse city selection, zero GPS device tracking, offline-resilient cache.
+

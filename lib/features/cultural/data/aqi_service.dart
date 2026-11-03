@@ -128,3 +128,4 @@ class AqiService {
 final aqiServiceProvider = Provider<AqiService>((ref) {
   return AqiService();
 });
+
