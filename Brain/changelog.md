@@ -4,6 +4,31 @@ All notable changes, documentation audits, and architecture decisions for FitKar
 
 ---
 
+## [2026-11-03] — Bootstrap Flutter Application & Smoke Test (TASK 002)
+
+### 1. Flutter Project Scaffold
+- Initialized clean Flutter application targeting Android and iOS with package/bundle identifier `com.sulekhniwal.fitkarma`.
+- Generated `pubspec.yaml` (name `fitkarma`, SDK `^3.13.7`), `analysis_options.yaml` (including `flutter_lints/flutter.yaml`).
+- Configured Android application ID `com.sulekhniwal.fitkarma` and iOS bundle identifier `com.sulekhniwal.fitkarma`.
+
+### 2. Application Entrypoint & Smoke Test
+- Created clean `lib/main.dart` with `FitKarmaApp` (dark theme `#0D0F12`, Material 3).
+- Added smoke test in `test/widget_test.dart` asserting that `FitKarmaApp` mounts and displays application branding.
+- Zero business logic or feature code introduced.
+
+### 3. Verification Gates
+- `flutter pub get`: Dependencies resolved cleanly.
+- `dart format .`: Formatted cleanly.
+- `flutter analyze`: 0 issues found.
+- `flutter test`: 1/1 smoke tests passed.
+- `node scripts/doc_link_check.js`: 0 errors.
+- `node scripts/doc_lint.js`: 0 errors.
+
+### 4. Next Step
+- Ready for TASK 003 (Establish Git Ignore, Environment, and Secret Boundaries).
+
+---
+
 ## [2026-11-03] — Documentation Wiring and Doc-Lint Gate (TASK 001A)
 
 ### 1. Documentation Contract Resolution

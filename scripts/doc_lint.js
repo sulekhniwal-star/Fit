@@ -131,3 +131,4 @@ if (totalErrors > 0) {
   console.log('SUCCESS: All doc-lint rules passed.');
   process.exit(0);
 }
+

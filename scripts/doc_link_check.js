@@ -124,3 +124,4 @@ if (totalErrors > 0) {
   console.log('\nSUCCESS: All required documentation files and links resolved cleanly.');
   process.exit(0);
 }
+
