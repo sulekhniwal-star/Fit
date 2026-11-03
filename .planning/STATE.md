@@ -9,17 +9,17 @@ See: `.planning/PROJECT.md` (updated 2026-11-03)
 
 ## Current Position
 
-Phase: 12 of 24 (Festivals, Fasting, AQI & India-First UX)  
-Plan: 0 of 3 in current phase  
-Status: Phase 12 planned, ready to execute (/gsd-execute-phase 12)  
-Last activity: 2026-11-03 — Phase 12 planned (3 plans created: 12-01, 12-02, 12-03).
+Phase: 13 of 24 (Women's Health & Specialized Tracking)  
+Plan: 0 of TBD in current phase  
+Status: Phase 12 complete, ready to plan Phase 13 (/gsd-plan-phase 13)  
+Last activity: 2026-11-03 — Phase 12 executed (3 plans completed: 12-01, 12-02, 12-03).
 
-Progress: [███████████] 45.8%
+Progress: [████████████] 50.0%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 33
+- Total plans completed: 36
 - Average duration: 11.2 min
 - Total execution time: 5.6 hours
 
@@ -38,6 +38,7 @@ Progress: [███████████] 45.8%
 | 9. Daily Intelligence Package & Health OS Brain | 3 | 35 min | 11.6 min |
 | 10. AI Foundation & Server-Side Gateway | 3 | 35 min | 11.6 min |
 | 11. WhatsApp AI Logging | 3 | 35 min | 11.6 min |
+| 12. Festivals, Fasting, AQI & India-First UX | 3 | 35 min | 11.6 min |
 
 **Recent Trend:**
 - Last 5 plans: [11m, 12m, 11m, 12m, 12m]
@@ -50,6 +51,15 @@ Progress: [███████████] 45.8%
 ### Decisions
 
 Decisions are logged in `PROJECT.md` Key Decisions table.
+
+Phase 12 decisions:
+- [Phase 12]: Fasting protocols (16:8, 14:10, 12:12, 18:6, 20:4, Navratri, Ekadashi, Karwa Chauth, Ramadan, Maha Shivratri, Custom) implemented with strict voluntary opt-in and zero algorithmic inference of religion (TASK 069, ADR-005).
+- [Phase 12]: Fasting engine automatically suppresses irrelevant "haven't logged food" warnings during active fasts, suppresses water reminders only for Nirjala/dry fasts, and enforces clinical boundary disclaimers (contraindicated for pregnancy, type 1 diabetes).
+- [Phase 12]: Safe refeeding guidance offers soothing Indian digestive recovery meals (tender coconut water, moong dal khichdi, papaya, chaas) and flags foods to avoid to prevent gastric distress.
+- [Phase 12]: CPCB NAQI Air Quality Engine integrates all 6 official bands (Good, Satisfactory, Moderate, Poor, Very Poor, Severe) with DPDP Act 2023 coarse city resolution (50+ Indian cities) and zero persistent GPS tracking.
+- [Phase 12]: AQI workout safety advisor dynamically evaluates outdoor cardio risk and generates indoor alternatives (Indoor Treadmill, Bodyweight HIIT, Surya Namaskar Flow, Restorative Yoga) on AQI >= 201 days.
+- [Phase 12]: Replaceable festival calendar architecture (`FestivalCalendarSource`) supports multi-faith celebrations (Diwali, Holi, Eid, Navratri, Pongal, Ganesh Chaturthi) with optional opt-out/mute controls.
+- [Phase 12]: Cultural nutrition planner provides authentic ICMR macros for traditional delicacies and implements shame-free weekly calorie redistribution (3-4 days) with pre-feast fiber/hydration loading and post-feast Shatapawali walks.
 
 Phase 11 decisions:
 - [Phase 11]: WhatsApp Business Cloud API v21.0 integration implemented via Supabase Edge Function (`whatsapp-webhook`) with HMAC-SHA256 signature verification (`X-Hub-Signature-256`) and constant-time comparison to prevent timing attacks.

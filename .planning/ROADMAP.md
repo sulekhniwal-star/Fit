@@ -235,9 +235,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 12-01: Fasting Tracker & Indian Fast Protocols
-- [ ] 12-02: Real-Time AQI Engine & Outdoor Workout Safety Adaptor
-- [ ] 12-03: Festival Calendar & Cultural Nutrition Planner
+- [x] 12-01: Fasting Tracker & Indian Fast Protocols
+- [x] 12-02: Real-Time AQI Engine & Outdoor Workout Safety Adaptor
+- [x] 12-03: Festival Calendar & Cultural Nutrition Planner
 
 ---
 
