@@ -4,6 +4,39 @@ All notable changes, documentation audits, and architecture decisions for FitKar
 
 ---
 
+## [2026-11-04] — Riverpod Application Architecture (TASK 005)
+
+### 1. State Management & Dependency Injection
+- Added `flutter_riverpod: ^2.6.1` to `pubspec.yaml`.
+- Created application-level provider contracts and implementations in `lib/core/providers/`:
+  - `appConfigProvider`: Requires explicit startup configuration; fails fast if uninitialized.
+  - `loggingServiceProvider`: Instantiates `ConsoleLoggingService` wired to active `AppConfig`.
+  - `localDatabaseProvider`: Contract provider for Drift + SQLCipher persistence.
+  - `syncEngineProvider`: Contract provider for outbox sync engine.
+  - `AppProviderObserver`: Lifecycle observer for logging provider additions, updates, disposals, and failures with redaction support.
+
+### 2. Application Bootstrap & Consumer Integration
+- Updated `FitKarmaApp` to a `ConsumerWidget` observing `appConfigProvider`.
+- Updated `lib/main.dart` to mount `ProviderScope` with `AppProviderObserver` and configured `appConfigProvider` override.
+- Updated `test/helpers/test_helpers.dart` (`pumpFitKarmaWidget`) with full `ProviderScope` override support.
+
+### 3. Verification & Quality Gates
+- Added unit and widget tests in `test/core/providers/riverpod_architecture_test.dart` asserting:
+  - Providers throw `UnimplementedError` when contracts are uninitialized.
+  - Dependencies are cleanly overridable in tests.
+  - `AppProviderObserver` intercepts lifecycle events.
+  - `FitKarmaApp` mounts and boots cleanly with `ProviderScope`.
+- `dart format .`: Formatted cleanly.
+- `flutter analyze`: 0 issues found.
+- `flutter test`: 23/23 tests passed.
+- `node scripts/doc_link_check.js`: 0 errors.
+- `node scripts/doc_lint.js`: 0 errors.
+
+### 4. Next Step
+- Ready for TASK 006 (Navigation and Route Architecture).
+
+---
+
 ## [2026-11-03] — Establish Project Folder Architecture (TASK 004)
 
 ### 1. Folder Structure & Modular Domain Scaffolding

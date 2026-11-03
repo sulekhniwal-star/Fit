@@ -3,4 +3,3 @@
 abstract class HealthTrackingModule {
   static const String featureName = 'health_tracking';
 }
-

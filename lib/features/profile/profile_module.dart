@@ -3,4 +3,3 @@
 abstract class ProfileModule {
   static const String featureName = 'profile';
 }
-

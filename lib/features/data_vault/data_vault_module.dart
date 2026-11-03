@@ -3,4 +3,3 @@
 abstract class DataVaultModule {
   static const String featureName = 'data_vault';
 }
-

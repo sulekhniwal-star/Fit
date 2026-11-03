@@ -9,4 +9,3 @@ abstract interface class SyncEngineContract {
   Future<void> processOutbox();
   Stream<bool> get isSyncingStream;
 }
-

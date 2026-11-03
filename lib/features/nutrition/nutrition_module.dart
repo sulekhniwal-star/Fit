@@ -3,4 +3,3 @@
 abstract class NutritionModule {
   static const String featureName = 'nutrition';
 }
-

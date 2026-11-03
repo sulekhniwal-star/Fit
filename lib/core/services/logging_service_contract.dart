@@ -5,4 +5,3 @@ abstract interface class LoggingServiceContract {
   void warning(String message, [Object? error, StackTrace? stackTrace]);
   void error(String message, [Object? error, StackTrace? stackTrace]);
 }
-

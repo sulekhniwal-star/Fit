@@ -5,4 +5,3 @@ abstract interface class AppRouterContract {
   void pop();
   String get currentRoute;
 }
-
