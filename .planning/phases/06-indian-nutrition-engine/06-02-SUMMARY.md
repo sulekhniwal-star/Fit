@@ -33,3 +33,4 @@
 ## Verification Run
 - `flutter test test/features/nutrition/cooking_multipliers_and_tadka_test.dart`: 7 passed.
 - `flutter analyze --fatal-infos`: 0 issues.
+

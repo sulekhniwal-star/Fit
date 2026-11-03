@@ -148,7 +148,12 @@ Plans:
   1. Users can browse and filter exercise libraries by target muscle and equipment.
   2. Active workouts track sets, reps, weights, and rest periods with an audible/haptic timer.
   3. Completed workouts update weekly volume metrics and sync via outbox.
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 07-01: Exercise Library, Muscle Groups, Equipment Filtering & Seed Catalog
+- [ ] 07-02: Active Workout Logger, Set/Rep Tracking, Rest Timer & State Machine
+- [ ] 07-03: Volume Progression Analysis, Recovery Readiness & Workout Dashboard
 
 ---
 

@@ -135,3 +135,4 @@ class FamilyRecipe {
 
   String get ingredientsJson => jsonEncode(ingredients.map((i) => i.toJson()).toList());
 }
+

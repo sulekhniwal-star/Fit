@@ -34,3 +34,4 @@
 ## Verification Run
 - `flutter test test/features/nutrition/food_catalog_and_portions_test.dart`: 10 passed.
 - `flutter analyze --fatal-infos`: 0 issues.
+

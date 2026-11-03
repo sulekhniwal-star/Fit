@@ -130,3 +130,4 @@ final foodCatalogRepositoryProvider = Provider<DriftFoodCatalogRepository>((ref)
   final db = ref.watch(appDatabaseProvider);
   return DriftFoodCatalogRepository(db);
 });
+

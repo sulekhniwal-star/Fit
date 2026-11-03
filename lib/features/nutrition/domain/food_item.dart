@@ -235,3 +235,4 @@ class PortionCalculator {
     return 1.0;
   }
 }
+

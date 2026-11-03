@@ -41,3 +41,4 @@
 ## Verification Run
 - `flutter test`: 141 passed across whole codebase.
 - `flutter analyze --fatal-infos`: 0 issues.
+

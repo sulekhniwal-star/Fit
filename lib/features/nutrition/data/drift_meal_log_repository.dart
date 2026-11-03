@@ -224,3 +224,4 @@ final mealLogRepositoryProvider = Provider<DriftMealLogRepository>((ref) {
   final queue = ref.watch(outboxQueueProvider);
   return DriftMealLogRepository(db, queue);
 });
+

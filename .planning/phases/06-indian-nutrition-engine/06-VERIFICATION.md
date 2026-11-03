@@ -58,3 +58,4 @@
 - [x] Family Recipe Splitter and Dynamic TDEE engine verified.
 - [x] `NutritionDashboardScreen` mounted to `/nutrition` in `AppRouter`.
 - [x] Phase 6 is ready for official milestone closure.
+

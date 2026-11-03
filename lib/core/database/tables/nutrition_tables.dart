@@ -71,3 +71,4 @@ class RecipesTable extends Table {
   @override
   Set<Column> get primaryKey => {id};
 }
+

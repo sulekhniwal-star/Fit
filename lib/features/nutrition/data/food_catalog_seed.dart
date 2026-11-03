@@ -845,3 +845,4 @@ class FoodCatalogSeed {
     return list;
   }
 }
+
