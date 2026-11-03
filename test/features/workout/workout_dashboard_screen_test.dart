@@ -109,8 +109,13 @@ void main() {
       await tester.pumpWidget(createScreen());
       await tester.pumpAndSettle();
 
+      // Drag ListView up to reveal Quick Start section
+      await tester.drag(find.byType(ListView), const Offset(0, -200));
+      await tester.pumpAndSettle();
+
       // Tap Surya Namaskar quick chip
-      await tester.tap(find.byKey(const Key('quick_start_surya')));
+      final chip = find.byKey(const Key('quick_start_surya'));
+      await tester.tap(chip);
       await tester.pumpAndSettle();
 
       // Should have pushed ActiveWorkoutScreen

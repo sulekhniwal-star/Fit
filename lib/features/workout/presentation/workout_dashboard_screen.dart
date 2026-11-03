@@ -8,6 +8,7 @@ import '../../../shared/widgets/app_scaffold.dart';
 import '../../../shared/widgets/bento_card.dart';
 import '../../../shared/widgets/sync_status_badge.dart';
 import '../../auth/presentation/auth_state_notifier.dart';
+import '../../cultural/presentation/aqi_context_card.dart';
 import '../data/drift_workout_repository.dart';
 import '../domain/exercise.dart';
 import '../domain/recovery_readiness_calculator.dart';
@@ -230,6 +231,11 @@ class _WorkoutDashboardScreenState extends ConsumerState<WorkoutDashboardScreen>
                       ],
                     ),
                   ),
+
+                  const SizedBox(height: AppSpacing.md),
+
+                  // 1b. Air Quality Index (AQI) Context Card
+                  const AqiContextCard(),
 
                   const SizedBox(height: AppSpacing.md),
 
