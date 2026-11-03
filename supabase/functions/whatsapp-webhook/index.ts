@@ -8,7 +8,9 @@ import { MetaWhatsAppClient } from './meta_client.ts';
 import { WhatsAppMediaFetcher } from './media_fetcher.ts';
 import { GroqAudioTranscriber } from './audio_transcriber.ts';
 import { ConversationalMealPipeline, type MealPipelineOutput } from './meal_pipeline.ts';
-import type { MetaWebhookPayload, MetaInboundMessage } from './schemas.ts';
+import { WhatsAppCardBuilder } from './card_builder.ts';
+import { WhatsAppCommitHandler } from './commit_handler.ts';
+import type { MetaWebhookPayload, MetaInboundMessage, WhatsAppInteractionRecord } from './schemas.ts';
 
 declare const Deno: {
   env: {
@@ -49,6 +51,20 @@ export interface InboundProcessingDeps {
     waMessageId: string,
     output: MealPipelineOutput,
   ) => Promise<void>;
+  getInteractionById?: (id: string) => Promise<WhatsAppInteractionRecord | null>;
+  updateInteractionStatus?: (id: string, status: 'confirmed' | 'cancelled' | 'expired') => Promise<void>;
+  insertFoodLogs?: (entries: Array<{
+    user_id: string;
+    logged_at: string;
+    meal_slot: string;
+    food_name: string;
+    portion_quantity: number;
+    portion_unit: string;
+    calories: number;
+    protein_grams: number;
+    carbs_grams: number;
+    fat_grams: number;
+  }>) => Promise<number>;
 }
 
 export async function handleWebhookRequest(
@@ -88,11 +104,18 @@ export async function handleWebhookRequest(
     const signatureHeader = req.headers.get('x-hub-signature-256');
     const rawBody = await req.text();
 
-    // Verify HMAC-SHA256 signature
-    const isValidSignature = await verifyMetaSignature(rawBody, signatureHeader, appSecret);
-    if (!isValidSignature && signatureHeader) {
+    // Verify HMAC-SHA256 signature strictly: Missing or invalid signature is rejected with 401
+    if (!signatureHeader || signatureHeader.trim() === '') {
       return new Response(
-        JSON.stringify({ error: 'Unauthorized: Invalid X-Hub-Signature-256' }),
+        JSON.stringify({ error: 'Unauthorized: Missing X-Hub-Signature-256 header' }),
+        { status: 401, headers: { 'Content-Type': 'application/json' } },
+      );
+    }
+
+    const isValidSignature = await verifyMetaSignature(rawBody, signatureHeader, appSecret);
+    if (!isValidSignature) {
+      return new Response(
+        JSON.stringify({ error: 'Unauthorized: Invalid X-Hub-Signature-256 digest' }),
         { status: 401, headers: { 'Content-Type': 'application/json' } },
       );
     }
@@ -121,6 +144,9 @@ export async function handleWebhookRequest(
             lookupProfile: options?.lookupProfile,
             recordInteraction: options?.recordInteraction,
             updateInteractionPrediction: options?.updateInteractionPrediction,
+            getInteractionById: options?.getInteractionById,
+            updateInteractionStatus: options?.updateInteractionStatus,
+            insertFoodLogs: options?.insertFoodLogs,
           });
         }
       }
@@ -153,6 +179,20 @@ async function processSingleInboundMessage(
       status: string;
     }) => Promise<boolean>;
     updateInteractionPrediction?: (waMessageId: string, output: MealPipelineOutput) => Promise<void>;
+    getInteractionById?: (id: string) => Promise<WhatsAppInteractionRecord | null>;
+    updateInteractionStatus?: (id: string, status: 'confirmed' | 'cancelled' | 'expired') => Promise<void>;
+    insertFoodLogs?: (entries: Array<{
+      user_id: string;
+      logged_at: string;
+      meal_slot: string;
+      food_name: string;
+      portion_quantity: number;
+      portion_unit: string;
+      calories: number;
+      protein_grams: number;
+      carbs_grams: number;
+      fat_grams: number;
+    }>) => Promise<number>;
   },
 ): Promise<void> {
   const waMessageId = msg.id;
@@ -180,8 +220,23 @@ async function processSingleInboundMessage(
     } catch (e) {
       rawInput = `[audio_transcription_error]: ${e}`;
     }
-  } else if (msg.type === 'interactive') {
-    rawInput = `[button_reply:${msg.interactive.button_reply.id}]`;
+  } else if (msg.type === 'interactive' && msg.interactive?.button_reply) {
+    const buttonId = msg.interactive.button_reply.id;
+    rawInput = `[button_reply:${buttonId}]`;
+
+    // Process interactive button reply via WhatsAppCommitHandler
+    if (deps.getInteractionById && deps.updateInteractionStatus && deps.insertFoodLogs) {
+      await WhatsAppCommitHandler.handleButtonReply(
+        buttonId,
+        deps.metaClient,
+        {
+          getInteractionById: deps.getInteractionById,
+          updateInteractionStatus: deps.updateInteractionStatus,
+          insertFoodLogs: deps.insertFoodLogs,
+        },
+      );
+    }
+    return;
   }
 
   // Deduplication & interaction record
@@ -219,6 +274,14 @@ async function processSingleInboundMessage(
     if (deps.updateInteractionPrediction) {
       await deps.updateInteractionPrediction(waMessageId, mealOutput);
     }
+
+    // Build and dispatch interactive confirmation card with Meta Quick Reply buttons
+    const cardPayload = WhatsAppCardBuilder.buildMealConfirmationCard(
+      normalizedPhone,
+      waMessageId,
+      mealOutput,
+    );
+    await deps.metaClient.sendInteractiveMessage(cardPayload);
   }
 }
 

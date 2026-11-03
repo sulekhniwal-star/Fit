@@ -1,10 +1,12 @@
 import 'dart:convert';
 import 'package:drift/drift.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/database/app_database.dart';
 import '../../../core/errors/failures.dart';
 import '../../../core/errors/result.dart';
 import '../../../core/sync/models/outbox_mutation.dart';
 import '../../../core/sync/outbox_queue.dart';
+import '../../../core/sync/sync_coordinator.dart';
 import '../../../core/sync/syncable_repository.dart';
 import '../domain/dosha_calculator.dart';
 import '../domain/profile_repository.dart';
@@ -155,4 +157,11 @@ class DriftProfileRepository extends SyncableRepository<UserProfile, String>
     );
   }
 }
+
+final driftProfileRepositoryProvider = Provider<DriftProfileRepository>((ref) {
+  final db = ref.watch(appDatabaseProvider);
+  final outbox = ref.watch(outboxQueueProvider);
+  return DriftProfileRepository(db, outbox);
+});
+
 

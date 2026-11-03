@@ -9,6 +9,9 @@ class RouteNames {
   static const aiTextMeal = '/nutrition/ai-text';
   static const aiPhotoMeal = '/nutrition/ai-photo';
   static const workouts = '/workouts';
+  static const activeWorkout = '/workouts/active';
+  static const health = '/health';
+  static const fasting = '/fasting';
   static const profile = '/profile';
   static const dataVault = '/data-vault';
   static const settings = '/settings';

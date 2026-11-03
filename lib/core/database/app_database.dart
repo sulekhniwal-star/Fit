@@ -65,7 +65,8 @@ class AppDatabase extends _$AppDatabase {
         file,
         setup: (rawDb) {
           if (encryptionKey != null && encryptionKey.isNotEmpty) {
-            rawDb.execute("PRAGMA key = '$encryptionKey';");
+            final sanitizedKey = encryptionKey.replaceAll("'", "''");
+            rawDb.execute("PRAGMA key = '$sanitizedKey';");
           }
           rawDb.execute('PRAGMA foreign_keys = ON;');
         },

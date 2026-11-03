@@ -48,7 +48,7 @@ language plpgsql
 security definer
 as $$
 begin
-    if auth.uid() <> target_user_id and current_setting('role') <> 'service_role' then
+    if (auth.uid() is null or auth.uid() <> target_user_id) and current_setting('role', true) <> 'service_role' then
         raise exception 'Unauthorized deletion request';
     end if;
 

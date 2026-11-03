@@ -3,6 +3,7 @@ import '../../../core/errors/failures.dart';
 import '../../../core/errors/result.dart';
 import '../domain/profile_repository.dart';
 import '../domain/user_profile.dart';
+import 'drift_profile_repository.dart';
 
 class LocalProfileRepository implements ProfileRepository {
   final Map<String, UserProfile> _storage = {};
@@ -47,6 +48,5 @@ class LocalProfileRepository implements ProfileRepository {
 }
 
 final profileRepositoryProvider = Provider<ProfileRepository>((ref) {
-  return LocalProfileRepository();
+  return ref.watch(driftProfileRepositoryProvider);
 });
-

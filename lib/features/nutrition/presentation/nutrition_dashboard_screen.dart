@@ -48,7 +48,7 @@ class _NutritionDashboardScreenState extends ConsumerState<NutritionDashboardScr
 
   String get _effectiveUserId {
     if (widget.userId != null) return widget.userId!;
-    final authState = ref.watch(authStateNotifierProvider);
+    final authState = ref.read(authStateNotifierProvider);
     if (authState is AuthAuthenticated) {
       return authState.user.id;
     }

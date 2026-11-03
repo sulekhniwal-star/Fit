@@ -81,9 +81,14 @@ class SyncCoordinator extends StateNotifier<SyncState> {
       try {
         if (_dispatcher != null) {
           await _dispatcher!(mutation);
+          await _queue.markCompleted(mutation.id);
+          syncedCount++;
+        } else {
+          // Do not silently swallow mutations when dispatcher is unconfigured
+          await _queue.resetInFlightToPending();
+          state = Synced(syncedAt: DateTime.now(), itemsSynced: 0);
+          return;
         }
-        await _queue.markCompleted(mutation.id);
-        syncedCount++;
       } catch (e) {
         _consecutiveFailures++;
         final backoff = calculateBackoffSeconds(_consecutiveFailures);
