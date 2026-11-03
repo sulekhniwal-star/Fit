@@ -51,3 +51,4 @@ Establish FitKarma's zero-friction conversational WhatsApp logging interface. En
   - `20261103000001_whatsapp_interactions.sql`: Postgres table for correlation, idempotency, and audit logging.
 - `lib/features/nutrition/`:
   - Outbox sync & realtime sync listener updates to reflect WhatsApp-logged meals in the mobile dashboard.
+

@@ -146,3 +146,4 @@ Meta limits interactive messages to a maximum of 3 buttons:
   - Bot responds with statutory non-diagnostic statement:
     *"FitKarma is a wellness and nutrition tracker, not a medical practitioner. For blood sugar concerns or medication advice, please consult your physician."*
   - Refuses to log medicine as food or make prescriptive treatment claims.
+
