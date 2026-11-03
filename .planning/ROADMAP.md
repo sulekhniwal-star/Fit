@@ -182,7 +182,12 @@ Plans:
   1. Home screen dynamically renders the Daily Intelligence Package on first launch each day.
   2. No screen attempts to show all modules simultaneously; DIP prioritizes the top 3 actionable insights.
   3. Calculations run deterministically offline with cached models.
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 09-01: DIP Domain Contract & Daily Readiness Engine
+- [ ] 09-02: Deterministic DIP Rule Engine & Telemetry Pipeline
+- [ ] 09-03: Contextual Home Surface, Micro-Action Cards & Routing Assembly
 
 ---
 
