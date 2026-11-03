@@ -6,6 +6,7 @@ import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
 import 'tables/activity_and_wellness_tables.dart';
 import 'tables/body_metrics_table.dart';
+import 'tables/fasting_sessions_table.dart';
 import 'tables/nutrition_tables.dart';
 import 'tables/outbox_table.dart';
 import 'tables/user_profiles_table.dart';
@@ -32,6 +33,7 @@ part 'app_database.g.dart';
   ExercisesTable,
   WorkoutSessionsTable,
   WorkoutSetsTable,
+  FastingSessionsTable,
 ])
 class AppDatabase extends _$AppDatabase {
   AppDatabase([QueryExecutor? executor]) : super(executor ?? _openConnection());

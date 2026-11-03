@@ -69,3 +69,4 @@ India's Ministry of Environment, Forest and Climate Change utilizes CPCB NAQI ba
   1. **Weekly Calorie Redistribution**: Shifting 150-200 kcal from weekdays to provide headroom for festive dinners.
   2. **Hydration & Fiber Pre-Loading**: Encouraging 2 glasses of water and raw salad/sprouts before family feasts to regulate satiety.
   3. **Tadka & Portion Awareness**: Providing accurate portion values for festive sweets without red "forbidden" warnings.
+

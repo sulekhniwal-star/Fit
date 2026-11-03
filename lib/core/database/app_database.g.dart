@@ -10298,6 +10298,741 @@ class WorkoutSetsTableCompanion extends UpdateCompanion<WorkoutSetsTableData> {
   }
 }
 
+class $FastingSessionsTableTable extends FastingSessionsTable
+    with TableInfo<$FastingSessionsTableTable, FastingSessionsTableData> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $FastingSessionsTableTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<String> id = GeneratedColumn<String>(
+    'id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _userIdMeta = const VerificationMeta('userId');
+  @override
+  late final GeneratedColumn<String> userId = GeneratedColumn<String>(
+    'user_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _protocolTypeMeta = const VerificationMeta(
+    'protocolType',
+  );
+  @override
+  late final GeneratedColumn<String> protocolType = GeneratedColumn<String>(
+    'protocol_type',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _startTimeMeta = const VerificationMeta(
+    'startTime',
+  );
+  @override
+  late final GeneratedColumn<DateTime> startTime = GeneratedColumn<DateTime>(
+    'start_time',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _plannedEndTimeMeta = const VerificationMeta(
+    'plannedEndTime',
+  );
+  @override
+  late final GeneratedColumn<DateTime> plannedEndTime =
+      GeneratedColumn<DateTime>(
+        'planned_end_time',
+        aliasedName,
+        false,
+        type: DriftSqlType.dateTime,
+        requiredDuringInsert: true,
+      );
+  static const VerificationMeta _actualEndTimeMeta = const VerificationMeta(
+    'actualEndTime',
+  );
+  @override
+  late final GeneratedColumn<DateTime> actualEndTime =
+      GeneratedColumn<DateTime>(
+        'actual_end_time',
+        aliasedName,
+        true,
+        type: DriftSqlType.dateTime,
+        requiredDuringInsert: false,
+      );
+  static const VerificationMeta _statusMeta = const VerificationMeta('status');
+  @override
+  late final GeneratedColumn<String> status = GeneratedColumn<String>(
+    'status',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant('active'),
+  );
+  static const VerificationMeta _isWaterlessMeta = const VerificationMeta(
+    'isWaterless',
+  );
+  @override
+  late final GeneratedColumn<bool> isWaterless = GeneratedColumn<bool>(
+    'is_waterless',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("is_waterless" IN (0, 1))',
+    ),
+    defaultValue: const Constant(false),
+  );
+  static const VerificationMeta _hydrationRemindersMeta =
+      const VerificationMeta('hydrationReminders');
+  @override
+  late final GeneratedColumn<bool> hydrationReminders = GeneratedColumn<bool>(
+    'hydration_reminders',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("hydration_reminders" IN (0, 1))',
+    ),
+    defaultValue: const Constant(true),
+  );
+  static const VerificationMeta _notesMeta = const VerificationMeta('notes');
+  @override
+  late final GeneratedColumn<String> notes = GeneratedColumn<String>(
+    'notes',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _createdAtMeta = const VerificationMeta(
+    'createdAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> createdAt = GeneratedColumn<DateTime>(
+    'created_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _updatedAtMeta = const VerificationMeta(
+    'updatedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> updatedAt = GeneratedColumn<DateTime>(
+    'updated_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    userId,
+    protocolType,
+    startTime,
+    plannedEndTime,
+    actualEndTime,
+    status,
+    isWaterless,
+    hydrationReminders,
+    notes,
+    createdAt,
+    updatedAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'fasting_sessions_table';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<FastingSessionsTableData> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    } else if (isInserting) {
+      context.missing(_idMeta);
+    }
+    if (data.containsKey('user_id')) {
+      context.handle(
+        _userIdMeta,
+        userId.isAcceptableOrUnknown(data['user_id']!, _userIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_userIdMeta);
+    }
+    if (data.containsKey('protocol_type')) {
+      context.handle(
+        _protocolTypeMeta,
+        protocolType.isAcceptableOrUnknown(
+          data['protocol_type']!,
+          _protocolTypeMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_protocolTypeMeta);
+    }
+    if (data.containsKey('start_time')) {
+      context.handle(
+        _startTimeMeta,
+        startTime.isAcceptableOrUnknown(data['start_time']!, _startTimeMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_startTimeMeta);
+    }
+    if (data.containsKey('planned_end_time')) {
+      context.handle(
+        _plannedEndTimeMeta,
+        plannedEndTime.isAcceptableOrUnknown(
+          data['planned_end_time']!,
+          _plannedEndTimeMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_plannedEndTimeMeta);
+    }
+    if (data.containsKey('actual_end_time')) {
+      context.handle(
+        _actualEndTimeMeta,
+        actualEndTime.isAcceptableOrUnknown(
+          data['actual_end_time']!,
+          _actualEndTimeMeta,
+        ),
+      );
+    }
+    if (data.containsKey('status')) {
+      context.handle(
+        _statusMeta,
+        status.isAcceptableOrUnknown(data['status']!, _statusMeta),
+      );
+    }
+    if (data.containsKey('is_waterless')) {
+      context.handle(
+        _isWaterlessMeta,
+        isWaterless.isAcceptableOrUnknown(
+          data['is_waterless']!,
+          _isWaterlessMeta,
+        ),
+      );
+    }
+    if (data.containsKey('hydration_reminders')) {
+      context.handle(
+        _hydrationRemindersMeta,
+        hydrationReminders.isAcceptableOrUnknown(
+          data['hydration_reminders']!,
+          _hydrationRemindersMeta,
+        ),
+      );
+    }
+    if (data.containsKey('notes')) {
+      context.handle(
+        _notesMeta,
+        notes.isAcceptableOrUnknown(data['notes']!, _notesMeta),
+      );
+    }
+    if (data.containsKey('created_at')) {
+      context.handle(
+        _createdAtMeta,
+        createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_createdAtMeta);
+    }
+    if (data.containsKey('updated_at')) {
+      context.handle(
+        _updatedAtMeta,
+        updatedAt.isAcceptableOrUnknown(data['updated_at']!, _updatedAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_updatedAtMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  FastingSessionsTableData map(
+    Map<String, dynamic> data, {
+    String? tablePrefix,
+  }) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return FastingSessionsTableData(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}id'],
+      )!,
+      userId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}user_id'],
+      )!,
+      protocolType: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}protocol_type'],
+      )!,
+      startTime: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}start_time'],
+      )!,
+      plannedEndTime: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}planned_end_time'],
+      )!,
+      actualEndTime: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}actual_end_time'],
+      ),
+      status: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}status'],
+      )!,
+      isWaterless: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}is_waterless'],
+      )!,
+      hydrationReminders: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}hydration_reminders'],
+      )!,
+      notes: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}notes'],
+      ),
+      createdAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}created_at'],
+      )!,
+      updatedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}updated_at'],
+      )!,
+    );
+  }
+
+  @override
+  $FastingSessionsTableTable createAlias(String alias) {
+    return $FastingSessionsTableTable(attachedDatabase, alias);
+  }
+}
+
+class FastingSessionsTableData extends DataClass
+    implements Insertable<FastingSessionsTableData> {
+  final String id;
+  final String userId;
+  final String protocolType;
+  final DateTime startTime;
+  final DateTime plannedEndTime;
+  final DateTime? actualEndTime;
+  final String status;
+  final bool isWaterless;
+  final bool hydrationReminders;
+  final String? notes;
+  final DateTime createdAt;
+  final DateTime updatedAt;
+  const FastingSessionsTableData({
+    required this.id,
+    required this.userId,
+    required this.protocolType,
+    required this.startTime,
+    required this.plannedEndTime,
+    this.actualEndTime,
+    required this.status,
+    required this.isWaterless,
+    required this.hydrationReminders,
+    this.notes,
+    required this.createdAt,
+    required this.updatedAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<String>(id);
+    map['user_id'] = Variable<String>(userId);
+    map['protocol_type'] = Variable<String>(protocolType);
+    map['start_time'] = Variable<DateTime>(startTime);
+    map['planned_end_time'] = Variable<DateTime>(plannedEndTime);
+    if (!nullToAbsent || actualEndTime != null) {
+      map['actual_end_time'] = Variable<DateTime>(actualEndTime);
+    }
+    map['status'] = Variable<String>(status);
+    map['is_waterless'] = Variable<bool>(isWaterless);
+    map['hydration_reminders'] = Variable<bool>(hydrationReminders);
+    if (!nullToAbsent || notes != null) {
+      map['notes'] = Variable<String>(notes);
+    }
+    map['created_at'] = Variable<DateTime>(createdAt);
+    map['updated_at'] = Variable<DateTime>(updatedAt);
+    return map;
+  }
+
+  FastingSessionsTableCompanion toCompanion(bool nullToAbsent) {
+    return FastingSessionsTableCompanion(
+      id: Value(id),
+      userId: Value(userId),
+      protocolType: Value(protocolType),
+      startTime: Value(startTime),
+      plannedEndTime: Value(plannedEndTime),
+      actualEndTime: actualEndTime == null && nullToAbsent
+          ? const Value.absent()
+          : Value(actualEndTime),
+      status: Value(status),
+      isWaterless: Value(isWaterless),
+      hydrationReminders: Value(hydrationReminders),
+      notes: notes == null && nullToAbsent
+          ? const Value.absent()
+          : Value(notes),
+      createdAt: Value(createdAt),
+      updatedAt: Value(updatedAt),
+    );
+  }
+
+  factory FastingSessionsTableData.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return FastingSessionsTableData(
+      id: serializer.fromJson<String>(json['id']),
+      userId: serializer.fromJson<String>(json['userId']),
+      protocolType: serializer.fromJson<String>(json['protocolType']),
+      startTime: serializer.fromJson<DateTime>(json['startTime']),
+      plannedEndTime: serializer.fromJson<DateTime>(json['plannedEndTime']),
+      actualEndTime: serializer.fromJson<DateTime?>(json['actualEndTime']),
+      status: serializer.fromJson<String>(json['status']),
+      isWaterless: serializer.fromJson<bool>(json['isWaterless']),
+      hydrationReminders: serializer.fromJson<bool>(json['hydrationReminders']),
+      notes: serializer.fromJson<String?>(json['notes']),
+      createdAt: serializer.fromJson<DateTime>(json['createdAt']),
+      updatedAt: serializer.fromJson<DateTime>(json['updatedAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<String>(id),
+      'userId': serializer.toJson<String>(userId),
+      'protocolType': serializer.toJson<String>(protocolType),
+      'startTime': serializer.toJson<DateTime>(startTime),
+      'plannedEndTime': serializer.toJson<DateTime>(plannedEndTime),
+      'actualEndTime': serializer.toJson<DateTime?>(actualEndTime),
+      'status': serializer.toJson<String>(status),
+      'isWaterless': serializer.toJson<bool>(isWaterless),
+      'hydrationReminders': serializer.toJson<bool>(hydrationReminders),
+      'notes': serializer.toJson<String?>(notes),
+      'createdAt': serializer.toJson<DateTime>(createdAt),
+      'updatedAt': serializer.toJson<DateTime>(updatedAt),
+    };
+  }
+
+  FastingSessionsTableData copyWith({
+    String? id,
+    String? userId,
+    String? protocolType,
+    DateTime? startTime,
+    DateTime? plannedEndTime,
+    Value<DateTime?> actualEndTime = const Value.absent(),
+    String? status,
+    bool? isWaterless,
+    bool? hydrationReminders,
+    Value<String?> notes = const Value.absent(),
+    DateTime? createdAt,
+    DateTime? updatedAt,
+  }) => FastingSessionsTableData(
+    id: id ?? this.id,
+    userId: userId ?? this.userId,
+    protocolType: protocolType ?? this.protocolType,
+    startTime: startTime ?? this.startTime,
+    plannedEndTime: plannedEndTime ?? this.plannedEndTime,
+    actualEndTime: actualEndTime.present
+        ? actualEndTime.value
+        : this.actualEndTime,
+    status: status ?? this.status,
+    isWaterless: isWaterless ?? this.isWaterless,
+    hydrationReminders: hydrationReminders ?? this.hydrationReminders,
+    notes: notes.present ? notes.value : this.notes,
+    createdAt: createdAt ?? this.createdAt,
+    updatedAt: updatedAt ?? this.updatedAt,
+  );
+  FastingSessionsTableData copyWithCompanion(
+    FastingSessionsTableCompanion data,
+  ) {
+    return FastingSessionsTableData(
+      id: data.id.present ? data.id.value : this.id,
+      userId: data.userId.present ? data.userId.value : this.userId,
+      protocolType: data.protocolType.present
+          ? data.protocolType.value
+          : this.protocolType,
+      startTime: data.startTime.present ? data.startTime.value : this.startTime,
+      plannedEndTime: data.plannedEndTime.present
+          ? data.plannedEndTime.value
+          : this.plannedEndTime,
+      actualEndTime: data.actualEndTime.present
+          ? data.actualEndTime.value
+          : this.actualEndTime,
+      status: data.status.present ? data.status.value : this.status,
+      isWaterless: data.isWaterless.present
+          ? data.isWaterless.value
+          : this.isWaterless,
+      hydrationReminders: data.hydrationReminders.present
+          ? data.hydrationReminders.value
+          : this.hydrationReminders,
+      notes: data.notes.present ? data.notes.value : this.notes,
+      createdAt: data.createdAt.present ? data.createdAt.value : this.createdAt,
+      updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('FastingSessionsTableData(')
+          ..write('id: $id, ')
+          ..write('userId: $userId, ')
+          ..write('protocolType: $protocolType, ')
+          ..write('startTime: $startTime, ')
+          ..write('plannedEndTime: $plannedEndTime, ')
+          ..write('actualEndTime: $actualEndTime, ')
+          ..write('status: $status, ')
+          ..write('isWaterless: $isWaterless, ')
+          ..write('hydrationReminders: $hydrationReminders, ')
+          ..write('notes: $notes, ')
+          ..write('createdAt: $createdAt, ')
+          ..write('updatedAt: $updatedAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    userId,
+    protocolType,
+    startTime,
+    plannedEndTime,
+    actualEndTime,
+    status,
+    isWaterless,
+    hydrationReminders,
+    notes,
+    createdAt,
+    updatedAt,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is FastingSessionsTableData &&
+          other.id == this.id &&
+          other.userId == this.userId &&
+          other.protocolType == this.protocolType &&
+          other.startTime == this.startTime &&
+          other.plannedEndTime == this.plannedEndTime &&
+          other.actualEndTime == this.actualEndTime &&
+          other.status == this.status &&
+          other.isWaterless == this.isWaterless &&
+          other.hydrationReminders == this.hydrationReminders &&
+          other.notes == this.notes &&
+          other.createdAt == this.createdAt &&
+          other.updatedAt == this.updatedAt);
+}
+
+class FastingSessionsTableCompanion
+    extends UpdateCompanion<FastingSessionsTableData> {
+  final Value<String> id;
+  final Value<String> userId;
+  final Value<String> protocolType;
+  final Value<DateTime> startTime;
+  final Value<DateTime> plannedEndTime;
+  final Value<DateTime?> actualEndTime;
+  final Value<String> status;
+  final Value<bool> isWaterless;
+  final Value<bool> hydrationReminders;
+  final Value<String?> notes;
+  final Value<DateTime> createdAt;
+  final Value<DateTime> updatedAt;
+  final Value<int> rowid;
+  const FastingSessionsTableCompanion({
+    this.id = const Value.absent(),
+    this.userId = const Value.absent(),
+    this.protocolType = const Value.absent(),
+    this.startTime = const Value.absent(),
+    this.plannedEndTime = const Value.absent(),
+    this.actualEndTime = const Value.absent(),
+    this.status = const Value.absent(),
+    this.isWaterless = const Value.absent(),
+    this.hydrationReminders = const Value.absent(),
+    this.notes = const Value.absent(),
+    this.createdAt = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  FastingSessionsTableCompanion.insert({
+    required String id,
+    required String userId,
+    required String protocolType,
+    required DateTime startTime,
+    required DateTime plannedEndTime,
+    this.actualEndTime = const Value.absent(),
+    this.status = const Value.absent(),
+    this.isWaterless = const Value.absent(),
+    this.hydrationReminders = const Value.absent(),
+    this.notes = const Value.absent(),
+    required DateTime createdAt,
+    required DateTime updatedAt,
+    this.rowid = const Value.absent(),
+  }) : id = Value(id),
+       userId = Value(userId),
+       protocolType = Value(protocolType),
+       startTime = Value(startTime),
+       plannedEndTime = Value(plannedEndTime),
+       createdAt = Value(createdAt),
+       updatedAt = Value(updatedAt);
+  static Insertable<FastingSessionsTableData> custom({
+    Expression<String>? id,
+    Expression<String>? userId,
+    Expression<String>? protocolType,
+    Expression<DateTime>? startTime,
+    Expression<DateTime>? plannedEndTime,
+    Expression<DateTime>? actualEndTime,
+    Expression<String>? status,
+    Expression<bool>? isWaterless,
+    Expression<bool>? hydrationReminders,
+    Expression<String>? notes,
+    Expression<DateTime>? createdAt,
+    Expression<DateTime>? updatedAt,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (userId != null) 'user_id': userId,
+      if (protocolType != null) 'protocol_type': protocolType,
+      if (startTime != null) 'start_time': startTime,
+      if (plannedEndTime != null) 'planned_end_time': plannedEndTime,
+      if (actualEndTime != null) 'actual_end_time': actualEndTime,
+      if (status != null) 'status': status,
+      if (isWaterless != null) 'is_waterless': isWaterless,
+      if (hydrationReminders != null) 'hydration_reminders': hydrationReminders,
+      if (notes != null) 'notes': notes,
+      if (createdAt != null) 'created_at': createdAt,
+      if (updatedAt != null) 'updated_at': updatedAt,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  FastingSessionsTableCompanion copyWith({
+    Value<String>? id,
+    Value<String>? userId,
+    Value<String>? protocolType,
+    Value<DateTime>? startTime,
+    Value<DateTime>? plannedEndTime,
+    Value<DateTime?>? actualEndTime,
+    Value<String>? status,
+    Value<bool>? isWaterless,
+    Value<bool>? hydrationReminders,
+    Value<String?>? notes,
+    Value<DateTime>? createdAt,
+    Value<DateTime>? updatedAt,
+    Value<int>? rowid,
+  }) {
+    return FastingSessionsTableCompanion(
+      id: id ?? this.id,
+      userId: userId ?? this.userId,
+      protocolType: protocolType ?? this.protocolType,
+      startTime: startTime ?? this.startTime,
+      plannedEndTime: plannedEndTime ?? this.plannedEndTime,
+      actualEndTime: actualEndTime ?? this.actualEndTime,
+      status: status ?? this.status,
+      isWaterless: isWaterless ?? this.isWaterless,
+      hydrationReminders: hydrationReminders ?? this.hydrationReminders,
+      notes: notes ?? this.notes,
+      createdAt: createdAt ?? this.createdAt,
+      updatedAt: updatedAt ?? this.updatedAt,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<String>(id.value);
+    }
+    if (userId.present) {
+      map['user_id'] = Variable<String>(userId.value);
+    }
+    if (protocolType.present) {
+      map['protocol_type'] = Variable<String>(protocolType.value);
+    }
+    if (startTime.present) {
+      map['start_time'] = Variable<DateTime>(startTime.value);
+    }
+    if (plannedEndTime.present) {
+      map['planned_end_time'] = Variable<DateTime>(plannedEndTime.value);
+    }
+    if (actualEndTime.present) {
+      map['actual_end_time'] = Variable<DateTime>(actualEndTime.value);
+    }
+    if (status.present) {
+      map['status'] = Variable<String>(status.value);
+    }
+    if (isWaterless.present) {
+      map['is_waterless'] = Variable<bool>(isWaterless.value);
+    }
+    if (hydrationReminders.present) {
+      map['hydration_reminders'] = Variable<bool>(hydrationReminders.value);
+    }
+    if (notes.present) {
+      map['notes'] = Variable<String>(notes.value);
+    }
+    if (createdAt.present) {
+      map['created_at'] = Variable<DateTime>(createdAt.value);
+    }
+    if (updatedAt.present) {
+      map['updated_at'] = Variable<DateTime>(updatedAt.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('FastingSessionsTableCompanion(')
+          ..write('id: $id, ')
+          ..write('userId: $userId, ')
+          ..write('protocolType: $protocolType, ')
+          ..write('startTime: $startTime, ')
+          ..write('plannedEndTime: $plannedEndTime, ')
+          ..write('actualEndTime: $actualEndTime, ')
+          ..write('status: $status, ')
+          ..write('isWaterless: $isWaterless, ')
+          ..write('hydrationReminders: $hydrationReminders, ')
+          ..write('notes: $notes, ')
+          ..write('createdAt: $createdAt, ')
+          ..write('updatedAt: $updatedAt, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
 abstract class _$AppDatabase extends GeneratedDatabase {
   _$AppDatabase(QueryExecutor e) : super(e);
   $AppDatabaseManager get managers => $AppDatabaseManager(this);
@@ -10333,6 +11068,8 @@ abstract class _$AppDatabase extends GeneratedDatabase {
   late final $WorkoutSetsTableTable workoutSetsTable = $WorkoutSetsTableTable(
     this,
   );
+  late final $FastingSessionsTableTable fastingSessionsTable =
+      $FastingSessionsTableTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
@@ -10355,6 +11092,7 @@ abstract class _$AppDatabase extends GeneratedDatabase {
     exercisesTable,
     workoutSessionsTable,
     workoutSetsTable,
+    fastingSessionsTable,
   ];
 }
 
@@ -15773,6 +16511,377 @@ typedef $$WorkoutSetsTableTableProcessedTableManager =
       WorkoutSetsTableData,
       PrefetchHooks Function()
     >;
+typedef $$FastingSessionsTableTableCreateCompanionBuilder =
+    FastingSessionsTableCompanion Function({
+      required String id,
+      required String userId,
+      required String protocolType,
+      required DateTime startTime,
+      required DateTime plannedEndTime,
+      Value<DateTime?> actualEndTime,
+      Value<String> status,
+      Value<bool> isWaterless,
+      Value<bool> hydrationReminders,
+      Value<String?> notes,
+      required DateTime createdAt,
+      required DateTime updatedAt,
+      Value<int> rowid,
+    });
+typedef $$FastingSessionsTableTableUpdateCompanionBuilder =
+    FastingSessionsTableCompanion Function({
+      Value<String> id,
+      Value<String> userId,
+      Value<String> protocolType,
+      Value<DateTime> startTime,
+      Value<DateTime> plannedEndTime,
+      Value<DateTime?> actualEndTime,
+      Value<String> status,
+      Value<bool> isWaterless,
+      Value<bool> hydrationReminders,
+      Value<String?> notes,
+      Value<DateTime> createdAt,
+      Value<DateTime> updatedAt,
+      Value<int> rowid,
+    });
+
+class $$FastingSessionsTableTableFilterComposer
+    extends Composer<_$AppDatabase, $FastingSessionsTableTable> {
+  $$FastingSessionsTableTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get userId => $composableBuilder(
+    column: $table.userId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get protocolType => $composableBuilder(
+    column: $table.protocolType,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get startTime => $composableBuilder(
+    column: $table.startTime,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get plannedEndTime => $composableBuilder(
+    column: $table.plannedEndTime,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get actualEndTime => $composableBuilder(
+    column: $table.actualEndTime,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get status => $composableBuilder(
+    column: $table.status,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get isWaterless => $composableBuilder(
+    column: $table.isWaterless,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get hydrationReminders => $composableBuilder(
+    column: $table.hydrationReminders,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get notes => $composableBuilder(
+    column: $table.notes,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$FastingSessionsTableTableOrderingComposer
+    extends Composer<_$AppDatabase, $FastingSessionsTableTable> {
+  $$FastingSessionsTableTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get userId => $composableBuilder(
+    column: $table.userId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get protocolType => $composableBuilder(
+    column: $table.protocolType,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get startTime => $composableBuilder(
+    column: $table.startTime,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get plannedEndTime => $composableBuilder(
+    column: $table.plannedEndTime,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get actualEndTime => $composableBuilder(
+    column: $table.actualEndTime,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get status => $composableBuilder(
+    column: $table.status,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get isWaterless => $composableBuilder(
+    column: $table.isWaterless,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get hydrationReminders => $composableBuilder(
+    column: $table.hydrationReminders,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get notes => $composableBuilder(
+    column: $table.notes,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$FastingSessionsTableTableAnnotationComposer
+    extends Composer<_$AppDatabase, $FastingSessionsTableTable> {
+  $$FastingSessionsTableTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get userId =>
+      $composableBuilder(column: $table.userId, builder: (column) => column);
+
+  GeneratedColumn<String> get protocolType => $composableBuilder(
+    column: $table.protocolType,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<DateTime> get startTime =>
+      $composableBuilder(column: $table.startTime, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get plannedEndTime => $composableBuilder(
+    column: $table.plannedEndTime,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<DateTime> get actualEndTime => $composableBuilder(
+    column: $table.actualEndTime,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get status =>
+      $composableBuilder(column: $table.status, builder: (column) => column);
+
+  GeneratedColumn<bool> get isWaterless => $composableBuilder(
+    column: $table.isWaterless,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<bool> get hydrationReminders => $composableBuilder(
+    column: $table.hydrationReminders,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get notes =>
+      $composableBuilder(column: $table.notes, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get createdAt =>
+      $composableBuilder(column: $table.createdAt, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get updatedAt =>
+      $composableBuilder(column: $table.updatedAt, builder: (column) => column);
+}
+
+class $$FastingSessionsTableTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $FastingSessionsTableTable,
+          FastingSessionsTableData,
+          $$FastingSessionsTableTableFilterComposer,
+          $$FastingSessionsTableTableOrderingComposer,
+          $$FastingSessionsTableTableAnnotationComposer,
+          $$FastingSessionsTableTableCreateCompanionBuilder,
+          $$FastingSessionsTableTableUpdateCompanionBuilder,
+          (
+            FastingSessionsTableData,
+            BaseReferences<
+              _$AppDatabase,
+              $FastingSessionsTableTable,
+              FastingSessionsTableData
+            >,
+          ),
+          FastingSessionsTableData,
+          PrefetchHooks Function()
+        > {
+  $$FastingSessionsTableTableTableManager(
+    _$AppDatabase db,
+    $FastingSessionsTableTable table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$FastingSessionsTableTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$FastingSessionsTableTableOrderingComposer(
+                $db: db,
+                $table: table,
+              ),
+          createComputedFieldComposer: () =>
+              $$FastingSessionsTableTableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
+          updateCompanionCallback:
+              ({
+                Value<String> id = const Value.absent(),
+                Value<String> userId = const Value.absent(),
+                Value<String> protocolType = const Value.absent(),
+                Value<DateTime> startTime = const Value.absent(),
+                Value<DateTime> plannedEndTime = const Value.absent(),
+                Value<DateTime?> actualEndTime = const Value.absent(),
+                Value<String> status = const Value.absent(),
+                Value<bool> isWaterless = const Value.absent(),
+                Value<bool> hydrationReminders = const Value.absent(),
+                Value<String?> notes = const Value.absent(),
+                Value<DateTime> createdAt = const Value.absent(),
+                Value<DateTime> updatedAt = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => FastingSessionsTableCompanion(
+                id: id,
+                userId: userId,
+                protocolType: protocolType,
+                startTime: startTime,
+                plannedEndTime: plannedEndTime,
+                actualEndTime: actualEndTime,
+                status: status,
+                isWaterless: isWaterless,
+                hydrationReminders: hydrationReminders,
+                notes: notes,
+                createdAt: createdAt,
+                updatedAt: updatedAt,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String id,
+                required String userId,
+                required String protocolType,
+                required DateTime startTime,
+                required DateTime plannedEndTime,
+                Value<DateTime?> actualEndTime = const Value.absent(),
+                Value<String> status = const Value.absent(),
+                Value<bool> isWaterless = const Value.absent(),
+                Value<bool> hydrationReminders = const Value.absent(),
+                Value<String?> notes = const Value.absent(),
+                required DateTime createdAt,
+                required DateTime updatedAt,
+                Value<int> rowid = const Value.absent(),
+              }) => FastingSessionsTableCompanion.insert(
+                id: id,
+                userId: userId,
+                protocolType: protocolType,
+                startTime: startTime,
+                plannedEndTime: plannedEndTime,
+                actualEndTime: actualEndTime,
+                status: status,
+                isWaterless: isWaterless,
+                hydrationReminders: hydrationReminders,
+                notes: notes,
+                createdAt: createdAt,
+                updatedAt: updatedAt,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map(
+                (e) => (
+                  e.readTable<
+                    $FastingSessionsTableTable,
+                    FastingSessionsTableData
+                  >(table),
+                  BaseReferences<
+                    _$AppDatabase,
+                    $FastingSessionsTableTable,
+                    FastingSessionsTableData
+                  >(db, table, e),
+                ),
+              )
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$FastingSessionsTableTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $FastingSessionsTableTable,
+      FastingSessionsTableData,
+      $$FastingSessionsTableTableFilterComposer,
+      $$FastingSessionsTableTableOrderingComposer,
+      $$FastingSessionsTableTableAnnotationComposer,
+      $$FastingSessionsTableTableCreateCompanionBuilder,
+      $$FastingSessionsTableTableUpdateCompanionBuilder,
+      (
+        FastingSessionsTableData,
+        BaseReferences<
+          _$AppDatabase,
+          $FastingSessionsTableTable,
+          FastingSessionsTableData
+        >,
+      ),
+      FastingSessionsTableData,
+      PrefetchHooks Function()
+    >;
 
 class $AppDatabaseManager {
   final _$AppDatabase _db;
@@ -15823,4 +16932,6 @@ class $AppDatabaseManager {
       $$WorkoutSessionsTableTableTableManager(_db, _db.workoutSessionsTable);
   $$WorkoutSetsTableTableTableManager get workoutSetsTable =>
       $$WorkoutSetsTableTableTableManager(_db, _db.workoutSetsTable);
+  $$FastingSessionsTableTableTableManager get fastingSessionsTable =>
+      $$FastingSessionsTableTableTableManager(_db, _db.fastingSessionsTable);
 }

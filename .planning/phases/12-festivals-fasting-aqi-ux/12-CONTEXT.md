@@ -12,3 +12,4 @@ Deliver India-first cultural, religious, and environmental adaptations for FitKa
 - **Privacy-Conscious Location (DPDP Act 2023)**: AQI lookups must never store or transmit granular GPS lat/long to third parties. Support coarse city/district level lookups or 100% manual city selection (e.g., Delhi, Mumbai, Bengaluru, Kolkata, Chennai, etc.).
 - **Replaceable Calendar Source**: The festival calendar must be behind an extensible domain abstraction (`FestivalCalendarSource`) so regional calendars (e.g. Tamil, Bengali, Telugu, Hijri, Lunar Panchang) can be updated or replaced without modifying core business logic.
 - **Offline Resilience**: All fasting timers, cached AQI reports, and festival food guides must function seamlessly offline with Drift local storage.
+

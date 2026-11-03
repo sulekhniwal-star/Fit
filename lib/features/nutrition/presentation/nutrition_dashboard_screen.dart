@@ -12,6 +12,7 @@ import '../../../shared/widgets/sync_status_badge.dart';
 import '../../ai/presentation/ai_meal_text_logger_sheet.dart';
 import '../../ai/presentation/photo_food_logger_screen.dart';
 import '../../auth/presentation/auth_state_notifier.dart';
+import '../../cultural/presentation/fasting_tracker_card.dart';
 import '../data/drift_meal_log_repository.dart';
 import '../domain/dynamic_tdee_calculator.dart';
 import '../domain/food_log_entry.dart';
@@ -153,6 +154,10 @@ class _NutritionDashboardScreenState extends ConsumerState<NutritionDashboardScr
 
                     // WhatsApp AI Logging Card
                     _buildWhatsAppAiBanner(),
+                    const SizedBox(height: AppSpacing.sm),
+
+                    // Cultural Fasting Tracker
+                    const FastingTrackerCard(),
                     const SizedBox(height: AppSpacing.md),
 
                     // Quick Action: Family Recipe Splitter
