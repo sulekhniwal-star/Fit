@@ -3,6 +3,7 @@ import 'package:fitkarma/core/config/app_config.dart';
 import 'package:fitkarma/core/database/local_database_contract.dart';
 import 'package:fitkarma/core/providers/app_providers.dart';
 import 'package:fitkarma/core/providers/app_state_observer.dart';
+import 'package:fitkarma/core/services/diagnostic_event.dart';
 import 'package:fitkarma/core/services/logging_service_contract.dart';
 import 'package:fitkarma/core/sync/sync_engine_contract.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -17,7 +18,7 @@ class MockLoggingService implements LoggingServiceContract {
   }
 
   @override
-  void info(String message) {
+  void info(String message, [Map<String, dynamic>? parameters]) {
     logs.add('INFO: $message');
   }
 
@@ -29,6 +30,11 @@ class MockLoggingService implements LoggingServiceContract {
   @override
   void error(String message, [Object? error, StackTrace? stackTrace]) {
     logs.add('ERROR: $message');
+  }
+
+  @override
+  void recordDiagnosticEvent(DiagnosticEvent event) {
+    logs.add('EVENT: ${event.name}');
   }
 }
 

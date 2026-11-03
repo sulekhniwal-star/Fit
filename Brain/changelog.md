@@ -4,6 +4,43 @@ All notable changes, documentation audits, and architecture decisions for FitKar
 
 ---
 
+## [2026-11-04] — Logging and Observability Foundation (TASK 008)
+
+### 1. PII Scrubbing & Secret Masking
+- Created `SensitiveDataRedactor` in `lib/core/services/sensitive_data_redactor.dart`:
+  - Masks sensitive key names in maps (`password`, `token`, `otp`, `pin`, `secret`, `email`, `phone`, `card`, `cvv`, etc.).
+  - Regex scrubbing for freeform strings: JWT tokens (`eyJ...`), Bearer headers, API keys (`rzp_...`, `gsk_...`, `sbp_...`), email addresses, and phone numbers.
+  - Recursive scrubbing for nested maps and lists.
+
+### 2. Observability & Crash Reporting Boundaries
+- Defined `CrashReporterContract` in `lib/core/services/crash_reporter_contract.dart`.
+- Implemented `SentryCrashReporter` in `lib/core/services/sentry_crash_reporter.dart`:
+  - Operates in safe no-op mode without crashing or opening unauthorized sockets when no production `SENTRY_DSN` is configured.
+  - Automatically sanitizes PII before recording breadcrumbs and error reports.
+- Implemented `DiagnosticEvent` in `lib/core/services/diagnostic_event.dart` for structured telemetry.
+- Updated `ConsoleLoggingService` in `lib/core/services/console_logging_service.dart`:
+  - Strictly suppresses debug logs in production environments (`AppEnvironment.production`).
+  - Routes sanitized breadcrumbs and errors to the configured `CrashReporterContract`.
+- Wired `sensitiveDataRedactorProvider`, `crashReporterProvider`, and `loggingServiceProvider` in `lib/core/providers/app_providers.dart`.
+
+### 3. Verification & Quality Gates
+- Added unit tests in `test/core/services/logging_and_redaction_test.dart` (9 tests) verifying:
+  - String scrubbing for JWTs, Bearer tokens, API keys, emails, phone numbers.
+  - Map and list redaction across sensitive keys.
+  - Production environment log suppression.
+  - Diagnostic event scrubbing and breadcrumb forwarding.
+  - Sentry boundary safe execution without production credentials.
+- `dart format .`: Formatted cleanly.
+- `flutter analyze`: 0 issues found.
+- `flutter test`: 65/65 tests passed.
+- `node scripts/doc_link_check.js`: 0 errors.
+- `node scripts/doc_lint.js`: 0 errors.
+
+### 4. Next Step
+- Ready for TASK 008A (Feature Flags and Backend-Configurable Remote Config).
+
+---
+
 ## [2026-11-04] — Error and Result Primitives (TASK 007)
 
 ### 1. FK-xxxx Error Taxonomy & Envelope Primitives

@@ -1,7 +1,10 @@
 import 'package:fitkarma/core/config/app_config.dart';
 import 'package:fitkarma/core/database/local_database_contract.dart';
 import 'package:fitkarma/core/services/console_logging_service.dart';
+import 'package:fitkarma/core/services/crash_reporter_contract.dart';
 import 'package:fitkarma/core/services/logging_service_contract.dart';
+import 'package:fitkarma/core/services/sentry_crash_reporter.dart';
+import 'package:fitkarma/core/services/sensitive_data_redactor.dart';
 import 'package:fitkarma/core/sync/sync_engine_contract.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -10,10 +13,28 @@ final appConfigProvider = Provider<AppConfig>((ref) {
   throw UnimplementedError('appConfigProvider must be overridden at startup');
 });
 
+/// Sensitive data redactor provider for PII scrubbing and secret masking.
+final sensitiveDataRedactorProvider = Provider<SensitiveDataRedactor>((ref) {
+  return const SensitiveDataRedactor();
+});
+
+/// Crash reporter provider. Defaults to [SentryCrashReporter] with PII scrubbing.
+final crashReporterProvider = Provider<CrashReporterContract>((ref) {
+  final config = ref.watch(appConfigProvider);
+  final redactor = ref.watch(sensitiveDataRedactorProvider);
+  return SentryCrashReporter(config: config, redactor: redactor);
+});
+
 /// Shared logging and observability service provider.
 final loggingServiceProvider = Provider<LoggingServiceContract>((ref) {
   final config = ref.watch(appConfigProvider);
-  return ConsoleLoggingService(config);
+  final redactor = ref.watch(sensitiveDataRedactorProvider);
+  final crashReporter = ref.watch(crashReporterProvider);
+  return ConsoleLoggingService(
+    config,
+    redactor: redactor,
+    crashReporter: crashReporter,
+  );
 });
 
 /// Contract provider for local database persistence (Drift + SQLCipher).
