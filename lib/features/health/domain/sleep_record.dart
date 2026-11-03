@@ -60,6 +60,30 @@ class SleepRecord {
     return '${hours}h ${mins}m';
   }
 
+  SleepRecord copyWith({
+    String? id,
+    String? userId,
+    DateTime? startTime,
+    DateTime? endTime,
+    int? durationMinutes,
+    int? qualityRating,
+    int? deepSleepMinutes,
+    int? remSleepMinutes,
+    HealthSource? source,
+  }) {
+    return SleepRecord(
+      id: id ?? this.id,
+      userId: userId ?? this.userId,
+      startTime: startTime ?? this.startTime,
+      endTime: endTime ?? this.endTime,
+      durationMinutes: durationMinutes ?? this.durationMinutes,
+      qualityRating: qualityRating ?? this.qualityRating,
+      deepSleepMinutes: deepSleepMinutes ?? this.deepSleepMinutes,
+      remSleepMinutes: remSleepMinutes ?? this.remSleepMinutes,
+      source: source ?? this.source,
+    );
+  }
+
   Map<String, dynamic> toJson() => {
         'id': id,
         'user_id': userId,

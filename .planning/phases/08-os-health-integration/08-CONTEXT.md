@@ -28,3 +28,4 @@ Connect FitKarma to Android Health Connect and iOS Apple Health / HealthKit for 
   - `health_background_sync_manager.dart`: Battery-conscious background scheduler and failure telemetry.
 - `lib/features/os_health/presentation/`:
   - `os_health_sync_card.dart`: Settings/Dashboard card displaying connection status, permission chips, last sync time, and "Sync Now" button.
+

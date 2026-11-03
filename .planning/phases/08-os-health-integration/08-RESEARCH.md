@@ -27,3 +27,4 @@
 - Enforce minimum sync interval of 15 minutes.
 - Support manual pull-to-refresh / "Sync Now" in UI.
 - Record failed sync attempts with exponential backoff and error logging via `AppLogger` with PII redaction.
+
