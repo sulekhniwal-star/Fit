@@ -59,7 +59,8 @@ The working directory currently lacks all application implementation artifacts:
 | **Host Operating System** | Windows 11 (26H2, build 26340.9843) | Host environment, locale `en-IN`. |
 | **Flutter SDK** | **3.47.9** (channel stable) | `C:\Users\JSK\develop\flutter`<br>• Engine hash: `89c39edfdf`<br>• Framework revision: `c197ca5199` |
 | **Dart SDK** | **3.13.7** | DevTools version `2.60.0`. |
-| **Android SDK** | **37.0.0** (platform `android-37.0`) | `C:\Users\JSK\AppData\Local\Android\Sdk`<br>• Build-tools: `37.0.0`<br>• Emulator: `37.2.13.0` |
+| **Android SDK** | **37.0.0** (platform `android-37.0`) | `C:\Users\JSK\AppData\Local\Android\Sdk`<br>• Build-tools: `37.0.0`<br>• Emulator: `37.2.13.0`<br>• Available AVD: `Pixel_10_Pro` (Android) |
+| **Connected Devices** | 2 devices available | • `Windows (desktop)` (`windows-x64`)<br>• `Edge (web)` (Microsoft Edge 157) |
 | **Android JDK** | OpenJDK Runtime Environment 25.0.4 | Bundled with Android Studio (`C:\Program Files\Android\Android Studio\jbr\bin\java`). All Android licenses accepted. |
 | **Node.js** | **v24.22.1** | Available in system PATH. |
 | **npm** | **11.19.1** | Available in system PATH. |
