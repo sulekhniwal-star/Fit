@@ -68,6 +68,41 @@ export class MetaWhatsAppClient {
   }
 
   /**
+   * Sends an interactive message (e.g. quick reply buttons) back to a user on WhatsApp.
+   */
+  async sendInteractiveMessage(payload: unknown): Promise<WhatsAppSendResult> {
+    if (this.isMock || !this.accessToken) {
+      return {
+        success: true,
+        messageId: `mock_interactive_msg_${Date.now()}`,
+      };
+    }
+
+    try {
+      const url = `https://graph.facebook.com/v21.0/${this.phoneNumberId}/messages`;
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${this.accessToken}`,
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        return { success: false, error: `Meta API error (${response.status}): ${errorText}` };
+      }
+
+      const json = await response.json();
+      const messageId = json.messages?.[0]?.id;
+      return { success: true, messageId };
+    } catch (e) {
+      return { success: false, error: `Network error sending WhatsApp interactive message: ${e}` };
+    }
+  }
+
+  /**
    * Sends a friendly onboarding template to an unregistered sender.
    */
   async sendUnlinkedInvitation(to: string): Promise<WhatsAppSendResult> {
@@ -83,3 +118,4 @@ export class MetaWhatsAppClient {
     return this.sendTextMessage(to, text);
   }
 }
+

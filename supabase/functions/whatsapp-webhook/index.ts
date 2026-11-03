@@ -8,7 +8,9 @@ import { MetaWhatsAppClient } from './meta_client.ts';
 import { WhatsAppMediaFetcher } from './media_fetcher.ts';
 import { GroqAudioTranscriber } from './audio_transcriber.ts';
 import { ConversationalMealPipeline, type MealPipelineOutput } from './meal_pipeline.ts';
-import type { MetaWebhookPayload, MetaInboundMessage } from './schemas.ts';
+import { WhatsAppCardBuilder } from './card_builder.ts';
+import { WhatsAppCommitHandler } from './commit_handler.ts';
+import type { MetaWebhookPayload, MetaInboundMessage, WhatsAppInteractionRecord } from './schemas.ts';
 
 declare const Deno: {
   env: {
@@ -49,6 +51,20 @@ export interface InboundProcessingDeps {
     waMessageId: string,
     output: MealPipelineOutput,
   ) => Promise<void>;
+  getInteractionById?: (id: string) => Promise<WhatsAppInteractionRecord | null>;
+  updateInteractionStatus?: (id: string, status: 'confirmed' | 'cancelled' | 'expired') => Promise<void>;
+  insertFoodLogs?: (entries: Array<{
+    user_id: string;
+    logged_at: string;
+    meal_slot: string;
+    food_name: string;
+    portion_quantity: number;
+    portion_unit: string;
+    calories: number;
+    protein_grams: number;
+    carbs_grams: number;
+    fat_grams: number;
+  }>) => Promise<number>;
 }
 
 export async function handleWebhookRequest(
@@ -121,6 +137,9 @@ export async function handleWebhookRequest(
             lookupProfile: options?.lookupProfile,
             recordInteraction: options?.recordInteraction,
             updateInteractionPrediction: options?.updateInteractionPrediction,
+            getInteractionById: options?.getInteractionById,
+            updateInteractionStatus: options?.updateInteractionStatus,
+            insertFoodLogs: options?.insertFoodLogs,
           });
         }
       }
@@ -153,6 +172,20 @@ async function processSingleInboundMessage(
       status: string;
     }) => Promise<boolean>;
     updateInteractionPrediction?: (waMessageId: string, output: MealPipelineOutput) => Promise<void>;
+    getInteractionById?: (id: string) => Promise<WhatsAppInteractionRecord | null>;
+    updateInteractionStatus?: (id: string, status: 'confirmed' | 'cancelled' | 'expired') => Promise<void>;
+    insertFoodLogs?: (entries: Array<{
+      user_id: string;
+      logged_at: string;
+      meal_slot: string;
+      food_name: string;
+      portion_quantity: number;
+      portion_unit: string;
+      calories: number;
+      protein_grams: number;
+      carbs_grams: number;
+      fat_grams: number;
+    }>) => Promise<number>;
   },
 ): Promise<void> {
   const waMessageId = msg.id;
@@ -180,8 +213,22 @@ async function processSingleInboundMessage(
     } catch (e) {
       rawInput = `[audio_transcription_error]: ${e}`;
     }
-  } else if (msg.type === 'interactive') {
+  } else if (msg.type === 'interactive' && msg.interactive?.type === 'button_reply') {
     rawInput = `[button_reply:${msg.interactive.button_reply.id}]`;
+
+    // Process interactive button reply immediately
+    if (deps.getInteractionById && deps.updateInteractionStatus && deps.insertFoodLogs) {
+      await WhatsAppCommitHandler.handleButtonReply(
+        msg.interactive.button_reply.id,
+        deps.metaClient,
+        {
+          getInteractionById: deps.getInteractionById,
+          updateInteractionStatus: deps.updateInteractionStatus,
+          insertFoodLogs: deps.insertFoodLogs,
+        },
+      );
+      return;
+    }
   }
 
   // Deduplication & interaction record
@@ -218,6 +265,21 @@ async function processSingleInboundMessage(
 
     if (deps.updateInteractionPrediction) {
       await deps.updateInteractionPrediction(waMessageId, mealOutput);
+    }
+
+    // Build and send interactive Quick Reply button card
+    if (mealOutput.items.length > 0) {
+      const interactivePayload = WhatsAppCardBuilder.buildMealConfirmationCard(
+        normalizedPhone,
+        waMessageId,
+        mealOutput,
+      );
+      await deps.metaClient.sendInteractiveMessage(interactivePayload);
+    } else {
+      await deps.metaClient.sendTextMessage(
+        normalizedPhone,
+        'Hum aapke meal ko samajh nahi paaye. Kripya apne khane ka naam aur matra batayein (e.g., "2 roti aur 1 katori daal"). 🥗',
+      );
     }
   }
 }

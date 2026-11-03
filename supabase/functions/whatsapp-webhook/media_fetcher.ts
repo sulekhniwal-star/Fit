@@ -95,3 +95,4 @@ export class WhatsAppMediaFetcher {
     result.data.fill(0);
   }
 }
+

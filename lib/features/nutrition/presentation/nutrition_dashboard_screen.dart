@@ -149,6 +149,10 @@ class _NutritionDashboardScreenState extends ConsumerState<NutritionDashboardScr
 
                     // AI Food Recognition
                     _buildAiLoggingCard(),
+                    const SizedBox(height: AppSpacing.sm),
+
+                    // WhatsApp AI Logging Card
+                    _buildWhatsAppAiBanner(),
                     const SizedBox(height: AppSpacing.md),
 
                     // Quick Action: Family Recipe Splitter
@@ -375,6 +379,116 @@ class _NutritionDashboardScreenState extends ConsumerState<NutritionDashboardScr
                 builder: (_) => const PhotoFoodLoggerScreen(),
               ),
             ).then((_) => _loadNutritionData()),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildWhatsAppAiBanner() {
+    return BentoCard(
+      child: Row(
+        children: [
+          Container(
+            padding: const EdgeInsets.all(AppSpacing.xs),
+            decoration: BoxDecoration(
+              color: const Color(0xFF25D366).withValues(alpha: 0.15),
+              shape: BoxShape.circle,
+            ),
+            child: const Icon(Icons.chat_bubble_outline_rounded, color: Color(0xFF25D366), size: 20),
+          ),
+          const SizedBox(width: AppSpacing.sm),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Text(
+                      'WhatsApp AI Logger',
+                      style: AppTypography.caption.copyWith(
+                        fontWeight: FontWeight.w700,
+                        color: AppColors.textPrimary,
+                      ),
+                    ),
+                    const SizedBox(width: 6),
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF25D366).withValues(alpha: 0.2),
+                        borderRadius: AppRadii.borderFull,
+                      ),
+                      child: Text(
+                        'Active',
+                        style: AppTypography.caption.copyWith(
+                          fontSize: 9,
+                          fontWeight: FontWeight.bold,
+                          color: const Color(0xFF25D366),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Text(
+                  'Send voice notes or text in Hindi/English to log in 5s.',
+                  style: AppTypography.caption.copyWith(fontSize: 11),
+                ),
+              ],
+            ),
+          ),
+          OutlinedButton(
+            onPressed: _showWhatsAppInfoDialog,
+            style: OutlinedButton.styleFrom(
+              foregroundColor: const Color(0xFF25D366),
+              side: const BorderSide(color: Color(0xFF25D366)),
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+              minimumSize: const Size(0, 36),
+            ),
+            child: const Text('Info', style: TextStyle(fontSize: 12)),
+          ),
+        ],
+      ),
+    );
+  }
+
+  void _showWhatsAppInfoDialog() {
+    showDialog<void>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        backgroundColor: AppColors.surface,
+        title: Row(
+          children: [
+            const Icon(Icons.chat_bubble_rounded, color: Color(0xFF25D366)),
+            const SizedBox(width: AppSpacing.sm),
+            Text(
+              'WhatsApp AI Logging',
+              style: AppTypography.headline.copyWith(fontSize: 18),
+            ),
+          ],
+        ),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              'Zero-friction nutrition logging directly from WhatsApp:',
+              style: AppTypography.body,
+            ),
+            const SizedBox(height: AppSpacing.sm),
+            Text(
+              '• Send voice notes in Hindi, English, or Hinglish\n'
+              '• Type raw meal descriptions (e.g., "2 roti, 1 katori dal")\n'
+              '• Receive instant interactive confirmation cards\n'
+              '• Tap "Confirm & Log" to sync into your daily macros\n'
+              '• DPDP Act 2023 compliant: audio is zeroed in-memory',
+              style: AppTypography.caption.copyWith(fontSize: 12, height: 1.5),
+            ),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(ctx).pop(),
+            child: const Text('Got it', style: TextStyle(color: AppColors.primary)),
           ),
         ],
       ),

@@ -62,3 +62,4 @@ export function constantTimeEqual(a: string, b: string): boolean {
 
   return result === 0;
 }
+

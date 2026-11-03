@@ -96,3 +96,4 @@ export interface WhatsAppInteractionRecord {
   created_at: string;
   updated_at: string;
 }
+

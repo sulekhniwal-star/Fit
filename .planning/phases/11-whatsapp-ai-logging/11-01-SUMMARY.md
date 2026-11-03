@@ -35,3 +35,4 @@
 - `supabase/functions/whatsapp-webhook/test.ts`: 7 automated test suites verified GET challenge handshake, token mismatch rejection, HMAC signature verification, phone normalization, deduplication, unlinked invitations, and linked profile resolution.
 - Node test run exited with code 0.
 - Flutter static analysis passed with 0 issues.
+
