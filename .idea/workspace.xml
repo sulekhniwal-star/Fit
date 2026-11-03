@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d91faf27-3ffa-4c9f-bc56-5d720cb9204b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Brain/changelog.md" beforeDir="false" afterPath="$PROJECT_DIR$/Brain/changelog.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Brain/implementation_audit.md" beforeDir="false" afterPath="$PROJECT_DIR$/Brain/implementation_audit.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLAUDE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FitKarma_Master_Documentation_v1.0.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis_options.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/debug/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/kotlin/com/sulekhniwal/fitkarma/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/drawable-v21/launch_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/drawable/launch_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/values-night/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/profile/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/settings.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Flutter/AppFrameworkInfo.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Flutter/Debug.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Flutter/Release.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/AppDelegate.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Base.lproj/LaunchScreen.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Base.lproj/Main.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Runner-Bridging-Header.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/SceneDelegate.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/RunnerTests/RunnerTests.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/router/app_router.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/router/route_names.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/config/app_config.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/config/feature_flags.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/config/remote_config.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/database/app_database.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/database/app_database.g.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/database/encryption_key_provider.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/database/tables/activity_and_wellness_tables.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/database/tables/body_metrics_table.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/database/tables/fasting_sessions_table.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/database/tables/nutrition_tables.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/database/tables/outbox_table.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/database/tables/user_profiles_table.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/database/tables/vitals_and_habits_tables.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/database/tables/workout_tables.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/errors/failures.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/errors/result.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/localization/app_localizations.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/localization/locale_provider.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/logging/app_logger.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/logging/pii_redactor.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/providers/app_providers.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/services/supabase_service.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/sync/conflict/conflict_resolution.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/sync/models/outbox_mutation.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/sync/outbox_queue.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/sync/presentation/conflict_resolution_dialog.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/sync/realtime_sync_bridge.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/sync/sync_coordinator.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/sync/sync_state.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/sync/syncable_repository.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/ai/data/ai_gateway_client.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/ai/domain/ai_meal_analyzer_service.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/ai/domain/ai_models.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/ai/domain/indian_food_matcher.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/ai/presentation/ai_meal_confirmation_card.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/ai/presentation/ai_meal_text_logger_sheet.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/ai/presentation/photo_food_logger_screen.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/auth/data/supabase_auth_repository.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/auth/domain/auth_repository.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/auth/domain/auth_user.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/auth/presentation/auth_state_notifier.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/auth/presentation/otp_verification_screen.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/auth/presentation/phone_login_screen.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/brain/data/dip_repository.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/brain/domain/daily_readiness_calculator.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/brain/domain/dip_models.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/brain/domain/dip_rule_engine.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/brain/presentation/daily_readiness_card.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/brain/presentation/dip_action_feed.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/brain/presentation/home_dashboard_screen.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/brain/presentation/quick_log_action_bar.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/cultural/data/aqi_service.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/cultural/data/drift_fasting_repository.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/cultural/data/festival_calendar_source.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/cultural/domain/aqi_models.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/cultural/domain/aqi_workout_advisory.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/cultural/domain/fasting_phase.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/cultural/domain/fasting_protocol.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/cultural/domain/fasting_session.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/cultural/domain/festival_models.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/cultural/domain/festive_balance_calculator.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/cultural/domain/festive_food.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/cultural/domain/safe_refeeding_guide.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/cultural/presentation/aqi_badge.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/cultural/presentation/aqi_context_card.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/cultural/presentation/aqi_details_sheet.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/cultural/presentation/aqi_state_notifier.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/cultural/presentation/fasting_screen.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/cultural/presentation/fasting_state_notifier.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/cultural/presentation/fasting_tracker_card.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/cultural/presentation/festival_banner_card.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/cultural/presentation/festival_detail_sheet.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/cultural/presentation/festival_state_notifier.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/cultural/presentation/refeeding_guidance_sheet.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/health/data/drift_body_metrics_repository.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/health/data/drift_health_repositories.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/health/data/drift_vitals_repositories.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/health/domain/body_metric.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/health/domain/habit_entry.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/health/domain/health_primitives.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/health/domain/medication_entry.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/health/domain/mood_log.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/health/domain/sleep_record.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/health/domain/step_record.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/health/domain/vital_record.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/health/domain/water_log.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/health/domain/weight_trend_calculator.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/health/presentation/health_dashboard_screen.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/health/presentation/mood_selector_card.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/health/presentation/water_quick_add_card.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/health/presentation/weight_logger_sheet.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/nutrition/data/cooking_multipliers_seed.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/nutrition/data/drift_cooking_repository.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/nutrition/data/drift_food_catalog_repository.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/nutrition/data/drift_meal_log_repository.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/nutrition/data/food_catalog_seed.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/nutrition/domain/cooking_multiplier.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/nutrition/domain/dynamic_tdee_calculator.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/nutrition/domain/family_recipe.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/nutrition/domain/food_item.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/nutrition/domain/food_log_entry.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/nutrition/domain/portion_unit.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/nutrition/domain/tadka_model.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/nutrition/presentation/nutrition_dashboard_screen.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/nutrition/presentation/recipe_splitter_sheet.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/nutrition/presentation/tadka_slider_widget.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/onboarding/presentation/onboarding_wizard_screen.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/os_health/data/apple_health_adapter.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/os_health/data/health_background_sync_manager.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/os_health/data/health_connect_adapter.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/os_health/data/health_integration_service.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/os_health/data/mock_platform_health_adapter.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/os_health/domain/biometric_deduplication_engine.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/os_health/domain/health_data_types.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/os_health/domain/platform_health_adapter.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/os_health/presentation/os_health_settings_screen.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/os_health/presentation/os_health_sync_card.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/profile/data/drift_profile_repository.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/profile/data/local_profile_repository.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/profile/domain/dosha_calculator.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/profile/domain/profile_repository.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/profile/domain/user_profile.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/workout/data/drift_exercise_repository.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/workout/data/drift_workout_repository.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/workout/data/exercise_library_seed.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/workout/domain/exercise.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/workout/domain/recovery_readiness_calculator.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/workout/domain/volume_progression_calculator.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/workout/domain/workout_session.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/workout/domain/workout_set.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/workout/presentation/active_workout_screen.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/workout/presentation/rest_timer_widget.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/workout/presentation/workout_dashboard_screen.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/shared/accessibility/accessibility_helpers.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/shared/theme/app_colors.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/shared/theme/app_motion.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/shared/theme/app_radii.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/shared/theme/app_spacing.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/shared/theme/app_theme.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/shared/theme/app_typography.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/shared/widgets/action_button.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/shared/widgets/app_scaffold.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/shared/widgets/bento_card.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/shared/widgets/design_system_showcase.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/shared/widgets/loading_skeleton.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/shared/widgets/metric_card.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/shared/widgets/offline_banner.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/shared/widgets/sync_status_badge.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supabase/config.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supabase/functions/_shared/envelope.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supabase/functions/ai-gateway/groq_client.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supabase/functions/ai-gateway/guardrails.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supabase/functions/ai-gateway/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supabase/functions/ai-gateway/schemas.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supabase/functions/ai-gateway/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supabase/functions/health-check/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supabase/functions/whatsapp-webhook/audio_transcriber.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supabase/functions/whatsapp-webhook/card_builder.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supabase/functions/whatsapp-webhook/commit_handler.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supabase/functions/whatsapp-webhook/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supabase/functions/whatsapp-webhook/interactive_test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supabase/functions/whatsapp-webhook/meal_pipeline.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supabase/functions/whatsapp-webhook/media_fetcher.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supabase/functions/whatsapp-webhook/meta_client.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supabase/functions/whatsapp-webhook/phone_matcher.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supabase/functions/whatsapp-webhook/pipeline_test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supabase/functions/whatsapp-webhook/schemas.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supabase/functions/whatsapp-webhook/signature.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supabase/functions/whatsapp-webhook/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supabase/migrations/20261102000001_baseline_schema_and_rls.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supabase/migrations/20261103000001_whatsapp_interactions.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/app/router/app_router_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/core/config/remote_config_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/core/database/app_database_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/core/errors/failures_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/core/localization/app_localizations_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/core/logging/app_logger_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/core/providers/app_providers_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/core/sync/conflict_resolution_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/core/sync/outbox_queue_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/core/sync/sync_coordinator_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/core/sync/syncable_repository_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/ai/ai_meal_analyzer_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/ai/ai_meal_logging_screen_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/ai/indian_food_matcher_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/ai/whatsapp_sync_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/auth/auth_repository_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/auth/phone_login_screen_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/brain/daily_readiness_calculator_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/brain/dip_repository_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/brain/dip_rule_engine_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/brain/home_dashboard_screen_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/cultural/aqi_domain_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/cultural/aqi_service_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/cultural/aqi_widget_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/cultural/fasting_protocol_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/cultural/fasting_repository_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/cultural/fasting_ui_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/cultural/festival_calendar_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/cultural/festival_widget_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/cultural/festive_nutrition_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/health/body_metrics_repository_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/health/health_dashboard_screen_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/health/health_primitives_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/health/sleep_and_step_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/health/vitals_and_habits_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/health/water_and_mood_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/health/weight_logger_sheet_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/health/weight_trend_calculator_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/nutrition/cooking_multipliers_and_tadka_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/nutrition/family_recipe_and_meal_log_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/nutrition/food_catalog_and_portions_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/nutrition/nutrition_dashboard_screen_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/onboarding/onboarding_wizard_screen_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/os_health/health_abstraction_and_deduplication_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/os_health/health_background_sync_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/os_health/health_integration_service_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/os_health/os_health_sync_card_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/profile/user_profile_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/workout/active_workout_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/workout/exercise_library_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/workout/volume_and_readiness_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/workout/workout_dashboard_screen_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/shared/accessibility/accessibility_helpers_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/shared/theme/app_theme_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/shared/widgets/action_button_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/shared/widgets/app_scaffold_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/shared/widgets/bento_card_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/shared/widgets/sync_status_badge_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/widget_test.dart" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="main.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/main.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3LasF0VVt8lklfQ8Xiw4emylGbx" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="ProjectPane">
+        <option name="show-excluded-files" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;CidrDebugProfileConversion&quot;: &quot;true&quot;,
+    &quot;Flutter.main.dart.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;io.flutter.project.isFirstOpen&quot;: &quot;true&quot;,
+    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Fit&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;templates.modelproviders.configurable&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  }
+}</component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d91faf27-3ffa-4c9f-bc56-5d720cb9204b" name="Changes" comment="" />
+      <created>1793703405897</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1793703405897</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
