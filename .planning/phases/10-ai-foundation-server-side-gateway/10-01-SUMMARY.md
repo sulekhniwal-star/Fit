@@ -31,3 +31,4 @@
      - `sanitizePromptText`: Scrubs Indian phone numbers (`+91...`, `9xxxxxxxxx`), email addresses, and auth tokens before passing input to LLM providers.
      - `enforceMedicalBoundaryOnText` & `applyMedicalGuardrailsToResponse`: Automatically filters out prohibited clinical claims (cures for diabetes, cancer, hypertension; Ayurvedic panaceas; prescription overrides).
      - Guarantees non-diagnostic statutory disclaimer on all responses.
+

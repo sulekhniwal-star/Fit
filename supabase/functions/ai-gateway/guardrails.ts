@@ -90,3 +90,4 @@ export function applyMedicalGuardrailsToResponse(
 
   return { result: cloned, warnings };
 }
+

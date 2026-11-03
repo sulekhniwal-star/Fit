@@ -173,3 +173,4 @@ export function validateAndNormalizeMealResponse(raw: unknown): MealAnalysisPayl
     statutory_disclaimer: 'Nutritional estimate only. Not clinical or medical guidance.',
   };
 }
+
