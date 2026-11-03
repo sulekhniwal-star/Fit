@@ -54,3 +54,5 @@ app.*.map.json
 google-services.json
 GoogleService-Info.plist
 **/secrets/**
+
+.ua/
