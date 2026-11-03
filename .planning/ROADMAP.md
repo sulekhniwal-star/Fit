@@ -185,9 +185,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 09-01: DIP Domain Contract & Daily Readiness Engine
-- [ ] 09-02: Deterministic DIP Rule Engine & Telemetry Pipeline
-- [ ] 09-03: Contextual Home Surface, Micro-Action Cards & Routing Assembly
+- [x] 09-01: DIP Domain Contract & Daily Readiness Engine
+- [x] 09-02: Deterministic DIP Rule Engine & Telemetry Pipeline
+- [x] 09-03: Contextual Home Surface, Micro-Action Cards & Routing Assembly
 
 ---
 
