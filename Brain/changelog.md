@@ -4,6 +4,46 @@ All notable changes, documentation audits, and architecture decisions for FitKar
 
 ---
 
+## [2026-11-04] — Error and Result Primitives (TASK 007)
+
+### 1. FK-xxxx Error Taxonomy & Envelope Primitives
+- Implemented comprehensive `Failure` taxonomy in `lib/core/errors/failure.dart` aligned with `Brain/error_handling.md`:
+  - `ValidationFailure` (`FK-2001`)
+  - `AuthFailure` (`FK-1001`)
+  - `AuthZFailure` (`FK-1002`)
+  - `OfflineFailure` (`FK-3001`)
+  - `SyncFailure` (`FK-3002`, `retryable: true`)
+  - `ConflictFailure` (`FK-3003`)
+  - `NetworkFailure` (`FK-6001`, `retryable: true`)
+  - `AIFailure` (`FK-4001` unparseable, `FK-4002` low confidence)
+  - `ThirdPartyFailure` (`FK-6001`, `retryable: true`)
+  - `PaymentFailure` (`FK-5001` request failed, `FK-5002` verification failed, `FK-5003` mandate failed, `FK-5004` duplicate webhook)
+  - `PrivacyFailure` (`FK-7001`)
+  - `InternalFailure` (`FK-9999`)
+- Built contract-compliant serialization envelope: `{ code, message, retryable, request_id }` with JSON serialization and roundtrip deserialization (`toJson`, `fromJson`).
+- Guaranteed user-facing error messages are display-safe, non-technical, and free of secrets, bearer tokens, or stack traces.
+
+### 2. Result Monad Primitive
+- Implemented `Result<T>` sealed class in `lib/core/errors/result.dart` supporting functional error handling (`Success<T>`, `FailureResult<T>`).
+- Provided `isSuccess`, `isFailure`, `dataOrNull`, `failureOrNull`, `getOrThrow`, `getOrElse`, `fold`, `map`, and `flatMap`.
+
+### 3. Verification & Quality Gates
+- Added 17 unit tests in `test/core/errors/error_and_result_test.dart` asserting:
+  - Exact taxonomy code mappings and retryable flags.
+  - Serialization and deserialization envelope validity.
+  - User-facing message safety (zero leakage of internal exceptions or secrets).
+  - Full functional behavior of `Result` (`fold`, `map`, `flatMap`, `getOrElse`).
+- `dart format .`: Formatted cleanly.
+- `flutter analyze`: 0 issues found.
+- `flutter test`: 56/56 tests passed.
+- `node scripts/doc_link_check.js`: 0 errors.
+- `node scripts/doc_lint.js`: 0 errors.
+
+### 4. Next Step
+- Ready for TASK 008 (Logging and Observability Foundation).
+
+---
+
 ## [2026-11-04] — Navigation and Route Architecture (TASK 006)
 
 ### 1. Declarative Routing Foundation
