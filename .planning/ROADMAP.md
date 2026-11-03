@@ -199,7 +199,12 @@ Plans:
   1. Mobile client never invokes LLM APIs directly; all requests route through Edge Functions.
   2. Freeform food descriptions parse reliably into structured food database matches with confidence scores.
   3. Photo meal analysis flags uncertain ingredients and requires user confirmation before logging.
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 10-01: Server-Side AI Gateway & Safety Boundary
+- [ ] 10-02: Dart AI Gateway Client & Meal Analyzer Pipeline
+- [ ] 10-03: Photo Food Logging & User Confirmation UX
 
 ---
 

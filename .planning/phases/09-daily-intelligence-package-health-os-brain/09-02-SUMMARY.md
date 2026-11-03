@@ -23,3 +23,4 @@
    - `DipRepository`: Injects and coordinates across 6 Drift tables (`StepRecord`, `SleepRecord`, `VitalRecord`, `WaterLog`, `FoodLogEntry`, `WorkoutSession`).
    - Computes rolling Acute Workload (7 days) and Chronic Workload (28 days) to calculate live ACWR.
    - Riverpod providers: `dipRuleEngineProvider`, `dipRepositoryProvider`, and reactive `dailyIntelligencePackageProvider`.
+

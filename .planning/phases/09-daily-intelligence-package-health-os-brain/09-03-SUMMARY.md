@@ -21,3 +21,4 @@
    - `QuickLogActionBar`: High-efficiency 1-tap rapid entry bar for `+250ml Water` (immediate SQLite entry), `Meal` (routes to nutrition), `Workout` (routes to workouts), and `Weight` (opens `WeightLoggerSheet`).
 5. **Router Integration**:
    - Registered `HomeDashboardScreen` at `RouteNames.dashboard` in `AppRouter`.
+
