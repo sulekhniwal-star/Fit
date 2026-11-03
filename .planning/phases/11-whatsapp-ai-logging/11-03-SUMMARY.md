@@ -39,3 +39,4 @@ Plan 11-03 completes the interactive WhatsApp loop (`WAPP-03`) adhering strictly
 - Human-in-the-loop guarantee verified: Zero food logs are written until the user taps `Confirm & Log`.
 - DPDP Act 2023 compliance verified: Ephemeral memory purge for voice notes.
 - Non-medical disclaimer included on every WhatsApp confirmation card.
+
