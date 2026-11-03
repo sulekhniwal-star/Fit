@@ -13,7 +13,6 @@ import 'package:fitkarma/features/ai/presentation/ai_meal_text_logger_sheet.dart
 import 'package:fitkarma/features/ai/presentation/photo_food_logger_screen.dart';
 import 'package:fitkarma/features/nutrition/data/drift_food_catalog_repository.dart';
 import 'package:fitkarma/features/nutrition/data/drift_meal_log_repository.dart';
-import 'package:fitkarma/features/nutrition/domain/food_log_entry.dart';
 import 'package:fitkarma/features/nutrition/domain/portion_unit.dart';
 
 void main() {

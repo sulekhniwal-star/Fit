@@ -36,3 +36,4 @@
 - `test/features/ai/ai_meal_analyzer_test.dart`: 9 unit & pipeline tests verified text analysis, photo analysis, validation gates, failure propagation, coaching extraction, and domain model round-trips.
 - Total test suite: 213/213 passed.
 - Analysis: `flutter analyze --fatal-infos` reported 0 issues.
+
