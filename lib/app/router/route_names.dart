@@ -6,6 +6,8 @@ class RouteNames {
 
   static const dashboard = '/dashboard';
   static const nutrition = '/nutrition';
+  static const aiTextMeal = '/nutrition/ai-text';
+  static const aiPhotoMeal = '/nutrition/ai-photo';
   static const workouts = '/workouts';
   static const profile = '/profile';
   static const dataVault = '/data-vault';

@@ -9,6 +9,8 @@ import '../../../shared/widgets/app_scaffold.dart';
 import '../../../shared/widgets/bento_card.dart';
 import '../../../shared/widgets/metric_card.dart';
 import '../../../shared/widgets/sync_status_badge.dart';
+import '../../ai/presentation/ai_meal_text_logger_sheet.dart';
+import '../../ai/presentation/photo_food_logger_screen.dart';
 import '../../auth/presentation/auth_state_notifier.dart';
 import '../data/drift_meal_log_repository.dart';
 import '../domain/dynamic_tdee_calculator.dart';
@@ -143,6 +145,10 @@ class _NutritionDashboardScreenState extends ConsumerState<NutritionDashboardScr
 
                     // Dynamic TDEE summary
                     _buildDynamicTdeeCard(),
+                    const SizedBox(height: AppSpacing.md),
+
+                    // AI Food Recognition
+                    _buildAiLoggingCard(),
                     const SizedBox(height: AppSpacing.md),
 
                     // Quick Action: Family Recipe Splitter
@@ -310,6 +316,68 @@ class _NutritionDashboardScreenState extends ConsumerState<NutritionDashboardScr
           ),
         ),
       ],
+    );
+  }
+
+  Widget _buildAiLoggingCard() {
+    return BentoCard(
+      child: Row(
+        children: [
+          Container(
+            padding: const EdgeInsets.all(AppSpacing.xs),
+            decoration: BoxDecoration(
+              color: AppColors.primary.withValues(alpha: 0.15),
+              shape: BoxShape.circle,
+            ),
+            child: const Icon(Icons.auto_awesome_rounded, color: AppColors.primary, size: 20),
+          ),
+          const SizedBox(width: AppSpacing.sm),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'AI Meal Logging',
+                  style: AppTypography.caption.copyWith(
+                    fontWeight: FontWeight.w700,
+                    color: AppColors.textPrimary,
+                  ),
+                ),
+                Text(
+                  'Describe in Hinglish or snap a photo of your plate.',
+                  style: AppTypography.caption.copyWith(fontSize: 11),
+                ),
+              ],
+            ),
+          ),
+          OutlinedButton(
+            onPressed: () => showModalBottomSheet<void>(
+              context: context,
+              isScrollControlled: true,
+              backgroundColor: Colors.transparent,
+              builder: (ctx) => AiMealTextLoggerSheet(
+                onMealLogged: _loadNutritionData,
+              ),
+            ),
+            style: OutlinedButton.styleFrom(
+              foregroundColor: AppColors.textPrimary,
+              side: const BorderSide(color: AppColors.glassBorder),
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+              minimumSize: const Size(0, 36),
+            ),
+            child: const Text('Text AI', style: TextStyle(fontSize: 12)),
+          ),
+          const SizedBox(width: AppSpacing.xs),
+          ActionButton(
+            label: 'Photo AI',
+            onPressed: () => Navigator.of(context).push<void>(
+              MaterialPageRoute<void>(
+                builder: (_) => const PhotoFoodLoggerScreen(),
+              ),
+            ).then((_) => _loadNutritionData()),
+          ),
+        ],
+      ),
     );
   }
 

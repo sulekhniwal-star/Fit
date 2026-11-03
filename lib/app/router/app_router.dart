@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import '../../features/ai/presentation/ai_meal_text_logger_sheet.dart';
+import '../../features/ai/presentation/photo_food_logger_screen.dart';
 import '../../features/brain/presentation/home_dashboard_screen.dart';
 import '../../features/nutrition/presentation/nutrition_dashboard_screen.dart';
 import '../../features/os_health/presentation/os_health_settings_screen.dart';
@@ -49,6 +51,21 @@ final appRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: RouteNames.nutrition,
         builder: (context, state) => const NutritionDashboardScreen(),
+      ),
+      GoRoute(
+        path: RouteNames.aiTextMeal,
+        builder: (context, state) => Scaffold(
+          appBar: AppBar(
+            title: const Text('AI Meal Description'),
+            backgroundColor: const Color(0xFF16191E),
+          ),
+          backgroundColor: const Color(0xFF0D0F12),
+          body: const SafeArea(child: AiMealTextLoggerSheet()),
+        ),
+      ),
+      GoRoute(
+        path: RouteNames.aiPhotoMeal,
+        builder: (context, state) => const PhotoFoodLoggerScreen(),
       ),
       GoRoute(
         path: RouteNames.workouts,
