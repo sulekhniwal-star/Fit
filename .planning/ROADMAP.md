@@ -216,7 +216,12 @@ Plans:
   1. Inbound WhatsApp messages verify phone number linkage to an active FitKarma account.
   2. Voice notes in Hinglish/Hindi transcribe accurately and extract meals and portions.
   3. System sends an interactive confirmation card before committing items to the user's food log.
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 11-01: Server-Side WhatsApp Webhook & Verification Engine
+- [ ] 11-02: Audio Transcription & Conversational Pipeline
+- [ ] 11-03: Interactive Confirmation & Food Log Commit Engine
 
 ---
 
