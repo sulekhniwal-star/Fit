@@ -3,3 +3,4 @@
 abstract class AuthModule {
   static const String featureName = 'auth';
 }
+

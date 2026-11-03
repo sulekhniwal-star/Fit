@@ -5,3 +5,4 @@ Future<void> bootstrap() async {
   WidgetsFlutterBinding.ensureInitialized();
   // Future initialization (Sentry, Riverpod container, Drift local database) wires here.
 }
+

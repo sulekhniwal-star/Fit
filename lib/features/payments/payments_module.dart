@@ -3,3 +3,4 @@
 abstract class PaymentsModule {
   static const String featureName = 'payments';
 }
+

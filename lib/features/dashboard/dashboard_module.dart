@@ -3,3 +3,4 @@
 abstract class DashboardModule {
   static const String featureName = 'dashboard';
 }
+

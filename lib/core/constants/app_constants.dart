@@ -9,3 +9,4 @@ class AppConstants {
   // Branding & Visual Baseline
   static const int primaryDarkBackgroundHex = 0xFF0D0F12;
 }
+

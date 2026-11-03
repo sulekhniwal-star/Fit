@@ -3,3 +3,4 @@
 abstract class FamilyModule {
   static const String featureName = 'family';
 }
+

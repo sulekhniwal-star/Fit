@@ -5,3 +5,4 @@ abstract interface class LocalDatabaseContract {
   Future<void> clearAllData();
   bool get isOpen;
 }
+
