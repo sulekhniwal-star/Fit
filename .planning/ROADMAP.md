@@ -202,9 +202,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 10-01: Server-Side AI Gateway & Safety Boundary
-- [ ] 10-02: Dart AI Gateway Client & Meal Analyzer Pipeline
-- [ ] 10-03: Photo Food Logging & User Confirmation UX
+- [x] 10-01: Server-Side AI Gateway & Safety Boundary
+- [x] 10-02: Dart AI Gateway Client & Meal Analyzer Pipeline
+- [x] 10-03: Photo Food Logging & User Confirmation UX
 
 ---
 
