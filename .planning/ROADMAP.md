@@ -12,9 +12,9 @@ FitKarma's roadmap translates the master product specification and 24-phase impl
 - [x] **Phase 2: Design System & UI Foundation** - Dark theme (`#0D0F12`), glassmorphism, spring physics, and English/Hindi localization.
 - [x] **Phase 3: Backend, Authentication & User Onboarding** - Supabase schema scaffold, RLS, phone OTP + Google auth, and biometric onboarding wizard.
 - [x] **Phase 4: Offline-First Data Foundation** - Drift + SQLCipher encrypted local storage, persistent mutation outbox, and sync state machine.
-- [ ] **Phase 5: Health Data Core** - Offline and syncable tracking for weight, measurements, sleep, water, mood, vitals, and medication.
-- [ ] **Phase 6: Indian Nutrition Engine** - 500+ Indian food database, household portion units, raw/cooked conversion, tadka slider, and Family Recipe Splitter.
-- [ ] **Phase 7: Workout & Fitness Core** - Structured exercise catalog, offline workout logger, rest timers, and volume progression tracking.
+- [x] **Phase 5: Health Data Core** - Offline and syncable tracking for weight, measurements, sleep, water, mood, vitals, and medication.
+- [x] **Phase 6: Indian Nutrition Engine** - 500+ Indian food database, household portion units, raw/cooked conversion, tadka slider, and Family Recipe Splitter.
+- [x] **Phase 7: Workout & Fitness Core** - Structured exercise catalog, offline workout logger, rest timers, and volume progression tracking.
 - [ ] **Phase 8: OS Health Integration** - Google Health Connect and Apple HealthKit integration with bidirectional deduplication and background sync.
 - [ ] **Phase 9: Daily Intelligence Package & Health OS Brain** - Deterministic DIP orchestration engine generating contextual daily home feeds.
 - [ ] **Phase 10: AI Foundation & Server-Side Gateway** - Supabase Edge Functions AI gateway with Groq multi-model routing, prompt safety, and meal analysis.
