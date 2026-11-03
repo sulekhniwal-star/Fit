@@ -30,3 +30,4 @@ Establish FitKarma's central intelligence layer: the Daily Intelligence Package 
   - `daily_readiness_card.dart`: Interactive Bento card displaying readiness score, tier, and contributing factors breakdown.
   - `dip_action_feed.dart`: Prioritized carousel/list of top actionable micro-actions with deep-linking to logs or timers.
   - `quick_log_action_bar.dart`: Quick-action launcher for fast 1-tap logging (water, meal, workout, weight).
+
