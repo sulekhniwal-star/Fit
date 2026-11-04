@@ -16,26 +16,28 @@ void main() {
     });
 
     test(
-        'transitions language via setLanguage and avoids redundant states', () {
-      final notifier = AppLocaleNotifier();
-      var stateChangeCount = 0;
-      notifier.addListener((_) => stateChangeCount++);
+      'transitions language via setLanguage and avoids redundant states',
+      () {
+        final notifier = AppLocaleNotifier();
+        var stateChangeCount = 0;
+        notifier.addListener((_) => stateChangeCount++);
 
-      // Initial subscription triggers listener once
-      expect(stateChangeCount, 1);
+        // Initial subscription triggers listener once
+        expect(stateChangeCount, 1);
 
-      notifier.setLanguage(AppLanguage.hindi);
-      expect(notifier.state, AppLanguage.hindi);
-      expect(stateChangeCount, 2);
+        notifier.setLanguage(AppLanguage.hindi);
+        expect(notifier.state, AppLanguage.hindi);
+        expect(stateChangeCount, 2);
 
-      // Redundant setLanguage does not fire listener
-      notifier.setLanguage(AppLanguage.hindi);
-      expect(stateChangeCount, 2);
+        // Redundant setLanguage does not fire listener
+        notifier.setLanguage(AppLanguage.hindi);
+        expect(stateChangeCount, 2);
 
-      notifier.setLanguage(AppLanguage.english);
-      expect(notifier.state, AppLanguage.english);
-      expect(stateChangeCount, 3);
-    });
+        notifier.setLanguage(AppLanguage.english);
+        expect(notifier.state, AppLanguage.english);
+        expect(stateChangeCount, 3);
+      },
+    );
 
     test('transitions language via setLocale', () {
       final notifier = AppLocaleNotifier();
@@ -79,25 +81,27 @@ void main() {
   });
 
   group('Riverpod Locale & Strings Reactive Providers', () {
-    test('appLanguageProvider drives appLocaleProvider and appStringsProvider',
-        () {
-      final container = ProviderContainer();
-      addTearDown(container.dispose);
+    test(
+      'appLanguageProvider drives appLocaleProvider and appStringsProvider',
+      () {
+        final container = ProviderContainer();
+        addTearDown(container.dispose);
 
-      expect(container.read(appLanguageProvider), AppLanguage.english);
-      expect(container.read(appLocaleProvider), const Locale('en'));
-      expect(container.read(appStringsProvider), isA<EnglishStrings>());
+        expect(container.read(appLanguageProvider), AppLanguage.english);
+        expect(container.read(appLocaleProvider), const Locale('en'));
+        expect(container.read(appStringsProvider), isA<EnglishStrings>());
 
-      // Switch to Hindi
-      container
-          .read(appLanguageProvider.notifier)
-          .setLanguage(AppLanguage.hindi);
+        // Switch to Hindi
+        container
+            .read(appLanguageProvider.notifier)
+            .setLanguage(AppLanguage.hindi);
 
-      expect(container.read(appLanguageProvider), AppLanguage.hindi);
-      expect(container.read(appLocaleProvider), const Locale('hi'));
-      expect(container.read(appStringsProvider), isA<HindiStrings>());
-      expect(container.read(appStringsProvider).dashboard, 'डैशबोर्ड');
-    });
+        expect(container.read(appLanguageProvider), AppLanguage.hindi);
+        expect(container.read(appLocaleProvider), const Locale('hi'));
+        expect(container.read(appStringsProvider), isA<HindiStrings>());
+        expect(container.read(appStringsProvider).dashboard, 'डैशबोर्ड');
+      },
+    );
   });
 
   group('Dynamic UI Locale Switching Widget Test', () {

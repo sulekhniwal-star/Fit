@@ -4,6 +4,37 @@ All notable changes, documentation audits, and architecture decisions for FitKar
 
 ---
 
+## [2026-11-04] — Accessibility Foundation (TASK 011)
+
+### 1. Accessibility Helpers & Primitives
+- Implemented core accessibility modules in `lib/shared/presentation/accessibility/`:
+  - `AccessibilityContrast` (`accessibility_contrast.dart`): Calculates relative luminance and WCAG 2.1 contrast ratios. Validates normal text (>= 4.5:1), large text (>= 3.0:1), and UI components against AA/AAA criteria.
+  - `AccessibleTouchTarget` (`accessible_touch_target.dart`): Guarantees minimum touch target bounds of 48.0dp x 48.0dp per WCAG 2.1 Success Criterion 2.5.5 and `AppSpacing.minTouchTarget`.
+  - `TextScaleHelper` & `AccessibleScrollableColumn` (`text_scale_helper.dart`): Utility for dynamic font scaling up to 2.0x+ without clipping or `RenderFlex` overflows.
+  - `AccessibleSemantics` & `AccessibleStatusBadge` (`accessible_semantics.dart`): Controls traversal ordering via `OrdinalSortKey`, screen-reader announcements via `SemanticsService.sendAnnouncement`, biomarker metric synthesis, and multi-modal status indicators combining color, icons, and text (never color alone).
+  - `AccessibleFocus` (`accessible_focus.dart`): Focus highlighting with high-contrast outlines and keyboard activation via Enter/Space keys.
+  - `ReducedMotionHelper` (`reduced_motion_helper.dart`): Respects system `disableAnimations` and `accessibleNavigation` settings, providing zero-duration transitions.
+
+### 2. Design System Components Hardening
+- Updated `PrimaryButton` in `lib/shared/presentation/widgets/primary_button.dart` to use `ConstrainedBox(minHeight: 48.0dp)` so height expands gracefully under large text scaling.
+- Updated `BentoCard` in `lib/shared/presentation/widgets/bento_card.dart` to include interactive `Semantics(button: true)` and semantic labels.
+- Enhanced `DesignSystemShowcaseScreen` with Section 8 showcasing non-color-only status badges, focus borders, and biomarker semantics.
+
+### 3. Verification & Quality Gates
+- Added comprehensive unit and widget tests (20 tests) in `test/shared/presentation/accessibility/`:
+  - `contrast_test.dart`: Validates mathematical contrast ratios and WCAG AAA compliance for `AppColors.textPrimary` (> 18:1), `AppColors.primary` button text (> 11:1), and brand accents.
+  - `touch_target_test.dart`: Validates min 48dp bounds for small icon buttons, `PrimaryButton`, and `AppTextField`.
+  - `text_scaling_test.dart`: Tests `PrimaryButton` vertical expansion at 2.0x scale, `AccessibleScrollableColumn` at 2.5x scale without overflow, and showcase screen at 1.5x scale.
+  - `semantics_and_screen_reader_test.dart`: Validates traversal sort order, biomarker announcements, and non-color-only status badges.
+  - `focus_and_reduced_motion_test.dart`: Validates keyboard focus activation and reduced-motion zero-duration curves.
+- `dart format .`: Formatted cleanly.
+- `flutter analyze`: 0 issues found.
+- `flutter test`: 134/134 tests passed (100% green).
+- `node scripts/doc_link_check.js`: 0 errors.
+- `node scripts/doc_lint.js`: 0 errors.
+
+---
+
 ## [2026-11-04] — Localization Foundation (TASK 010)
 
 ### 1. Multi-Language Catalog & Fallback Architecture

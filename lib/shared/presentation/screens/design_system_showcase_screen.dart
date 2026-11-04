@@ -1,3 +1,4 @@
+import 'package:fitkarma/shared/presentation/accessibility/accessibility.dart';
 import 'package:fitkarma/shared/presentation/theme/app_colors.dart';
 import 'package:fitkarma/shared/presentation/theme/app_spacing.dart';
 import 'package:fitkarma/shared/presentation/theme/app_typography.dart';
@@ -170,6 +171,42 @@ class _DesignSystemShowcaseScreenState
               title: 'Sync Interrupted',
               message: 'Unable to sync observations with Supabase. Working in offline mode.',
               onRetry: () {},
+            ),
+          ),
+          const SizedBox(height: AppSpacing.xl),
+
+          // 8. Accessibility & Non-Color-Only Indicators
+          Text(
+            'Accessibility & Status Badges',
+            style: AppTypography.titleLarge,
+          ),
+          const SizedBox(height: AppSpacing.md),
+          Wrap(
+            spacing: AppSpacing.sm,
+            runSpacing: AppSpacing.sm,
+            children: [
+              AccessibleStatusBadge.optimal(label: 'Optimal Blood Glucose'),
+              AccessibleStatusBadge.warning(label: 'Approaching Calorie Cap'),
+              AccessibleStatusBadge.alert(label: 'Sync Connection Failed'),
+            ],
+          ),
+          const SizedBox(height: AppSpacing.md),
+          AccessibleFocus(
+            onTap: () {},
+            child: BentoCard(
+              child: AccessibleSemantics.biomarker(
+                metricName: 'Fasting Blood Sugar',
+                value: '95',
+                unit: 'mg/dL',
+                status: 'Optimal',
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text('Fasting Sugar', style: AppTypography.titleMedium),
+                    Text('95 mg/dL', style: AppTypography.displayMedium),
+                  ],
+                ),
+              ),
             ),
           ),
         ],

@@ -27,10 +27,7 @@ void main() {
                 children: [
                   const AppEmptyState(),
                   const AppLoadingView(),
-                  AppErrorView(
-                    message: 'Network timeout',
-                    onRetry: () {},
-                  ),
+                  AppErrorView(message: 'Network timeout', onRetry: () {}),
                 ],
               ),
             ),
@@ -65,10 +62,7 @@ void main() {
                 children: [
                   const AppEmptyState(),
                   const AppLoadingView(),
-                  AppErrorView(
-                    message: 'नेटवर्क समस्या',
-                    onRetry: () {},
-                  ),
+                  AppErrorView(message: 'नेटवर्क समस्या', onRetry: () {}),
                 ],
               ),
             ),
@@ -79,33 +73,32 @@ void main() {
         // Hindi defaults dynamically resolved from AppStrings without hardcoded fallback
         expect(find.text('कोई जानकारी नहीं मिली'), findsOneWidget);
         expect(
-            find.text('अभी प्रदर्शित करने के लिए कुछ नहीं है।'), findsOneWidget);
+          find.text('अभी प्रदर्शित करने के लिए कुछ नहीं है।'),
+          findsOneWidget,
+        );
         expect(find.text('लोड हो रहा है...'), findsOneWidget);
         expect(find.text('कुछ गड़बड़ हुई'), findsOneWidget);
         expect(find.text('पुनः प्रयास करें'), findsOneWidget);
       },
     );
 
-    test(
-      'Static audit: app_state_views.dart must resolve defaults from AppStrings rather than raw literals',
-      () {
-        final file = File('lib/shared/presentation/widgets/app_state_views.dart');
-        expect(file.existsSync(), isTrue);
+    test('Static audit: app_state_views.dart must resolve defaults from AppStrings rather than raw literals', () {
+      final file = File('lib/shared/presentation/widgets/app_state_views.dart');
+      expect(file.existsSync(), isTrue);
 
-        final content = file.readAsStringSync();
+      final content = file.readAsStringSync();
 
-        // Verify that AppStrings.of(context) is used to resolve defaults
-        expect(content.contains('AppStrings.of(context)'), isTrue);
-        expect(content.contains('strings.emptyTitle'), isTrue);
-        expect(content.contains('strings.emptyMessage'), isTrue);
-        expect(content.contains('strings.loading'), isTrue);
-        expect(content.contains('strings.errorTitle'), isTrue);
-        expect(content.contains('strings.tryAgain'), isTrue);
+      // Verify that AppStrings.of(context) is used to resolve defaults
+      expect(content.contains('AppStrings.of(context)'), isTrue);
+      expect(content.contains('strings.emptyTitle'), isTrue);
+      expect(content.contains('strings.emptyMessage'), isTrue);
+      expect(content.contains('strings.loading'), isTrue);
+      expect(content.contains('strings.errorTitle'), isTrue);
+      expect(content.contains('strings.tryAgain'), isTrue);
 
-        // Verify that old hardcoded defaults in constructor declarations are removed
-        expect(content.contains("this.title = 'Something went wrong'"), isFalse);
-        expect(content.contains("this.retryLabel = 'Try Again'"), isFalse);
-      },
-    );
+      // Verify that old hardcoded defaults in constructor declarations are removed
+      expect(content.contains("this.title = 'Something went wrong'"), isFalse);
+      expect(content.contains("this.retryLabel = 'Try Again'"), isFalse);
+    });
   });
 }
