@@ -1,9 +1,15 @@
+import 'dart:ui';
+
 import 'package:fitkarma/core/config/app_config.dart';
 import 'package:fitkarma/core/config/feature_flags.dart';
 import 'package:fitkarma/core/config/remote_config.dart';
 import 'package:fitkarma/core/config/remote_config_service.dart';
 import 'package:fitkarma/core/config/remote_config_service_contract.dart';
 import 'package:fitkarma/core/database/local_database_contract.dart';
+import 'package:fitkarma/core/localization/ai_phrasing_config.dart';
+import 'package:fitkarma/core/localization/app_language.dart';
+import 'package:fitkarma/core/localization/app_locale_notifier.dart';
+import 'package:fitkarma/core/localization/app_strings.dart';
 import 'package:fitkarma/core/services/console_logging_service.dart';
 import 'package:fitkarma/core/services/crash_reporter_contract.dart';
 import 'package:fitkarma/core/services/logging_service_contract.dart';
@@ -59,6 +65,29 @@ final remoteConfigProvider = Provider<RemoteConfig>((ref) {
 final featureFlagsProvider = Provider<FeatureFlags>((ref) {
   return ref.watch(remoteConfigProvider).flags;
 });
+
+/// Active [AppLanguage] state provider.
+final appLanguageProvider =
+    StateNotifierProvider<AppLocaleNotifier, AppLanguage>((ref) {
+      return AppLocaleNotifier();
+    });
+
+/// Active Flutter [Locale] provider.
+final appLocaleProvider = Provider<Locale>((ref) {
+  return ref.watch(appLanguageProvider).toLocale;
+});
+
+/// Active typed [AppStrings] catalog provider for UI localization.
+final appStringsProvider = Provider<AppStrings>((ref) {
+  final language = ref.watch(appLanguageProvider);
+  return AppStrings.forLanguage(language);
+});
+
+/// Active [AiPhrasingConfig] state provider for LLM conversational guidance.
+final aiPhrasingConfigProvider =
+    StateNotifierProvider<AiPhrasingConfigNotifier, AiPhrasingConfig>((ref) {
+      return AiPhrasingConfigNotifier();
+    });
 
 /// Contract provider for local database persistence (Drift + SQLCipher).
 final localDatabaseProvider = Provider<LocalDatabaseContract>((ref) {

@@ -4,6 +4,46 @@ All notable changes, documentation audits, and architecture decisions for FitKar
 
 ---
 
+## [2026-11-04] — Localization Foundation (TASK 010)
+
+### 1. Multi-Language Catalog & Fallback Architecture
+- Implemented core localization in `lib/core/localization/`:
+  - `AppLanguage` (`app_language.dart`): Enum defining Phase 1 active supported languages (English `en`, Hindi `hi`, हिन्दी) and prepared regional expansion languages (Tamil `ta`, Telugu `te`, Gujarati `gu`, Bengali `bn`, Marathi `mr`, Punjabi `pa`). Implements `fromCode`, `fromLocale`, `supportedLanguages`, and `supportedLocales`.
+  - `AppStrings` (`app_strings.dart`): Strongly typed catalog and `AppLocalizationsDelegate` for buttons, navigation, dashboard, nutrition/fasting, vitals, error handling, auth, and AI coaching.
+  - `EnglishStrings`: Canonical, complete English string definitions.
+  - `HindiStrings`: Authentic vernacular translations extending `EnglishStrings`.
+  - Deterministic Fallback: Any un-translated keys or unreleased regional languages fall back cleanly to `EnglishStrings` without error.
+  - `AppStrings.of(context)`: Context helper resolving nearest strings with guaranteed non-null English fallback.
+
+### 2. Separation of AI Phrasing from UI Strings
+- Implemented `AiPhrasingConfig` (`ai_phrasing_config.dart`): Completely independent model decoupled from static UI string catalogs.
+  - `HinglishMixRatio`: Lexical mix ratios (subtle 15%, balanced 45%, vernacular 75%).
+  - `CoachingTone`: Personas (supportive elder, peer buddy, clinical specialist).
+  - `fastingAwareness`: Active validation against cultural/religious fasting protocols (Navratri phalahari, Ramadan Suhoor/Iftar, Ekadashi, Karwa Chauth).
+  - `toSystemPromptSnippet()`: Synthesizes structured prompt directive for LLM meal coaching.
+
+### 3. Dynamic Runtime Locale Switching
+- Implemented `AppLocaleNotifier` and `AiPhrasingConfigNotifier` (`app_locale_notifier.dart`).
+- Configured Riverpod providers in `lib/core/providers/app_providers.dart`:
+  - `appLanguageProvider`, `appLocaleProvider`, `appStringsProvider`, `aiPhrasingConfigProvider`.
+- Updated `FitKarmaApp` in `lib/app/fitkarma_app.dart` with `locale`, `supportedLocales`, and `localizationsDelegates` (`AppStrings.delegate`, `GlobalMaterialLocalizations.delegate`, etc.).
+- Refactored `AppEmptyState`, `AppLoadingView`, and `AppErrorView` in `lib/shared/presentation/widgets/app_state_views.dart` to use `AppStrings.of(context)` for automatic localization.
+
+### 4. Verification & Quality Gates
+- Added comprehensive unit and widget tests (32 tests) in `test/core/localization/`:
+  - `app_language_test.dart`: Language codes, metadata, fallback to English for unknown codes, supported/prepared categorization.
+  - `ai_phrasing_config_test.dart`: Hinglish mix ratio, coaching tone personas, serialization, and LLM prompt generation.
+  - `app_strings_test.dart`: Full English and Hindi catalogs, missing translation fallback, delegate methods.
+  - `locale_switching_test.dart`: Unit and widget tests for dynamic runtime language toggling without restart.
+  - `no_hardcoded_strings_test.dart`: Verification of zero hardcoded strings in shared state views.
+- `dart format .`: Formatted cleanly.
+- `flutter analyze`: 0 issues found.
+- `flutter test`: 114/114 tests passed (100% green).
+- `node scripts/doc_link_check.js`: 0 errors.
+- `node scripts/doc_lint.js`: 0 errors.
+
+---
+
 ## [2026-11-04] — FitKarma Design System (TASK 009)
 
 ### 1. Design Tokens & Theme Foundation

@@ -1,3 +1,4 @@
+import 'package:fitkarma/core/localization/app_strings.dart';
 import 'package:fitkarma/shared/presentation/theme/app_colors.dart';
 import 'package:fitkarma/shared/presentation/theme/app_spacing.dart';
 import 'package:fitkarma/shared/presentation/theme/app_typography.dart';
@@ -6,24 +7,30 @@ import 'package:fitkarma/shared/presentation/widgets/primary_button.dart';
 import 'package:flutter/material.dart';
 
 /// Reusable Empty State view for food logs, workouts, or family members.
+///
+/// Automatically pulls localized strings from [AppStrings.of(context)] when defaults are omitted.
 class AppEmptyState extends StatelessWidget {
   final IconData icon;
-  final String title;
-  final String message;
+  final String? title;
+  final String? message;
   final String? actionLabel;
   final VoidCallback? onAction;
 
   const AppEmptyState({
     super.key,
     this.icon = Icons.inbox_outlined,
-    required this.title,
-    required this.message,
+    this.title,
+    this.message,
     this.actionLabel,
     this.onAction,
   });
 
   @override
   Widget build(BuildContext context) {
+    final strings = AppStrings.of(context);
+    final effectiveTitle = title ?? strings.emptyTitle;
+    final effectiveMessage = message ?? strings.emptyMessage;
+
     return Center(
       child: Padding(
         padding: const EdgeInsets.all(AppSpacing.xl),
@@ -40,13 +47,13 @@ class AppEmptyState extends StatelessWidget {
             ),
             const SizedBox(height: AppSpacing.lg),
             Text(
-              title,
+              effectiveTitle,
               style: AppTypography.titleLarge,
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: AppSpacing.sm),
             Text(
-              message,
+              effectiveMessage,
               style: AppTypography.bodyMedium,
               textAlign: TextAlign.center,
             ),
@@ -69,15 +76,16 @@ class AppLoadingView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final strings = AppStrings.of(context);
+    final effectiveMessage = message ?? strings.loading;
+
     return Center(
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
           const AppProgressIndicator(),
-          if (message != null) ...[
-            const SizedBox(height: AppSpacing.lg),
-            Text(message!, style: AppTypography.bodyMedium),
-          ],
+          const SizedBox(height: AppSpacing.lg),
+          Text(effectiveMessage, style: AppTypography.bodyMedium),
         ],
       ),
     );
@@ -86,21 +94,25 @@ class AppLoadingView extends StatelessWidget {
 
 /// Reusable Error State view with user-safe message and retry action.
 class AppErrorView extends StatelessWidget {
-  final String title;
+  final String? title;
   final String message;
   final VoidCallback? onRetry;
-  final String retryLabel;
+  final String? retryLabel;
 
   const AppErrorView({
     super.key,
-    this.title = 'Something went wrong',
+    this.title,
     required this.message,
     this.onRetry,
-    this.retryLabel = 'Try Again',
+    this.retryLabel,
   });
 
   @override
   Widget build(BuildContext context) {
+    final strings = AppStrings.of(context);
+    final effectiveTitle = title ?? strings.errorTitle;
+    final effectiveRetryLabel = retryLabel ?? strings.tryAgain;
+
     return Center(
       child: Padding(
         padding: const EdgeInsets.all(AppSpacing.xl),
@@ -121,7 +133,7 @@ class AppErrorView extends StatelessWidget {
             ),
             const SizedBox(height: AppSpacing.lg),
             Text(
-              title,
+              effectiveTitle,
               style: AppTypography.titleLarge,
               textAlign: TextAlign.center,
             ),
@@ -133,7 +145,7 @@ class AppErrorView extends StatelessWidget {
             ),
             if (onRetry != null) ...[
               const SizedBox(height: AppSpacing.xl),
-              PrimaryButton(label: retryLabel, onPressed: onRetry),
+              PrimaryButton(label: effectiveRetryLabel, onPressed: onRetry),
             ],
           ],
         ),
